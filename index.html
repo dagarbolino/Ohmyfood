@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-container">
         <header>
             <div class="logo">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i class="fa-solid fa-arrow-left"></i><!--display:none-->
                 <img src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
             </div>
             <div class="map">
@@ -26,113 +26,107 @@
         </header>   
 
         <main>
-            <section class="hero">
+            
+            <div class="hero">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <button class="explor" type="button">
-                    <a href="#">Explorer nos restaurants</a>
+                    <a href="#retaurants">Explorer nos restaurants</a>
                 </button>
-            </section>
-    
+            </div>
+            
             <section class="fonctionnement">
                 <h2>Fonctionnement</h2>
                 <div class="stage1">
-                    <button type="button">
+                    <div class="badge-stage">
                         <i class="ellipse">1</i>
                         <i class="fa-solid fa-mobile-screen-button"></i>
-                        <h3>Choisissez un restaurant</h3>
-                    </button>
+                        <p>Choisissez un restaurant</p>
+                    </div>
                 </div>
                 <div class="stage2">
-                    <button type="button">
+                    <div class="badge-stage">
                         <i class="ellipse">2</i>
                         <i class="fa-solid fa-list-ul"></i>
-                        <h3>Composez votre menu</h3>
-                    </button>
+                        <p>Composez votre menu</p>
+                    </div>
                 </div>
                 <div class="stage3">
-                    <button type="button">
+                    <div class="badge-stage">
                         <i class="ellipse">3</i>
                         <i class="fa-solid fa-store"></i>
-                        <h3>Dégustez au restaurant</h3>
-                    </button>
+                        <p>Dégustez au restaurant</p>
+                    </div>
                 </div>
             </section>
 
             <section class="retaurants">
-                <h2>Restaurants</h2>
-
+                <h2 id="retaurants">Restaurants</h2>
                 <div class="card-menu">
-
                     <div class="card">
                         <div class="img-card">
-                            <img src="" alt="salade au centre d'une assiette, avec un zoom d'une table">
+                            <img src="" alt="Vue d'une table, plat filet de turbot, aux agrumes">
                             <h3>La palette du goût</h3>
-                            <div class="badge">
+                            <div class="badge-new">
                                 <p>nouveau</p>
                             </div>
                             <p>La palette du goût</p>
-                            <i class="fa-thin fa-heart fa-fade"></i>
+                            <i class="fa-regular fa-heart fa-fade"></i>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="img-card">
-                            <img src="" alt="">
+                            <img src="" alt="Plat, langoustine poêlée, purée de patate douce">
                             <h3>La note enchantée</h3>
-                            <div class="badge">
+                            <div class="badge-new">
                                 <p>nouveau</p>
                             </div>
                             <p>Charonne</p>
-                            <i class="fa-thin fa-heart fa-fade"></i>
+                            <i class="fa-regular fa-heart fa-fade"></i>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="img-card">
-                            <img src="" alt="">
+                            <img src="" alt="Plat, coquilles Saint-Jacques, accompagnées d'une purée de panais">
                             <h3>À la française</h3>
-                            <div class="badge">
+                            <div class="badge-new">
                                 <p>nouveau</p>
                             </div>
                             <p>Cité Rouge</p>
-                            <i class="fa-thin fa-heart fa-fade"></i>
+                            <i class="fa-regular fa-heart fa-fade"></i>
                         </div>
                     </div>
-
                     <div class="card">
                         <div class="img-card">
-                            <img src="" alt="">
+                            <img src="" alt="Plat sur assiette en longueur, langouste rôtie et ses légumes de saison ">
                             <h3>Le délice des sens</h3>
-                            <div class="badge">
+                            <div class="badge-new">
                                 <p>nouveau</p>
                             </div>
                             <p>Folie-Méricourt</p>
-                            <i class="fa-thin fa-heart fa-fade"></i>
+                            <i class="fa-regular fa-heart fa-fade"></i>
                         </div>
                     </div>
-
-
                 </div>
             </section>
         </main>
     </div> 
 
-        <footer>
-            <div class="logo-footer">
-                <img src="" alt="">
-            </div>
-            <div class="proposer-resto">
-                <a href="#">Proposer un restaurant</a>
-                <i></i>
-            </div>
-            <div class="devenir-partenaire">
-                <a href="#">Devenir partenaire</a>
-                <i></i>
-            </div>
-            <a href="#">Mentions légales</a>
-            <a href="#">Contact</a><!--voir formulaire de contact-->
-        </footer>
+    <footer>
+        <div class="logo-footer">
+            <img src="" alt="logo ohmyfood">
+        </div>
+        <div class="proposer-resto">
+            <i class="fa-solid fa-utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+        </div>
+        <div class="devenir-partenaire">
+            <i class="fa-regular fa-handshake"></i>
+            <a href="#">Devenir partenaire</a>
+        </div>
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a><!--voir formulaire de contact-->
+    </footer>
 
 </body>
 </html>
