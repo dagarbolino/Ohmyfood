@@ -218,6 +218,19 @@ body main .hero .btn-restau .section-fonctionnement h2 {
   font-weight: 700;
   line-height: normal;
 }
+body main .hero .btn-restau .section-fonctionnement .stage {
+  width: 335px;
+  height: 72.379px;
+  flex-shrink: 0;
+}
+body main .hero .btn-restau .section-fonctionnement .stage .badge-stage1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  height: 72.379px;
+  flex-shrink: 0;
+}
 body footer {
   display: block;
   color: #F6F6F6;

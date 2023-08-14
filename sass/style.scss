@@ -181,8 +181,19 @@ body {
         line-height: normal;
       } 
       .stage {
+        width: 335px;
+        height: 72.379px;
+        flex-shrink: 0;
 
-        
+        .badge-stage1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 335px;
+          height: 72.379px;
+          flex-shrink: 0;
+        }
+
       }
     }  
         }
