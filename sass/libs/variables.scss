@@ -1,0 +1,15 @@
+$colors: (
+  "bg-color-white": white,
+  "bg-color": #F6F6F6,
+  "color-primaire": #9356DC,
+  "color-secondary":#FF79DA,
+  "color-tertiaire":#99E2D0,
+  "color-bg-grey": #EAEAEA,
+  "color-grey": #353535,
+  "color-black": #010101,
+  "color-grad": linear-gradient(175deg, #9356DC 0%, #FF79DA 100%),
+  );
+
+  @mixin shadow {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }

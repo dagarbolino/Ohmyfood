@@ -14,101 +14,145 @@
 
 <body>
     
-    <header>
-        <div class="logo">
+    <nav class="navBar">
+        <div class="navBar__logo">
             <i class="fa-solid fa-arrow-left"></i><!--display:none-->
-            <img class="img-header" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+            <img class="navBar__logo--img" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         </div>
-        <div class="map">
+        <div class="navBar__map">
             <i class="fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
         </div>
-    </header>
+
+    </nav>
 
     <main>
 
         <section class="hero">
-            <h1>Réservez le menu qui vous convient</h1>
+            <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             
             <button class="btn-restau" type="button">
-                <a href="#retaurants">Explorer nos restaurants</a>
+                <a class="btn-restau__link" href="#retaurants">Explorer nos restaurants</a>
             </button>
             
         </section>
 
-        <section class="section-fonctionnement">
-            <h2>Fonctionnement</h2>
+        <section class="fonctionnement">
+            <h2 class="fonctionnement--h2">Fonctionnement</h2>
             <div class="stage">
-                <div class="badge-stage1">
-                    <i class="ellipse">1</i>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>Choisissez un restaurant</p>
+                <div class="stage__badge1">
+                    <div class="stage__badge--ellipse">
+                        <i>1</i>
+                    </div>
+                </div>
+                <div class="stage__badge">
+                    <div class="entitled">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Choisissez un restaurant</p>  
+                    </div>
                 </div>
             </div>
             <div class="stage">
-                <div class="badge-stage2">
-                    <i class="ellipse">2</i>
-                    <i class="fa-solid fa-list-ul"></i>
-                    <p>Composez votre menu</p>
+                <div class="stage__badge1">
+                    <div class="stage__badge--ellipse">
+                        <i>2</i>
+                    </div>
+                </div>
+                <div class="stage__badge">
+                    <div class="entitled">
+                        <i class="fa-solid fa-list-ul"></i>
+                        <p>Composez votre menu</p>    
+                    </div>
                 </div>
             </div>
             <div class="stage">
-                <div class="badge-stage3">
-                    <i class="ellipse">3</i>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Dégustez au restaurant</p>
+                <div class="stage__badge1">
+                    <div class="stage__badge--ellipse">
+                        <i>3</i>
+                    </div>
+                </div>
+                <div class="stage__badge">
+                    <div class="entitled">
+                        <i class="fa-solid fa-store"></i>
+                        <p>Dégustez au restaurant</p> 
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="retaurants">
             <h2 id="retaurants">Restaurants</h2>
-            <div class="card-menu">
-                <div class="card">
-                    <div class="img-card">
+            <div class="cardsMenus">
+
+                <div class="cardMenu">
+                    <a class="cardsMenus--link" href="">
+
+                    <div class="cardMenu__img">
                         <img src="" alt="Vue d'une table, plat filet de turbot, aux agrumes">
+                    </div>    
+
+                    <div class="cardMenu__title">
                         <h3>La palette du goût</h3>
-                        <div class="badge-new">
-                            <p>nouveau</p>
-                        </div>
-                        <p>La palette du goût</p>
+                        <p>Ménilmontant</p>
                         <i class="fa-regular fa-heart fa-fade"></i>
                     </div>
+
+                    <div class="cardMenu__badge">
+                        <p>nouveau</p>
+                    </div>
+                    
                 </div>
-                <div class="card">
-                    <div class="img-card">
+            </a>
+
+                <div class="cardsMenus">
+                    <a class="cardsMenus--link" href="">
+                    <div class="cardMenu__img">
                         <img src="" alt="Plat, langoustine poêlée, purée de patate douce">
+                    </div>
+                    <div class="cardMenu__title">
                         <h3>La note enchantée</h3>
-                        <div class="badge-new">
-                            <p>nouveau</p>
-                        </div>
                         <p>Charonne</p>
                         <i class="fa-regular fa-heart fa-fade"></i>
                     </div>
+                    <div class="cardMenu__badge">
+                        <p>nouveau</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="img-card">
+            </a>
+
+                <div class="cardsMenus">
+                    <a class="cardsMenus--link" href="">
+                    <div class="cardsMenu__img">
                         <img src="" alt="Plat, coquilles Saint-Jacques, accompagnées d'une purée de panais">
+                    </div>    
+                    <div class="cardMenu__title">
                         <h3>À la française</h3>
-                        <div class="badge-new">
-                            <p>nouveau</p>
-                        </div>
                         <p>Cité Rouge</p>
                         <i class="fa-regular fa-heart fa-fade"></i>
                     </div>
+                    <div class="cardMenu__badge">
+                        <p>nouveau</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="img-card">
+            </a>
+
+                <div class="cardsMenus">
+                    <a class="cardsMenus--link" href="">
+                    <div class="cardsMenu__img">
                         <img src="" alt="Plat sur assiette en longueur, langouste rôtie et ses légumes de saison ">
+                    </div>    
+                    <div class="cardMenu__title">
                         <h3>Le délice des sens</h3>
-                        <div class="badge-new">
-                            <p>nouveau</p>
-                        </div>
                         <p>Folie-Méricourt</p>
                         <i class="fa-regular fa-heart fa-fade"></i>
                     </div>
+                    <div class="cardMenu__badge">
+                        <p>nouveau</p>
+                    </div>
                 </div>
+            </a>
+            
             </div>
         </section>
     </main>
