@@ -136,6 +136,7 @@ body main .hero h2 {
   height: 68px;
   color: #010101;
   /* Section Title */
+  font-family: Roboto;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -152,6 +153,7 @@ body main .hero p {
   color: #353535;
   text-align: center;
   /* Paragraph */
+  font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -247,21 +249,41 @@ body main .fonctionnement .stage__badge--ellipse {
   background: #9356DC;
 }
 body main .fonctionnement .entitled {
+  width: 211px;
+  height: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .fonctionnement .entitled p {
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body main .fonctionnement .entitled .fa-solid.fa-store {
+  width: 18px;
+  height: 17px;
+  flex-shrink: 0;
+  color: #9356DC;
 }
 body main .retaurants {
   display: flex;
-  width: 375px;
-  height: 2252px;
+  width: 340px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
+  gap: 18px;
   flex-shrink: 0;
   background: #EAEAEA;
 }
 body main .retaurants h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
   width: 275px;
   height: 68px;
   flex-shrink: 0;
@@ -272,6 +294,99 @@ body main .retaurants h2 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+body main .retaurants .cardsMenus {
+  height: auto;
+  align-self: stretch;
+  border-radius: 15px;
+}
+body main .retaurants .cardsMenus .cardMenu {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #FFF;
+  /* Shadow/Card */
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+body main .retaurants .cardsMenus .cardMenu__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body main .retaurants .cardsMenus .cardMenu img {
+  width: 340px;
+  height: 231px;
+  flex-shrink: 0;
+  border-radius: 15px 15px 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body main .retaurants .cardsMenus .cardMenu__titleHeart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+}
+body main .retaurants .cardsMenus .cardMenu__title {
+  display: flex;
+  flex-direction: column;
+}
+body main .retaurants .cardsMenus .cardMenu__title h3 {
+  width: 267px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+body main .retaurants .cardsMenus .cardMenu__title p {
+  width: 247px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+body main .retaurants .cardsMenus .cardMenu__title__heart {
+  width: 24px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body main .retaurants .cardsMenus .cardMenu__title__heart i {
+  display: flex;
+}
+body main .retaurants .cardsMenus .cardMenu__badge {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0;
+}
+body main .retaurants .cardsMenus .cardMenu__badge p {
+  position: relative;
+  top: 50px;
+  right: 15px;
+  width: 80px;
+  height: 29px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99e2d0;
+  color: #008766;
 }
 body footer {
   display: block;
