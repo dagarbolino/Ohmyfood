@@ -46,6 +46,7 @@ td, th {
 a {
   text-decoration: None;
   width: 100%;
+  color: white;
 }
 
 body {
@@ -57,14 +58,11 @@ body {
   width: 100%;
   max-width: 375px;
   padding: 0px 0px;
-  gap: 30px;
 }
 body .navBar {
   display: flex;
   width: 375px;
   height: auto;
-  padding-bottom: 0px;
-  padding-top: 50px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -96,7 +94,7 @@ body .navBar .navBar__map {
   align-items: center;
   gap: 17px;
   flex-shrink: 0;
-  background: #EAEAEA;
+  background: #eaeaea;
 }
 body .navBar .navBar__map i {
   width: 12px;
@@ -124,7 +122,7 @@ body main .hero {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #EAEAEA;
+  background: #eaeaea;
   gap: 20px;
   padding: 30px;
 }
@@ -168,7 +166,7 @@ body main .hero .btn-restau {
   align-items: center;
   flex-shrink: 0;
   border-radius: 25px;
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 body main .hero .btn-restau .btn-restau__link {
@@ -178,7 +176,7 @@ body main .hero .btn-restau .btn-restau__link {
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  color: #F6F6F6;
+  color: #f6f6f6;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -234,7 +232,7 @@ body main .fonctionnement .stage__badge {
   height: 80px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: var(--background, #F6F6F6);
+  background: var(--background, #f6f6f6);
   /* Shadow/Instructions */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -246,7 +244,7 @@ body main .fonctionnement .stage__badge--ellipse {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background: #9356DC;
+  background: #9356dc;
 }
 body main .fonctionnement .entitled {
   width: 211px;
@@ -268,16 +266,17 @@ body main .fonctionnement .entitled .fa-solid.fa-store {
   width: 18px;
   height: 17px;
   flex-shrink: 0;
-  color: #9356DC;
+  color: #9356dc;
 }
 body main .retaurants {
   display: flex;
   width: 375px;
+  height: 1530px;
   flex-direction: column;
   align-items: center;
   gap: 18px;
   flex-shrink: 0;
-  background: #EAEAEA;
+  background: #eaeaea;
 }
 body main .retaurants h2 {
   display: flex;
@@ -308,7 +307,7 @@ body main .retaurants .cardsMenus .cardMenu {
   justify-content: center;
   flex-shrink: 0;
   border-radius: 15px;
-  background: #FFF;
+  background: #fff;
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -391,9 +390,67 @@ body main .retaurants .cardsMenus .cardMenu__badge p {
 }
 body footer {
   display: block;
-  color: #F6F6F6;
-  background: var(--main-color-grey);
+  color: white;
+  background: #353535;
   gap: 30px;
+}
+body footer .footer {
+  display: flex;
+  width: 375px;
+  height: 200px;
+  padding: 22px 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+body footer .footer__logo {
+  display: flex;
+  width: 139px;
+  height: 27px;
+  padding-right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+body footer .footer__logo img {
+  width: 137.582px;
+  height: 27px;
+  flex-shrink: 0;
+  color: white;
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+body footer .footer__link {
+  width: 190px;
+  height: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+body footer .footer__link .proposer-resto,
+body footer .footer__link .devenir-partenaire {
+  display: flex;
+  gap: 10px;
+  color: var(--white, #FFF);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+body footer .footer__link .mention-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--white, #FFF);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
