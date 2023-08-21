@@ -298,6 +298,11 @@ body main .retaurants .cardsMenus {
   height: auto;
   align-self: center;
   border-radius: 15px;
+  cursor: pointer;
+  transition: transform 400ms;
+}
+body main .retaurants .cardsMenus:hover {
+  transform: scale(1.1);
 }
 body main .retaurants .cardsMenus .cardMenu {
   display: flex;
@@ -313,7 +318,7 @@ body main .retaurants .cardsMenus .cardMenu {
 }
 body main .retaurants .cardsMenus .cardMenu__img {
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   background-position: center;
 }
 body main .retaurants .cardsMenus .cardMenu img {
@@ -322,7 +327,7 @@ body main .retaurants .cardsMenus .cardMenu img {
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   background-position: center;
 }
 body main .retaurants .cardsMenus .cardMenu__titleHeart {
@@ -359,14 +364,12 @@ body main .retaurants .cardsMenus .cardMenu__title p {
   line-height: normal;
 }
 body main .retaurants .cardsMenus .cardMenu__title__heart {
+  display: flex;
   width: 24px;
-  height: auto;
+  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-body main .retaurants .cardsMenus .cardMenu__title__heart i {
-  display: flex;
 }
 body main .retaurants .cardsMenus .cardMenu__badge {
   display: flex;
