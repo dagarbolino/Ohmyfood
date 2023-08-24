@@ -46,7 +46,7 @@ td, th {
 a {
   text-decoration: None;
   width: 100%;
-  color: white;
+  color: #f6f6f6;
 }
 
 body {
@@ -103,7 +103,6 @@ body .navBar .navBar__map i {
   fill: #353535;
 }
 body .navBar .navBar__map p {
-  /* Button */
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -167,6 +166,7 @@ body main .hero .btn-restau {
   flex-shrink: 0;
   border-radius: 25px;
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  /* Shadow/Instructions */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 body main .hero .btn-restau .btn-restau__link {
@@ -232,7 +232,7 @@ body main .fonctionnement .stage__badge {
   height: 80px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: var(--background, #f6f6f6);
+  background: #f6f6f6;
   /* Shadow/Instructions */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -255,7 +255,7 @@ body main .fonctionnement .entitled {
   align-items: center;
 }
 body main .fonctionnement .entitled p {
-  color: #000;
+  color: #010101;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -312,7 +312,7 @@ body main .retaurants .cardsMenus .cardMenu {
   justify-content: center;
   flex-shrink: 0;
   border-radius: 15px;
-  background: #fff;
+  background: white;
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -345,7 +345,7 @@ body main .retaurants .cardsMenus .cardMenu__title h3 {
   width: 267px;
   height: 20px;
   flex-shrink: 0;
-  color: #000;
+  color: #010101;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
@@ -356,20 +356,28 @@ body main .retaurants .cardsMenus .cardMenu__title p {
   width: 247px;
   height: 24px;
   flex-shrink: 0;
-  color: #000;
+  color: #010101;
   font-family: Roboto;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
-body main .retaurants .cardsMenus .cardMenu__title__heart {
-  display: flex;
-  width: 24px;
-  height: 30px;
+body main .retaurants .cardsMenus .cardMenu__heart {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: 22px;
+  height: 40px;
+}
+body main .retaurants .cardsMenus .cardMenu__heart i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9356dc;
+}
+body main .retaurants .cardsMenus .cardMenu__heart .fa-solid .fa-heart {
+  width: 22px;
+  height: 21px;
 }
 body main .retaurants .cardsMenus .cardMenu__badge {
   display: flex;
@@ -389,7 +397,7 @@ body main .retaurants .cardsMenus .cardMenu__badge p {
   align-items: center;
   justify-content: center;
   background: #99e2d0;
-  color: #008766;
+  color: #008768;
 }
 body footer {
   display: block;
@@ -414,13 +422,14 @@ body footer .footer__logo {
   justify-content: center;
   align-items: center;
 }
-body footer .footer__logo img {
+body footer .footer__logo p {
+  display: flex;
   width: 137.582px;
   height: 27px;
   flex-shrink: 0;
   color: white;
   font-family: Shrikhand;
-  font-size: 18px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -437,7 +446,7 @@ body footer .footer__link .proposer-resto,
 body footer .footer__link .devenir-partenaire {
   display: flex;
   gap: 10px;
-  color: var(--white, #FFF);
+  color: white;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -448,7 +457,7 @@ body footer .footer__link .mention-contact {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: var(--white, #FFF);
+  color: white;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;

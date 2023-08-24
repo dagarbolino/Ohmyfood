@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4cd061d277.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    
     <nav class="navBar">
         <div class="navBar__logo">
             <i class="fa-solid fa-arrow-left"></i><!--display:none-->
@@ -24,21 +24,27 @@
             <i class="fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
         </div>
+        <form class="search-bar">
+            
 
+            <button class="button-search" type="submit">
+                <span class="span-search"><i class="fa-solid fa-location-dot"></i></span>
+            </button>
+<i class="fa-solid fa-location-dot"></i>
+            <input class="search" type="text" placeholder="Paris, Belleville">
+
+        </form>
     </nav>
 
     <main>
-
         <section class="hero">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            
+
             <button class="btn-restau" type="button">
                 <a class="btn-restau__link" href="#retaurants">Explorer nos restaurants</a>
             </button>
-            
         </section>
-
         <section class="fonctionnement">
             <h2 class="fonctionnement--h2">Fonctionnement</h2>
             <div class="stage">
@@ -50,7 +56,7 @@
                 <div class="stage__badge">
                     <div class="entitled">
                         <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p>Choisissez un restaurant</p>  
+                        <p>Choisissez un restaurant</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +69,7 @@
                 <div class="stage__badge">
                     <div class="entitled">
                         <i class="fa-solid fa-list-ul"></i>
-                        <p>Composez votre menu</p>    
+                        <p>Composez votre menu</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +82,7 @@
                 <div class="stage__badge">
                     <div class="entitled">
                         <i class="fa-solid fa-store"></i>
-                        <p>Dégustez au restaurant</p> 
+                        <p>Dégustez au restaurant</p>
                     </div>
                 </div>
             </div>
@@ -84,30 +90,25 @@
 
         <section class="retaurants">
             <h2 id="retaurants">Restaurants</h2>
-
             <div class="cardsMenus">
-
                 <div class="cardMenu__badge">
                     <p>nouveau</p>
                 </div>
-
                 <div class="cardMenu">
-                    
                     <a class="cardMenu__link" href="">
-                        
                         <div class="cardMenu__img">
-                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Vue d'une table, plat filet de turbot, aux agrumes">
-                        </div> 
-
-                        <div class="cardMenu__titleHeart">  
+                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="Vue d'une table, plat filet de turbot, aux agrumes">
+                        </div>
+                        <div class="cardMenu__titleHeart">
                             <div class="cardMenu__title">
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
-                            </div>            
-                            <div class="cardMenu__heart">
-                                <i class="fa-regular fa-heart fa-fade"></i>
                             </div>
-                        </div> 
+                            <div class="cardMenu__heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -119,18 +120,18 @@
                 <div class="cardMenu">
                     <a class="cardMenu__link" href="">
                         <div class="cardMenu__img">
-                            <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat, langoustine poêlée, purée de patate douce">
+                            <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="Plat, langoustine poêlée, purée de patate douce">
                         </div>
-                        <div class="cardMenu__titleHeart"> 
+                        <div class="cardMenu__titleHeart">
                             <div class="cardMenu__title">
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
-                            </div>            
+                            </div>
                             <div class="cardMenu__heart">
-                                <i class="fa-regular fa-heart fa-fade"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
-                        
                     </a>
                 </div>
             </div>
@@ -142,15 +143,16 @@
                 <div class="cardMenu">
                     <a class="cardMenu__link" href="">
                         <div class="cardMenu__img">
-                            <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat, coquilles Saint-Jacques, accompagnées d'une purée de panais">
-                        </div>   
-                        <div class="cardMenu__titleHeart">  
+                            <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt="Plat, coquilles Saint-Jacques, accompagnées d'une purée de panais">
+                        </div>
+                        <div class="cardMenu__titleHeart">
                             <div class="cardMenu__title">
                                 <h3>À la française</h3>
                                 <p>Cité Rouge</p>
-                            </div>            
+                            </div>
                             <div class="cardMenu__heart">
-                                <i class="fa-regular fa-heart fa-fade"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </a>
@@ -164,22 +166,21 @@
                 <div class="cardMenu">
                     <a class="cardMenu__link" href="">
                         <div class="cardMenu__img">
-                            <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat sur assiette en longueur, langouste rôtie et ses légumes de saison ">
-                        </div> 
-                        <div class="cardMenu__titleHeart">    
+                            <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="Plat sur assiette en longueur, langouste rôtie et ses légumes de saison ">
+                        </div>
+                        <div class="cardMenu__titleHeart">
                             <div class="cardMenu__title">
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
-                            </div>            
+                            </div>
                             <div class="cardMenu__heart">
-                                <i class="fa-regular fa-heart fa-fade"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
-            
-            
         </section>
     </main>
 
@@ -187,7 +188,7 @@
     <footer>
         <div class="footer">
             <div class="footer__logo">
-                <img src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+                <p>ohmyfood</p>
             </div>
             <div class="footer__link">
                 <div class="proposer-resto">
@@ -209,5 +210,4 @@
     </footer>
 
 </body>
-
 </html>

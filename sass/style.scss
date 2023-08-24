@@ -4,10 +4,8 @@
 a {
   text-decoration: None;
   width: 100%;
-  color: white;
+  color: map-get($colors, bg-color);
 }
-
-
 
 body {
   display: flex;
@@ -18,14 +16,11 @@ body {
   width: 100%;
   max-width: 375px;
   padding: 0px 0px;
-  
 
   .navBar {
     display: flex;
     width: 375px;
     height: auto;
-    
-    
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -70,8 +65,6 @@ body {
       }
 
       p {
-        /* Button */
-
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -141,6 +134,7 @@ body {
         border-radius: 25px;
         background: map-get($colors, color-grad);
 
+        /* Shadow/Instructions */
         @include shadow;
 
         .btn-restau__link {
@@ -175,9 +169,7 @@ body {
         height: 31px;
         flex-shrink: 0;
         align-items: center;
-
         margin-bottom: 25px;
-
         color: map-get($colors, color-black);
         /* Section Title */
         font-family: Roboto;
@@ -210,14 +202,13 @@ body {
           align-items: center;
           justify-content: center;
           width: 322px;
-
           height: 80px;
           flex-shrink: 0;
           border-radius: 20px;
-          background: var(--background, #f6f6f6);
+          background: map-get($colors, bg-color);
 
           /* Shadow/Instructions */
-          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+          @include shadow-badge;
 
           &--ellipse {
             position: absolute;
@@ -241,7 +232,7 @@ body {
         align-items: center;
 
         p {
-          color: #000;
+          color: map-get($colors, color-black);
           font-family: Roboto;
           font-size: 16px;
           font-style: normal;
@@ -290,12 +281,11 @@ body {
         height: auto;
         align-self: center;
         border-radius: 15px;
-
         cursor: pointer;
         transition: transform 400ms;
 
         &:hover {
-          transform: scale(1.10);
+          transform: scale(1.1);
         }
 
         .cardMenu {
@@ -306,10 +296,10 @@ body {
           justify-content: center;
           flex-shrink: 0;
           border-radius: 15px;
-          background: #fff;
+          background: map-get($colors, bg-color-white);
 
           /* Shadow/Card */
-          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+          @include shadow-card;
 
           &__img {
             background-repeat: no-repeat;
@@ -322,7 +312,6 @@ body {
             height: 231px;
             flex-shrink: 0;
             border-radius: 15px 15px 0px 0px;
-
             background-repeat: no-repeat;
             object-fit: cover;
             background-position: center;
@@ -336,48 +325,55 @@ body {
             padding: 10px 0px;
           }
 
-            &__title {
-              display: flex;
-              flex-direction: column;
-            
-              h3 {
-                width: 267px;
-                height: 20px;
-                flex-shrink: 0;
-              
-                color: #000;
-                font-family: Roboto;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-              }
-            
-              p {
-                width: 247px;
-                height: 24px;
-                flex-shrink: 0;
-              
-                color: #000;
-                font-family: Roboto;
-                font-size: 17px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-            }
-            
-            &__heart {
-              display: flex;
-              width: 24px;
-              height: 30px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
+          &__title {
+            display: flex;
+            flex-direction: column;
 
+            h3 {
+              width: 267px;
+              height: 20px;
+              flex-shrink: 0;
+
+              color: map-get($colors, color-black);
+              font-family: Roboto;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
             }
-          
+
+            p {
+              width: 247px;
+              height: 24px;
+              flex-shrink: 0;
+
+              color: map-get($colors, color-black);
+              font-family: Roboto;
+              font-size: 17px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+            }
           }
-          
+          &__heart {
+            display: flex;
+            flex-direction: column;
+            width: 22px;
+            height: 40px;
+
+            i {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: map-get($colors, color-primaire);
+            }
+
+            .fa-solid .fa-heart {
+              width: 22px;
+              height: 21px;
+            }
+          }
+
           &__badge {
             display: flex;
             justify-content: flex-end;
@@ -395,8 +391,8 @@ body {
               display: flex;
               align-items: center;
               justify-content: center;
-              background: #99e2d0;
-              color: #008766;
+              background: map-get($colors, color-tertiaire);
+              color: map-get($colors, color-tertiaire1);
             }
           }
         }
@@ -418,7 +414,6 @@ body {
       flex-direction: column;
       align-items: flex-start;
       gap: 16px;
-      
 
       &__logo {
         display: flex;
@@ -427,20 +422,21 @@ body {
         padding-right: 0px;
         justify-content: center;
         align-items: center;
-
-        img {
-          width: 137.582px;
-          height: 27px;
-          flex-shrink: 0;
-          color: map-get($colors, bg-color-white);
-          font-family: Shrikhand;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
-  
       }
+
+      &__logo p {
+        display: flex;
+        width: 137.582px;
+        height: 27px;
+        flex-shrink: 0;
+        color: map-get($colors, bg-color-white);
+        font-family: Shrikhand;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
       &__link {
         width: 190px;
         height: 19px;
@@ -453,7 +449,7 @@ body {
         .devenir-partenaire {
           display: flex;
           gap: 10px;
-          color: var(--white, #FFF);
+          color: map-get($colors, bg-color-white);
           font-family: Roboto;
           font-size: 16px;
           font-style: normal;
@@ -465,17 +461,14 @@ body {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          color: var(--white, #FFF);
+          color: map-get($colors, bg-color-white);
           font-family: Roboto;
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
         }
-        
-
-        
-      } 
+      }
     }
   }
 }
