@@ -1,3 +1,8 @@
+@charset "UTF-8";
+/****  font family   ****/
+/****  for image and photo    ****/
+/****    Shadow    ****/
+/****    Restaurants cards    ****/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -43,10 +48,46 @@ td, th {
   padding: 0;
 }
 
+/*
+
+<footer>
+<div class="footer">
+    <div class="footer__logo">
+        <img class="footer__logo--img" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+    </div>
+    <div class="footer__link">
+        <div class="proposer-resto">
+            <i class="fa-solid fa-utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+        </div>
+
+        <div class="devenir-partenaire">
+            <i class="fa-regular fa-handshake"></i>
+            <a href="#">Devenir partenaire</a>
+        </div>
+
+        <div class="mention-contact">
+            <a href="#">Mentions légales</a>
+            <a href="#">Contact</a><!--voir formulaire de contact-->
+        </div>
+    </div>
+</div>
+</footer>
+
+*/
+/*** Photo page d'acceuil des restaurants*****/
 a {
   text-decoration: None;
   width: 100%;
   color: #f6f6f6;
+}
+
+* {
+  font-family: Roboto;
+}
+
+h1 {
+  font-family: Shrikhand;
 }
 
 body {
@@ -133,7 +174,6 @@ body main .hero h2 {
   height: 68px;
   color: #010101;
   /* Section Title */
-  font-family: Roboto;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -150,32 +190,32 @@ body main .hero p {
   color: #353535;
   text-align: center;
   /* Paragraph */
-  font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 body main .hero .btn-restau {
-  width: 218px;
-  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  width: 218px;
+  height: 50px;
   border-radius: 25px;
   background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  transition: transform 500ms;
   /* Shadow/Instructions */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 body main .hero .btn-restau .btn-restau__link {
   display: flex;
-  width: 180.495px;
-  height: 24px;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
+  width: 180.495px;
+  height: 24px;
   color: #f6f6f6;
   text-align: center;
   font-size: 16px;
@@ -183,45 +223,49 @@ body main .hero .btn-restau .btn-restau__link {
   font-weight: 500;
   line-height: normal;
 }
+body main .hero .btn-restau:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
+  transform: scale(1.03);
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+}
 body main .fonctionnement {
-  width: 375px;
-  height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  width: 375px;
+  height: 440px;
   background: white;
 }
 body main .fonctionnement--h2 {
-  width: 275px;
-  height: 31px;
   flex-shrink: 0;
   align-items: center;
-  margin-bottom: 25px;
+  width: 275px;
+  height: 31px;
   color: #010101;
   /* Section Title */
-  font-family: Roboto;
+  margin-bottom: 25px;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 body main .fonctionnement .stage {
-  position: relative;
-  width: 335px;
-  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  width: 335px;
+  height: 80px;
   flex-shrink: 0;
   margin-bottom: 10px;
 }
 body main .fonctionnement .stage__badge1 {
+  align-items: center;
   display: flex;
   height: 80px;
-  align-items: center;
 }
 body main .fonctionnement .stage__badge {
   display: flex;
@@ -237,22 +281,22 @@ body main .fonctionnement .stage__badge {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 body main .fonctionnement .stage__badge--ellipse {
-  position: absolute;
   display: flex;
-  width: 24px;
-  height: 24px;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #9356dc;
 }
 body main .fonctionnement .entitled {
-  width: 211px;
-  height: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 211px;
+  height: 15px;
 }
 body main .fonctionnement .entitled p {
   color: #010101;
@@ -288,7 +332,6 @@ body main .retaurants h2 {
   flex-shrink: 0;
   color: #010101;
   /* Section Title */
-  font-family: Roboto;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -299,36 +342,66 @@ body main .retaurants .cardsMenus {
   align-self: center;
   border-radius: 15px;
   cursor: pointer;
-  transition: transform 400ms;
+  transition: transform 500ms;
 }
 body main .retaurants .cardsMenus:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 body main .retaurants .cardsMenus .cardMenu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 340px;
   height: auto;
-  justify-content: center;
+  border-radius: 10px;
   flex-shrink: 0;
-  border-radius: 15px;
   background: white;
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-body main .retaurants .cardsMenus .cardMenu__img {
+body main .retaurants .cardsMenus .cardMenu__img-one {
+  background: url(./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
-}
-body main .retaurants .cardsMenus .cardMenu img {
+  background-size: cover;
   width: 340px;
   height: 231px;
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
+}
+body main .retaurants .cardsMenus .cardMenu__img-two {
+  background: url(./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
+  background-size: cover;
+  width: 340px;
+  height: 231px;
+  flex-shrink: 0;
+  border-radius: 15px 15px 0px 0px;
+}
+body main .retaurants .cardsMenus .cardMenu__img-three {
+  background: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  width: 340px;
+  height: 231px;
+  flex-shrink: 0;
+  border-radius: 15px 15px 0px 0px;
+}
+body main .retaurants .cardsMenus .cardMenu__img-four {
+  background: url(./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  width: 340px;
+  height: 231px;
+  flex-shrink: 0;
+  border-radius: 15px 15px 0px 0px;
 }
 body main .retaurants .cardsMenus .cardMenu__titleHeart {
   display: flex;
@@ -346,7 +419,6 @@ body main .retaurants .cardsMenus .cardMenu__title h3 {
   height: 20px;
   flex-shrink: 0;
   color: #010101;
-  font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -366,18 +438,19 @@ body main .retaurants .cardsMenus .cardMenu__title p {
 body main .retaurants .cardsMenus .cardMenu__heart {
   display: flex;
   flex-direction: column;
-  width: 22px;
+  width: 32px;
   height: 40px;
 }
 body main .retaurants .cardsMenus .cardMenu__heart i {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 23px;
   color: #9356dc;
 }
 body main .retaurants .cardsMenus .cardMenu__heart .fa-solid .fa-heart {
-  width: 22px;
-  height: 21px;
+  width: 32px;
+  height: 31px;
 }
 body main .retaurants .cardsMenus .cardMenu__badge {
   display: flex;
@@ -387,78 +460,64 @@ body main .retaurants .cardsMenus .cardMenu__badge {
   margin-top: 0;
 }
 body main .retaurants .cardsMenus .cardMenu__badge p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   top: 50px;
   right: 15px;
   width: 80px;
   height: 29px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #99e2d0;
   color: #008768;
 }
 body footer {
   display: block;
+  gap: 30px;
   color: white;
   background: #353535;
-  gap: 30px;
 }
 body footer .footer {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 375px;
   height: 200px;
   padding: 22px 25px;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 16px;
 }
 body footer .footer__logo {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 139px;
   height: 27px;
   padding-right: 0px;
-  justify-content: center;
-  align-items: center;
-}
-body footer .footer__logo p {
-  display: flex;
-  width: 137.582px;
-  height: 27px;
-  flex-shrink: 0;
-  color: white;
-  font-family: Shrikhand;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 body footer .footer__link {
-  width: 190px;
-  height: 19px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 190px;
+  height: 19px;
   gap: 7px;
 }
 body footer .footer__link .proposer-resto,
 body footer .footer__link .devenir-partenaire {
   display: flex;
-  gap: 10px;
   color: white;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  gap: 10px;
 }
 body footer .footer__link .mention-contact {
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: white;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
