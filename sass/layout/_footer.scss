@@ -1,32 +1,68 @@
+footer {
+    display: block;
+    gap: 30px;
+    color: map-get($colors, bg-color-white);
+    background: map-get($colors, color-grey);
+    
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-@mixin footer {
-  // 
+    width: 375px;
+    height: 200px;
+    padding: 22px 25px;
+    gap: 16px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 139px;
+        height: 27px;
+        padding-right: 0px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 190px;
+        height: 19px;
+        gap: 7px;
+
+        .proposer-resto,
+        .devenir-partenaire {
+            display: flex;
+            align-items: center;
+
+            color: map-get($colors, bg-color-white);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            gap: 10px;
+        }
+
+        .mention-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            color: map-get($colors, bg-color-white);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
 }
+    
 
-/*
+  }
 
-<footer>
-<div class="footer">
-    <div class="footer__logo">
-        <img class="footer__logo--img" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-    </div>
-    <div class="footer__link">
-        <div class="proposer-resto">
-            <i class="fa-solid fa-utensils"></i>
-            <a href="#">Proposer un restaurant</a>
-        </div>
 
-        <div class="devenir-partenaire">
-            <i class="fa-regular fa-handshake"></i>
-            <a href="#">Devenir partenaire</a>
-        </div>
-
-        <div class="mention-contact">
-            <a href="#">Mentions légales</a>
-            <a href="#">Contact</a><!--voir formulaire de contact-->
-        </div>
-    </div>
-</div>
-</footer>
-
-*/

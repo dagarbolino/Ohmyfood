@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /****  font family   ****/
 /****  for image and photo    ****/
 /****    Shadow    ****/
@@ -48,33 +47,59 @@ td, th {
   padding: 0;
 }
 
-/*
+footer {
+  display: block;
+  gap: 30px;
+  color: white;
+  background: #353535;
+}
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 375px;
+  height: 200px;
+  padding: 22px 25px;
+  gap: 16px;
+}
+footer .footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 139px;
+  height: 27px;
+  padding-right: 0px;
+}
+footer .footer__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 190px;
+  height: 19px;
+  gap: 7px;
+}
+footer .footer__link .proposer-resto,
+footer .footer__link .devenir-partenaire {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  gap: 10px;
+}
+footer .footer__link .mention-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 
-<footer>
-<div class="footer">
-    <div class="footer__logo">
-        <img class="footer__logo--img" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-    </div>
-    <div class="footer__link">
-        <div class="proposer-resto">
-            <i class="fa-solid fa-utensils"></i>
-            <a href="#">Proposer un restaurant</a>
-        </div>
-
-        <div class="devenir-partenaire">
-            <i class="fa-regular fa-handshake"></i>
-            <a href="#">Devenir partenaire</a>
-        </div>
-
-        <div class="mention-contact">
-            <a href="#">Mentions légales</a>
-            <a href="#">Contact</a><!--voir formulaire de contact-->
-        </div>
-    </div>
-</div>
-</footer>
-
-*/
 /*** Photo page d'acceuil des restaurants*****/
 a {
   text-decoration: None;
@@ -101,24 +126,12 @@ body {
   padding: 0px 0px;
 }
 body .navBar {
-  display: flex;
-  width: 375px;
-  height: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: -0.5px;
-  flex-shrink: 0;
+  @import url(./layout/_navigation.scss);
 }
-body .navBar .navBar__logo {
-  display: flex;
-  width: 375px;
-  align-items: center;
-}
-body .navBar .navBar__logo i {
+body .navBar i {
   display: none;
 }
-body .navBar .navBar__logo .navBar__logo--img {
+body .navBar .navBar__logo--img {
   display: flex;
   width: 375px;
   height: 63px;
@@ -138,6 +151,7 @@ body .navBar .navBar__map {
   background: #eaeaea;
 }
 body .navBar .navBar__map i {
+  display: flex;
   width: 12px;
   height: 16px;
   flex-shrink: 0;
@@ -162,7 +176,7 @@ body main .hero {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #eaeaea;
+  background: #f6f6f6;
   gap: 20px;
   padding: 30px;
 }

@@ -1,0 +1,122 @@
+@import "./abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+@import "vendors/bootstrap";
+@import "vendors/jquery-ui";
+
+@import "base/reset";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/sidebar";
+@import "layout/forms";
+@import "layout/footer";
+
+@import "components/buttons";
+@import "components/carousel";
+@import "components/card";
+@import "components/badge";
+@import "components/cover";
+@import "components/icon";
+@import "components/media";
+@import "components/logo";
+
+a {
+  text-decoration: None;
+  width: 100%;
+  color: map-get($colors, color-black);
+}
+
+* {
+  @include font-texte;
+}
+
+h1 {
+  @include font-logo-titres;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 60px;
+  margin: auto;
+  width: 100%;
+  max-width: 375px;
+  padding: 0px 0px;
+
+  .navBar {
+
+    .navBar__logo a {
+      color: map-get($colors, color-black);
+    }
+    .navBar__logo--img {
+      display: flex;
+      width: 375px;
+      height: 63px;
+      padding: 14px 89px 13px 89px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 375px;
+    height: 1307px;
+    
+
+    .imgOne {
+      display: flex;
+      flex-direction: column;
+      align-items:start;
+      width: 375px;
+      height: 275px;
+
+      background: url(#{$imgOne}); 
+      @include img-bg-cover-center-noRepeat;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      
+      width: 375px;
+      height: 1275px;
+      gap: 40px;
+      background: #F6F6F6;
+      
+
+      h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 341px;
+        height: 27px;
+
+        flex-shrink: 0;
+        color: black;
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: -40px 0px 0px 0px;
+        
+      }
+    }
+
+  }
+
+  footer {
+    a {
+      color: white;
+    }
+  }
+}
