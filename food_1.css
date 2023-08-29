@@ -65,7 +65,6 @@ td, th {
 
 footer {
   display: block;
-  gap: 30px;
   color: white;
   background: #353535;
 }
@@ -138,15 +137,20 @@ body {
   padding-bottom: 60px;
   margin: auto;
   width: 100%;
+  height: auto;
   max-width: 375px;
   padding: 0px 0px;
+}
+body .navBar {
+  position: relative;
+  z-index: 1;
 }
 body .navBar .navBar__logo a {
   color: #010101;
 }
 body .navBar .navBar__logo--img {
   display: flex;
-  width: 375px;
+  width: auto;
   height: 63px;
   padding: 14px 89px 13px 89px;
   justify-content: center;
@@ -156,11 +160,13 @@ body .navBar .navBar__logo--img {
 body main {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   width: 375px;
   height: 1307px;
 }
 body main .imgOne {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -173,12 +179,15 @@ body main .imgOne {
   background-size: cover;
 }
 body main .container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   width: 375px;
-  height: 1275px;
-  gap: 40px;
-  background: #F6F6F6;
+  height: 1090px;
+  background: #f6f6f6;
+  top: 215px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 body main .container h1 {
   display: flex;
@@ -187,13 +196,130 @@ body main .container h1 {
   width: 341px;
   height: 27px;
   flex-shrink: 0;
-  color: black;
+  color: #010101;
   font-family: Shrikhand;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: -40px 0px 0px 0px;
+  margin: 25px 0px 30px 20px;
+}
+body main .container .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 375px;
+  height: auto;
+  padding: 10px 10px;
+}
+body main .container .menu__entrees, body main .container .menu__plats, body main .container .menu__desserts {
+  display: flex;
+  width: 275px;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #010101;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+body main .container .menu__entrees h2, body main .container .menu__plats h2, body main .container .menu__desserts h2 {
+  font-weight: 600;
+}
+body main .container .menu__entrees .line, body main .container .menu__plats .line, body main .container .menu__desserts .line {
+  width: 40px;
+  height: 3px;
+  background: #99e2d0;
+  margin-bottom: 10px;
+}
+body main .container .menu__card {
+  display: flex;
+  width: 349px;
+  height: 69px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 0 15px;
+  border-radius: 15.043px;
+  background: white;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
+}
+body main .container .menu__title {
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+}
+body main .container .menu__title h3 {
+  height: 21px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+body main .container .menu__title p {
+  height: 19px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+body main .container .menu__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 24px;
+  height: 35px;
+}
+body main .container .menu__price p {
+  color: #353535;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+body main .btn-commander {
+  width: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .btn-commander button {
+  width: 186px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+  /* Shadow/Button */
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-align: center;
+  /* Button */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 body footer a {
   color: white;

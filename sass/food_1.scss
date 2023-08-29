@@ -44,17 +44,19 @@ body {
   padding-bottom: 60px;
   margin: auto;
   width: 100%;
+  height: auto;
   max-width: 375px;
   padding: 0px 0px;
 
   .navBar {
-
+    position: relative;
+    z-index: 1;
     .navBar__logo a {
       color: map-get($colors, color-black);
     }
     .navBar__logo--img {
       display: flex;
-      width: 375px;
+      width:auto;
       height: 63px;
       padding: 14px 89px 13px 89px;
       justify-content: center;
@@ -66,32 +68,35 @@ body {
   main {
     display: flex;
     flex-direction: column;
-    
+    position: relative;
     align-items: center;
     width: 375px;
     height: 1307px;
     
-
     .imgOne {
+      position: absolute;
       display: flex;
       flex-direction: column;
       align-items:start;
       width: 375px;
       height: 275px;
-
+      //z-index: 4;
       background: url(#{$imgOne}); 
       @include img-bg-cover-center-noRepeat;
     }
     
     .container {
+      position: absolute;
       display: flex;
       flex-direction: column;
-      
       width: 375px;
-      height: 1275px;
-      gap: 40px;
-      background: #F6F6F6;
+      height: 1090px;
+    
+      background: map-get($colors, bg-color);
       
+      top: 215px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
 
       h1 {
         display: flex;
@@ -99,24 +104,160 @@ body {
         justify-content: center;
         width: 341px;
         height: 27px;
-
+        
         flex-shrink: 0;
-        color: black;
+        color: map-get($colors, color-black);
         font-family: Shrikhand;
         font-size: 28px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        margin: -40px 0px 0px 0px;
+        margin: 25px 0px 30px 20px;
         
       }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+        width: 375px;
+        height: auto;
+        padding: 10px 10px;
+      
+        &__entrees,
+        &__plats,
+        &__desserts {
+          display: flex;
+          width: 275px;
+          height: auto;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          color: map-get($colors, color-black);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          text-transform: uppercase;
+          margin-bottom: 25px;
+          h2 {
+            font-weight: 600;
+            
+          }
+          .line {
+            width: 40px;
+            height: 3px;
+            background: map-get($colors, color-tertiaire);
+            margin-bottom: 10px;
+          }
+        }
+
+          &__card {
+            display: flex;
+            width: 349px;
+            height: 69px;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 0 15px;
+           
+            border-radius: 15.043px;
+            background: map-get($colors, bg-color-white);
+            box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10);
+       
+          }
+
+            &__title {
+              display: flex;
+              flex-direction: column;
+              text-transform: none;
+
+              h3 {
+                height: 21px;
+                flex-shrink: 0;
+                align-self: stretch;
+                overflow: hidden;
+                color: map-get($colors, color-black);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+              p {
+                height: 19px;
+                flex-shrink: 0;
+                align-self: stretch;
+                overflow: hidden;
+                color: map-get($colors, color-black);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: Roboto;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+            }
+
+            &__price {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              width: 24px;
+              height: 35px;
+
+              p {
+                color: map-get($colors, color-grey);
+                text-align: center;
+                font-family: Roboto;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+            }
+      }
     }
+
+    .btn-commander {
+      width: auto;
+      height: 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      
+          button {
+      width: 186px;
+      height: 50px;
+      flex-shrink: 0;
+      border-radius: 25px;
+      background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+
+      /* Shadow/Button */
+      @include shadow;
+      color: map-get($colors, bg-color-white);
+      text-align: center;
+      
+      /* Button */
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+    }
+    }
+
 
   }
 
   footer {
     a {
-      color: white;
+      color: map-get($colors, bg-color-white);
     }
   }
 }
