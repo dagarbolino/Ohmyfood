@@ -159,13 +159,45 @@ body {
             align-items: center;
             justify-content: space-between;
             margin: 5px 0;
-            padding: 0 15px;
-           
-            border-radius: 15.043px;
+            //padding: 0 15px;
+
+            cursor: pointer;
+
+            overflow: hidden;
+            border-radius: 15px;
             background: map-get($colors, bg-color-white);
             box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10);
-       
+            transition: transform 250ms;
+
           }
+          &__check {
+            &__check--select {
+              transform: scaleX(0);
+            }
+          }
+        
+          &__check--select {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: map-get($colors, color-tertiaire);
+            overflow: hidden;
+            width:59px;
+            height: 69px;
+            flex-shrink: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transition: transform 250ms ease-out 250ms;
+           
+
+           
+          }
+
+          &__check--select:hover {
+            display: none;
+            transition: transform 250ms ease-out 250ms;
+          }
+
 
             &__title {
               display: flex;
@@ -206,7 +238,7 @@ body {
               flex-direction: column;
               justify-content: flex-end;
               width: 24px;
-              height: 35px;
+              height: 40px;
 
               p {
                 color: map-get($colors, color-grey);
@@ -218,6 +250,8 @@ body {
                 line-height: normal;
               }
             }
+
+
       }
     }
 
@@ -231,25 +265,35 @@ body {
 
       
           button {
-      width: 186px;
-      height: 50px;
-      flex-shrink: 0;
-      border-radius: 25px;
-      background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+            width: 186px;
+            height: 50px;
+            flex-shrink: 0;
+            border-radius: 25px;
+            background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+            border: none;
 
-      /* Shadow/Button */
-      @include shadow;
-      color: map-get($colors, bg-color-white);
-      text-align: center;
-      
-      /* Button */
-      font-family: Roboto;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+            /* Shadow/Button */
+            @include shadow;
+            color: map-get($colors, bg-color-white);
+            opacity: 1;
+            text-align: center;
 
-    }
+            /* Button */
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            transition: transform 600ms;
+
+        }
+        button:hover {
+          cursor: pointer;
+          transform: scale(1.15);
+          opacity: 0.8;
+  
+          @include shadow-hover;
+        }
     }
 
 

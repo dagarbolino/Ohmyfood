@@ -237,6 +237,7 @@ body main .hero .btn-restau .btn-restau__link {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  transition: transform 500ms;
 }
 body main .hero .btn-restau:hover {
   transform: scale(1.03);
@@ -487,7 +488,7 @@ body main .retaurants .cardsMenus .cardMenu__badge p {
   width: 80px;
   height: 29px;
   flex-shrink: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   background: #99e2d0;
   color: #008768;
 }
