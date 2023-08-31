@@ -193,6 +193,100 @@ body {
           }
 
 
+
+
+.card {
+  display: flex;
+  width: 349px;
+  height: 69px;
+  align-items: center;
+  border-radius: 15px;
+  background: map-get($colors, bg-color-white);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0px;
+  cursor: pointer;
+
+  .pp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    .plate {
+      h3 {
+        height: 21px;
+        flex-shrink: 0;
+        align-self: stretch;
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 00;
+        line-height: normal;
+        
+      }
+      p {
+        height: 19px;
+        flex-shrink: 0;
+        align-self: stretch;
+        overflow: hidden;
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15.043px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        
+      }
+    }
+    .price {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+    }
+  }
+  .select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    height: 69px;
+    color: map-get($colors, bg-color-white);
+    background: map-get($colors, color-tertiaire);
+    
+    transition: all 400ms;
+    overflow: hidden;
+
+    i {
+      color: map-get($colors, color-tertiaire);
+      background: map-get($colors, bg-color-white);
+      padding: 2px;
+      border-radius: 50%;
+    }
+  }
+
+  &:hover {
+    .select {
+      width: 70px;
+
+      /*transform: translatex(0px);*/
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+
             &__title {
               display: flex;
               flex-direction: column;
