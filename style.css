@@ -303,6 +303,13 @@ body main .fonctionnement .stage__badge--ellipse {
   position: absolute;
   width: 24px;
   height: 24px;
+}
+body main .fonctionnement .stage__badge--ellipse i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   font-size: 15px;
   font-weight: 600;

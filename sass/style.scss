@@ -223,6 +223,7 @@ body {
         height: 80px;
         flex-shrink: 0;
         margin-bottom: 10px;
+        
 
         &__badge1 {
           align-items: center;
@@ -252,6 +253,15 @@ body {
             position: absolute;
             width: 24px;
             height: 24px;
+
+          }
+          &--ellipse i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             font-size: 15px;
             font-weight: 600;
@@ -259,6 +269,7 @@ body {
 
             background: map-get($colors, color-primaire);
             color: map-get($colors, bg-color);
+
           }
         }
       }

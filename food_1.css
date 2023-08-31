@@ -284,17 +284,19 @@ body main .container .menu .card .pp {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  text-transform: none;
 }
 body main .container .menu .card .pp .plate h3 {
   height: 21px;
   flex-shrink: 0;
   align-self: stretch;
-  color: #000;
+  overflow: hidden;
+  color: #010101;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 18px;
   font-style: normal;
-  font-weight: 0;
+  font-weight: 700;
   line-height: normal;
 }
 body main .container .menu .card .pp .plate p {
@@ -302,18 +304,28 @@ body main .container .menu .card .pp .plate p {
   flex-shrink: 0;
   align-self: stretch;
   overflow: hidden;
-  color: #000;
+  color: #010101;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 15.043px;
+  font-family: Roboto;
+  font-size: 15px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 body main .container .menu .card .pp .price {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
+  width: 24px;
+  height: 40px;
   justify-content: space-between;
+  color: #010101;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 body main .container .menu .card .select {
   display: flex;

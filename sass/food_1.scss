@@ -213,41 +213,52 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
+    text-transform: none;
 
     .plate {
       h3 {
         height: 21px;
         flex-shrink: 0;
         align-self: stretch;
-        color: #000;
+        overflow: hidden;
+        color: map-get($colors, color-black);
         text-overflow: ellipsis;
         white-space: nowrap;
-
         font-size: 18px;
         font-style: normal;
-        font-weight: 00;
+        font-weight: 700;
         line-height: normal;
-        
       }
       p {
         height: 19px;
         flex-shrink: 0;
         align-self: stretch;
         overflow: hidden;
-        color: #000;
+        color: map-get($colors, color-black);
         text-overflow: ellipsis;
         white-space: nowrap;
-        font-size: 15.043px;
+        font-family: Roboto;
+        font-size: 15px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        
       }
     }
     .price {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
+      width: 24px;
+      height: 40px;
       justify-content: space-between;
+
+      color: map-get($colors, color-black);
+      text-align: center;
+      font-family: Roboto;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
     }
   }
   .select {
