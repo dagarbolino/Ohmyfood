@@ -34,10 +34,15 @@ a {
 
 * {
   @include font-texte;
+  scroll-behavior:smooth;
 }
 
 h1 {
   @include font-logo-titres;
+}
+svg {
+
+  color: map-get($colors, color-primaire);
 }
 
 body {
@@ -49,7 +54,6 @@ body {
   width: 100%;
   max-width: 375px;
   padding: 0px 0px;
-
   .navBar {
     @import url(./layout/_navigation.scss);
 
@@ -103,6 +107,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
+  
+
 
     .hero {
       display: flex;
@@ -153,7 +159,7 @@ body {
         width: 218px;
         height: 50px;
         border: none;
-
+        
         border-radius: 25px;
         background: map-get($colors, color-grad);
         transition: transform 500ms;
@@ -168,6 +174,7 @@ body {
           flex-shrink: 0;
           width: 180.495px;
           height: 24px;
+          
 
           color: map-get($colors, bg-color);
           opacity: 1;
@@ -177,6 +184,7 @@ body {
           font-weight: 500;
           line-height: normal;
           transition: transform 500ms;
+          
         }
       }
       .btn-restau:hover {
@@ -267,7 +275,7 @@ body {
             font-weight: 600;
             font-style: normal;
 
-            background: map-get($colors, color-primaire);
+            background: map-get($colors, color-grad);
             color: map-get($colors, bg-color);
 
           }
@@ -418,20 +426,33 @@ body {
             flex-direction: column;
             width: 32px;
             height: 40px;
+            transition: 1000ms;
+            opacity: 0;
+            
 
-            i {
+            i, svg {
               display: flex;
               align-items: center;
               justify-content: center;
+              background: white;
+              color: red;
               font-size: 23px;
-
-              color: map-get($colors, color-primaire);
             }
 
-            .fa-solid .fa-heart {
+            .fa-solid .fa-heart, i{
               width: 32px;
               height: 31px;
+             
+              
             }
+
+            
+            &:hover {
+              opacity: 1;
+             
+              
+            }
+            
           }
 
           &__badge {
