@@ -9,7 +9,8 @@
 @import "base/reset";
 
 @import "layout/header";
-@import "layout/navigation";
+@import "layout/body";
+@import "layout/navbar";
 @import "layout/sidebar";
 @import "layout/forms";
 @import "layout/footer";
@@ -38,21 +39,21 @@ h1 {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 60px;
-  margin: auto;
-  width: 100%;
-  height: auto;
-  max-width: 375px;
-  padding: 0px 0px;
+@include body;
 
   .navBar {
     position: relative;
     z-index: 1;
-    .navBar__logo a {
+    .navBar__logo  {
+      display: flex;
+      flex-direction: row;
       color: map-get($colors, color-black);
+    }
+    i {
+      height: 63px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .navBar__logo--img {
       display: flex;
@@ -80,8 +81,7 @@ body {
       align-items:start;
       width: 375px;
       height: 275px;
-      //z-index: 4;
-      background: url(#{$imgOne}); 
+      //background: url(#{$imgOne}); 
       @include img-bg-cover-center-noRepeat;
     }
     
@@ -193,104 +193,9 @@ body {
           }
 
 
+/*******card du menu *******/
 
-
-.card {
-  display: flex;
-  width: 349px;
-  height: 69px;
-  align-items: center;
-  border-radius: 15px;
-  background: map-get($colors, bg-color-white);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 0px;
-  cursor: pointer;
-
-  .pp {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    text-transform: none;
-
-    .plate {
-      h3 {
-        height: 21px;
-        flex-shrink: 0;
-        align-self: stretch;
-        overflow: hidden;
-        color: map-get($colors, color-black);
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-      p {
-        height: 19px;
-        flex-shrink: 0;
-        align-self: stretch;
-        overflow: hidden;
-        color: map-get($colors, color-black);
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-family: Roboto;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-      }
-    }
-    .price {
-      display: flex;
-      align-items: flex-end;
-      width: 24px;
-      height: 40px;
-      justify-content: space-between;
-
-      color: map-get($colors, color-black);
-      text-align: center;
-      font-family: Roboto;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-
-    }
-  }
-  .select {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 0px;
-    height: 69px;
-    color: map-get($colors, bg-color-white);
-    background: map-get($colors, color-tertiaire);
-    
-    transition: all 400ms;
-    overflow: hidden;
-
-    i {
-      color: map-get($colors, color-tertiaire);
-      background: map-get($colors, bg-color-white);
-      padding: 2px;
-      border-radius: 50%;
-    }
-  }
-
-  &:hover {
-    .select {
-      width: 70px;
-
-      /*transform: translatex(0px);*/
-      
-    }
-  }
-}
-
+/***** fin card du menu*********/
 
 
 
@@ -399,8 +304,67 @@ body {
   }
 
   footer {
-    a {
-      color: map-get($colors, bg-color-white);
+    display: block;
+    gap: 30px;
+    color: map-get($colors, bg-color-white);
+    background: map-get($colors, color-grey);
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      width: 375px;
+      height: 200px;
+      padding: 22px 25px;
+      gap: 16px;
+
+      &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 139px;
+        height: 27px;
+        padding-right: 0px;
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 190px;
+        height: 19px;
+        gap: 7px;
+
+        .proposer-resto,
+        .devenir-partenaire {
+          display: flex;
+          align-items: center;
+
+          color: map-get($colors, bg-color-white);
+
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          gap: 10px;
+        }
+
+        .mention-contact {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          color: map-get($colors, bg-color-white);
+
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
     }
   }
 }

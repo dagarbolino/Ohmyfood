@@ -10,6 +10,8 @@
 @import "base/typography";
 
 @import "layout/header";
+@import "layout/body";
+@import "layout/navbar";
 @import "layout/footer";
 @import "layout/sidebar";
 @import "layout/forms";
@@ -46,33 +48,16 @@ svg {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 60px;
-  margin: auto;
-  width: 100%;
-  max-width: 375px;
-  padding: 0px 0px;
+  
+  @include body;
+
   .navBar {
-    @import url(./layout/_navigation.scss);
+    @include navBar;
 
     i {
       display: none;
     }
     
-
-    .navBar__logo--img {
-      display: flex;
-      width: 375px;
-      height: 63px;
-      padding: 14px 89px 13px 89px;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-
     .navBar__map {
       display: flex;
       width: 375px;

@@ -1,9 +1,15 @@
+/*
+
+
+@include footer {
+
+    
+}
 footer {
     display: block;
-   
+    gap: 30px;
     color: map-get($colors, bg-color-white);
     background: map-get($colors, color-grey);
-    
 .footer {
     display: flex;
     flex-direction: column;
@@ -65,4 +71,6 @@ footer {
 
   }
 
+
+*/
 

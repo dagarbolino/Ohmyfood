@@ -1,6 +1,4 @@
-
-
-.navBar {
+@mixin navBar {
   display: flex;
   width: 375px;
   height: auto;
@@ -14,8 +12,19 @@
     display: flex;
     width: 375px;
     align-items: center;
-
-    
+  }
+}
+  .navBar__logo--img {
+    display: flex;
+    width: 375px;
+    height: 63px;
+    padding: 14px 89px 13px 89px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
   }
 
-}
+
+
+
+

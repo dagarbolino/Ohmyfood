@@ -47,56 +47,172 @@ td, th {
   padding: 0;
 }
 
-footer {
-  display: block;
-  color: white;
-  background: #353535;
-}
-footer .footer {
+.navBar__logo--img {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   width: 375px;
-  height: 200px;
-  padding: 22px 25px;
-  gap: 16px;
-}
-footer .footer__logo {
-  display: flex;
+  height: 63px;
+  padding: 14px 89px 13px 89px;
   justify-content: center;
   align-items: center;
-  width: 139px;
-  height: 27px;
-  padding-right: 0px;
+  flex-shrink: 0;
 }
-footer .footer__link {
+
+/*
+
+
+@include footer {
+
+
+}
+footer {
+    display: block;
+    gap: 30px;
+    color: map-get($colors, bg-color-white);
+    background: map-get($colors, color-grey);
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 375px;
+    height: 200px;
+    padding: 22px 25px;
+    gap: 16px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 139px;
+        height: 27px;
+        padding-right: 0px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 190px;
+        height: 19px;
+        gap: 7px;
+
+        .proposer-resto,
+        .devenir-partenaire {
+            display: flex;
+            align-items: center;
+
+            color: map-get($colors, bg-color-white);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            gap: 10px;
+        }
+
+        .mention-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            color: map-get($colors, bg-color-white);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}
+
+
+  }
+
+
+*/
+.card {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 190px;
-  height: 19px;
-  gap: 7px;
+  width: 349px;
+  height: 69px;
+  align-items: center;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0px;
+  cursor: pointer;
 }
-footer .footer__link .proposer-resto,
-footer .footer__link .devenir-partenaire {
+.card__platePrice {
+  width: 100%;
   display: flex;
   align-items: center;
-  color: white;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  gap: 10px;
+  justify-content: space-between;
+  padding: 0 10px;
+  text-transform: none;
 }
-footer .footer__link .mention-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: white;
-  font-size: 16px;
+.card__platePrice .plate h3 {
+  height: 21px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
+}
+.card__platePrice .plate p {
+  height: 19px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.card__platePrice .price {
+  display: flex;
+  align-items: flex-end;
+  width: 24px;
+  height: 40px;
+  justify-content: space-between;
+  color: #010101;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card .select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0px;
+  height: 69px;
+  color: white;
+  background: #99e2d0;
+  transition: all 400ms;
+  overflow: hidden;
+}
+.card .select i {
+  color: #99e2d0;
+  background: white;
+  padding: 2px;
+  border-radius: 50%;
+}
+.card:hover .select {
+  width: 70px;
+  /*transform: translatex(0px);*/
 }
 
 /*** Photo page d'acceuil des restaurants*****/
@@ -130,19 +246,22 @@ body {
   padding: 0px 0px;
 }
 body .navBar {
-  @import url(./layout/_navigation.scss);
+  display: flex;
+  width: 375px;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: -0.5px;
+  flex-shrink: 0;
+}
+body .navBar .navBar__logo {
+  display: flex;
+  width: 375px;
+  align-items: center;
 }
 body .navBar i {
   display: none;
-}
-body .navBar .navBar__logo--img {
-  display: flex;
-  width: 375px;
-  height: 63px;
-  padding: 14px 89px 13px 89px;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
 body .navBar .navBar__map {
   display: flex;

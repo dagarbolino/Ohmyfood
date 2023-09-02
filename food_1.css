@@ -47,72 +47,172 @@ td, th {
   padding: 0;
 }
 
-.navBar {
+.navBar__logo--img {
   display: flex;
   width: 375px;
-  height: auto;
-  flex-direction: column;
+  height: 63px;
+  padding: 14px 89px 13px 89px;
   justify-content: center;
-  align-items: flex-start;
-  gap: -0.5px;
+  align-items: center;
   flex-shrink: 0;
 }
-.navBar .navBar__logo {
-  display: flex;
-  width: 375px;
-  align-items: center;
+
+/*
+
+
+@include footer {
+
+
+}
+footer {
+    display: block;
+    gap: 30px;
+    color: map-get($colors, bg-color-white);
+    background: map-get($colors, color-grey);
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 375px;
+    height: 200px;
+    padding: 22px 25px;
+    gap: 16px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 139px;
+        height: 27px;
+        padding-right: 0px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 190px;
+        height: 19px;
+        gap: 7px;
+
+        .proposer-resto,
+        .devenir-partenaire {
+            display: flex;
+            align-items: center;
+
+            color: map-get($colors, bg-color-white);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            gap: 10px;
+        }
+
+        .mention-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            color: map-get($colors, bg-color-white);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
 }
 
-footer {
-  display: block;
-  color: white;
-  background: #353535;
-}
-footer .footer {
+
+  }
+
+
+*/
+.card {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 375px;
-  height: 200px;
-  padding: 22px 25px;
-  gap: 16px;
-}
-footer .footer__logo {
-  display: flex;
-  justify-content: center;
+  width: 349px;
+  height: 69px;
   align-items: center;
-  width: 139px;
-  height: 27px;
-  padding-right: 0px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0px;
+  cursor: pointer;
 }
-footer .footer__link {
+.card__platePrice {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 190px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  text-transform: none;
+}
+.card__platePrice .plate h3 {
+  height: 21px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card__platePrice .plate p {
   height: 19px;
-  gap: 7px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
-footer .footer__link .proposer-resto,
-footer .footer__link .devenir-partenaire {
+.card__platePrice .price {
+  display: flex;
+  align-items: flex-end;
+  width: 24px;
+  height: 40px;
+  justify-content: space-between;
+  color: #010101;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card .select {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 0px;
+  height: 69px;
   color: white;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  gap: 10px;
+  background: #99e2d0;
+  transition: all 400ms;
+  overflow: hidden;
 }
-footer .footer__link .mention-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: white;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.card .select i {
+  color: #99e2d0;
+  background: white;
+  padding: 2px;
+  border-radius: 50%;
+}
+.card:hover .select {
+  width: 70px;
+  /*transform: translatex(0px);*/
 }
 
 /*** Photo page d'acceuil des restaurants*****/
@@ -137,7 +237,6 @@ body {
   padding-bottom: 60px;
   margin: auto;
   width: 100%;
-  height: auto;
   max-width: 375px;
   padding: 0px 0px;
 }
@@ -145,8 +244,16 @@ body .navBar {
   position: relative;
   z-index: 1;
 }
-body .navBar .navBar__logo a {
+body .navBar .navBar__logo {
+  display: flex;
+  flex-direction: row;
   color: #010101;
+}
+body .navBar i {
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .navBar .navBar__logo--img {
   display: flex;
@@ -172,7 +279,6 @@ body main .imgOne {
   align-items: start;
   width: 375px;
   height: 275px;
-  background: url(./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
@@ -212,6 +318,8 @@ body main .container .menu {
   width: 375px;
   height: auto;
   padding: 10px 10px;
+  /*******card du menu *******/
+  /***** fin card du menu*********/
 }
 body main .container .menu__entrees, body main .container .menu__plats, body main .container .menu__desserts {
   display: flex;
@@ -265,88 +373,6 @@ body main .container .menu__check:active {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   transform: scaleX(2);
-}
-body main .container .menu .card {
-  display: flex;
-  width: 349px;
-  height: 69px;
-  align-items: center;
-  border-radius: 15px;
-  background: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 0px;
-  cursor: pointer;
-}
-body main .container .menu .card .pp {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  text-transform: none;
-}
-body main .container .menu .card .pp .plate h3 {
-  height: 21px;
-  flex-shrink: 0;
-  align-self: stretch;
-  overflow: hidden;
-  color: #010101;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-body main .container .menu .card .pp .plate p {
-  height: 19px;
-  flex-shrink: 0;
-  align-self: stretch;
-  overflow: hidden;
-  color: #010101;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-body main .container .menu .card .pp .price {
-  display: flex;
-  align-items: flex-end;
-  width: 24px;
-  height: 40px;
-  justify-content: space-between;
-  color: #010101;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-body main .container .menu .card .select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 0px;
-  height: 69px;
-  color: white;
-  background: #99e2d0;
-  transition: all 400ms;
-  overflow: hidden;
-}
-body main .container .menu .card .select i {
-  color: #99e2d0;
-  background: white;
-  padding: 2px;
-  border-radius: 50%;
-}
-body main .container .menu .card:hover .select {
-  width: 70px;
-  /*transform: translatex(0px);*/
 }
 body main .container .menu__title {
   display: flex;
@@ -429,8 +455,57 @@ body main .btn-commander button:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }
-body footer a {
+body footer {
+  display: block;
+  gap: 30px;
   color: white;
+  background: #353535;
+}
+body footer .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 375px;
+  height: 200px;
+  padding: 22px 25px;
+  gap: 16px;
+}
+body footer .footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 139px;
+  height: 27px;
+  padding-right: 0px;
+}
+body footer .footer__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 190px;
+  height: 19px;
+  gap: 7px;
+}
+body footer .footer__link .proposer-resto,
+body footer .footer__link .devenir-partenaire {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  gap: 10px;
+}
+body footer .footer__link .mention-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=food_1.css.map */
