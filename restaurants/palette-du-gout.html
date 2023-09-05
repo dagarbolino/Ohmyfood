@@ -9,21 +9,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="../food_1.css" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/4cd061d277.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <nav class="navBar">
-    <div class="navBar__logo">
+  <nav class="navBarMenu">
+    <div class="navBarMenu__logo">
       <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-      <img class="navBar__logo--img" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood" />
+      <img class="navBarMenu__logo--img" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood" />
     </div>
   </nav>
 
   <main>
     <div class="imgOne">
-      <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+      <img class="imgOne--img" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
     </div>
 
     <div class="container">
@@ -34,22 +34,50 @@
           <h2>ENTREES</h2>
           <i class="line"></i>
 
-            <div class="card">
-              <div class="card__platePrice">
-                <div class="plate">
-                  <h3>Fricassée d'escargot</h3>
-                  <p>Au piment d'espelette</p>
-                </div>
-                
-                <div class="price">
-                  <p>25</p>
-                  <p>€</p>
-                </div>
+          <div class="card">
+            <div class="card__platePrice">
+              <div class="plate">
+                <h3>Fricassée d'escargot</h3>
+                <p>Au piment d'espelette</p>
               </div>
-              <div class="select">
-                <i class="fa-solid fa-check"></i>
+
+              <div class="price">
+                <p>25</p>
+                <p>€</p>
               </div>
             </div>
+
+
+
+            <div class="select">
+              <label for="myCheckBoxId" class="checkbox">
+                <input checked class="checkbox__input" type="checkbox" name="myCheckBox" id="myCheckBoxId">
+                <div class="checkbox__box">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </label>  
+            </div>
+
+
+
+            <!--
+              <div class="select">
+              <label for="myCheckBoxId" class="checkbox">
+                <input checked class="checkbox__input" type="checkbox" name="myCheckBox" id="myCheckBoxId">
+                <div class="checkbox__box">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </label>      
+            </div>
+            -->
+
+
+
+            </div>
+
+
+
+          </div>
 
           <div class="card">
             <div class="card__platePrice">
@@ -57,7 +85,7 @@
                 <h3>Fricassée d'escargot</h3>
                 <p>Au piment d'espelette</p>
               </div>
-              
+
               <div class="price">
                 <p>25</p>
                 <p>€</p>
@@ -74,7 +102,7 @@
                 <h3>Fricassée d'escargot</h3>
                 <p>Au piment d'espelette</p>
               </div>
-              
+
               <div class="price">
                 <p>25</p>
                 <p>€</p>
@@ -96,7 +124,7 @@
                 <h3>Fricassée d'escargot</h3>
                 <p>Au piment d'espelette</p>
               </div>
-              
+
               <div class="price">
                 <p>25</p>
                 <p>€</p>
@@ -107,37 +135,38 @@
             </div>
           </div>
 
-        <div class="card">
-          <div class="card__platePrice">
-            <div class="plate">
-              <h3>Fricassée d'escargot</h3>
-              <p>Au piment d'espelette</p>
-            </div>
-            
-            <div class="price">
-              <p>25</p>
-              <p>€</p>
-            </div>
-          </div>
-          <div class="select">
-            <i class="fa-solid fa-check"></i>
-          </div>
-        </div>
+          <div class="card">
+            <div class="card__platePrice">
+              <div class="plate">
+                <h3>Fricassée d'escargot</h3>
+                <p>Au piment d'espelette</p>
+              </div>
 
-        <div class="card">
-          <div class="card__platePrice">
-            <div class="plate">
-              <h3>Fricassée d'escargot</h3>
-              <p>Au piment d'espelette</p>
+              <div class="price">
+                <p>25</p>
+                <p>€</p>
+              </div>
             </div>
-            
-            <div class="price">
-              <p>25</p>
-              <p>€</p>
+            <div class="select">
+              <i class="fa-solid fa-check"></i>
             </div>
           </div>
-          <div class="select">
-            <i class="fa-solid fa-check"></i>
+
+          <div class="card">
+            <div class="card__platePrice">
+              <div class="plate">
+                <h3>Fricassée d'escargot</h3>
+                <p>Au piment d'espelette</p>
+              </div>
+
+              <div class="price">
+                <p>25</p>
+                <p>€</p>
+              </div>
+            </div>
+            <div class="select">
+              <i class="fa-solid fa-check"></i>
+            </div>
           </div>
         </div>
 
@@ -150,7 +179,7 @@
                 <h3>Fricassée d'escargot</h3>
                 <p>Au piment d'espelette</p>
               </div>
-              
+
               <div class="price">
                 <p>25</p>
                 <p>€</p>
@@ -161,41 +190,42 @@
             </div>
           </div>
 
-        <div class="card">
-          <div class="card__platePrice">
-            <div class="plate">
-              <h3>Fricassée d'escargot</h3>
-              <p>Au piment d'espelette</p>
+          <div class="card">
+            <div class="card__platePrice">
+              <div class="plate">
+                <h3>Fricassée d'escargot</h3>
+                <p>Au piment d'espelette</p>
+              </div>
+
+              <div class="price">
+                <p>25</p>
+                <p>€</p>
+              </div>
             </div>
-            
-            <div class="price">
-              <p>25</p>
-              <p>€</p>
+            <div class="select">
+              <i class="fa-solid fa-check"></i>
             </div>
           </div>
-          <div class="select">
-            <i class="fa-solid fa-check"></i>
+
+          <div class="card">
+            <div class="card__platePrice">
+              <div class="plate">
+                <h3>Fricassée d'escargot</h3>
+                <p>Au piment d'espelette</p>
+              </div>
+
+              <div class="price">
+                <p>25</p>
+                <p>€</p>
+              </div>
+            </div>
+            <div class="select">
+              <i class="fa-solid fa-check"></i>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card__platePrice">
-            <div class="plate">
-              <h3>Fricassée d'escargot</h3>
-              <p>Au piment d'espelette</p>
-            </div>
-            
-            <div class="price">
-              <p>25</p>
-              <p>€</p>
-            </div>
-          </div>
-          <div class="select">
-            <i class="fa-solid fa-check"></i>
-          </div>
-        </div>
       </div>
-    </div>
 
       <div class="btn-commander">
         <form action="" method="get" target="_blank">
@@ -228,7 +258,7 @@
       </div>
     </div>
   </footer>
-  
+
 </body>
 
 </html>

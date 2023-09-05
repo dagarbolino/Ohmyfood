@@ -1,26 +1,22 @@
-/*
 
 
-@include footer {
-
-    
-}
 footer {
     display: block;
     gap: 30px;
     color: map-get($colors, bg-color-white);
     background: map-get($colors, color-grey);
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 
-    width: 375px;
-    height: 200px;
-    padding: 22px 25px;
-    gap: 16px;
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
-    &__logo {
+      width: 375px;
+      height: 200px;
+      padding: 22px 25px;
+      gap: 16px;
+
+      &__logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,9 +24,12 @@ footer {
         width: 139px;
         height: 27px;
         padding-right: 0px;
-    }
+      }
+        a {
+          color: map-get($colors, bg-color-white);
+        }
 
-    &__link {
+      &__link {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -41,36 +40,30 @@ footer {
 
         .proposer-resto,
         .devenir-partenaire {
-            display: flex;
-            align-items: center;
+          display: flex;
+          align-items: center;
 
-            color: map-get($colors, bg-color-white);
+          color: map-get($colors, bg-color-white);
 
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            gap: 10px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          gap: 10px;
         }
 
         .mention-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
 
-            color: map-get($colors, bg-color-white);
+          color: map-get($colors, bg-color-white);
 
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
         }
+      }
     }
-}
-    
-
   }
-
-
-*/
-

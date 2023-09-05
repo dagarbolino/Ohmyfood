@@ -1,0 +1,203 @@
+@import "../components/buttons";
+@import "../components/media";
+@import "../components/badge";
+
+.retaurants {
+  display: flex;
+  width: 375px;
+  height: 1530px;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+  background: map-get($colors, color-bg-grey);
+  h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    width: 275px;
+    height: 68px;
+    flex-shrink: 0;
+    color: map-get($colors, color-black);
+    /* Section Title */
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .cardsMenusC,
+  .cardsMenusD {
+    .cardMenu__badge {
+      opacity: 0;
+    }
+  }
+
+  .cardsMenusA,
+  .cardsMenusB,
+  .cardsMenusC,
+  .cardsMenusD {
+    height: auto;
+    align-self: center;
+    border-radius: 15px;
+    cursor: pointer;
+    .cardMenu {
+      @include display-cardMenu;
+      width: 340px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+      background: map-get($colors, bg-color-white);
+      /* Shadow/Card */
+      @include shadow-card;
+      &__img-one {
+        //background: url(#{$imgOne});
+        @include img-bg-cover-center-noRepeat;
+        @include size-img-1-2-3-4;
+      }
+      &__img-two {
+        //background: url(#{$imgTwo});
+        @include img-bg-cover-center-noRepeat;
+        @include size-img-1-2-3-4;
+      }
+      &__img-three {
+        //background: url(#{$imgThree});
+        @include img-bg-cover-center-noRepeat;
+        @include size-img-1-2-3-4;
+      }
+      &__img-four {
+        //background: url(#{$imgFour});
+        @include img-bg-cover-center-noRepeat;
+        @include size-img-1-2-3-4;
+      }
+      &__titleHeart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0px;
+      }
+      &__title {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          width: 267px;
+          height: 20px;
+          flex-shrink: 0;
+          color: map-get($colors, color-black);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        p {
+          width: 247px;
+          height: 24px;
+          flex-shrink: 0;
+          color: map-get($colors, color-black);
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+        }
+      }
+      &__heart {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 32px;
+        height: 40px;
+        transition: 1000ms;
+        i {
+          font-size: 1.2em;
+        }
+        .far {
+          color: black;
+          position: absolute;
+        }
+        .fas {
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 1;
+        }
+        &:hover .far{
+          position: absolute;
+          opacity: 0;
+          background-image: map-get($colors, color-grad );
+          background-clip: text;
+          -webkit-background-clip: text;
+          transition-duration: 300ms;
+          transform: scale(1.3);
+        }
+        &:hover .fas {
+          opacity: 1;
+          background-image: map-get($colors, color-grad );
+          background-clip: text;
+          color: map-get($colors, color-grad );
+          -webkit-background-clip: text;
+          transition-duration: 300ms;
+          transform: scale(1.3);
+        }
+
+        /*
+                .checkbox {
+          display: flex;
+          align-items: center;
+          justify-content: center;              
+          font-size: 18px;
+        }
+        .checkbox__input {
+          display: none;
+        }
+        .checkbox__box {
+          width: 32px;
+          height: 31px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .checkbox__input:checked + .checkbox__box .fas{
+          color: transparent;
+          background-image: map-get($colors, color-grad );
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 0;
+        }
+        .checkbox__input:checked + .checkbox__box .fas::after{
+          opacity: 1;
+          position: absolute;
+          color: map-get($colors, color-grad );
+          background-image: map-get($colors, color-grad );
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+       
+        .checkbox__input:checked + .checkbox__box .far::after{
+          opacity: 0;
+          position: absolute;
+          color: map-get($colors, color-black );
+          background-image: black;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+        .checkbox__input:checked + .checkbox__box .far{
+          color: b;
+          //background-image: map-get($colors, color-black);
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 1;
+        }
+        
+        */
+
+
+
+
+      }
+
+    }
+  }
+}

@@ -1,4 +1,24 @@
-@mixin body {
+
+a {
+  text-decoration: None;
+  width: 100%;
+  color: map-get($colors, bg-color);
+}
+
+* {
+  @include font-texte;
+  scroll-behavior:smooth;
+}
+
+h1 {
+  @include font-logo-titres;
+}
+svg {
+
+  color: map-get($colors, color-primaire);
+}
+
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,4 +27,16 @@
   width: 100%;
   max-width: 375px;
   padding: 0px 0px;
+
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  
+  }
+
+
 }

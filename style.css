@@ -47,9 +47,95 @@ td, th {
   padding: 0;
 }
 
-.navBar__logo--img {
+a {
+  text-decoration: None;
+  width: 100%;
+  color: #f6f6f6;
+}
+
+* {
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: Shrikhand;
+}
+
+svg {
+  color: #9356dc;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 60px;
+  margin: auto;
+  width: 100%;
+  max-width: 375px;
+  padding: 0px 0px;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.navBar .navBar__logo--img {
+  display: flex;
+  width: auto;
+  height: 63px;
+  padding: 14px 89px 13px 89px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.navBar .navBar__map {
   display: flex;
   width: 375px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  flex-shrink: 0;
+  background: #eaeaea;
+}
+.navBar .navBar__map i {
+  display: flex;
+  width: 12px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: #353535;
+}
+.navBar .navBar__map p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #353535;
+}
+
+.navBarMenu {
+  position: relative;
+  z-index: 1;
+}
+.navBarMenu__logo {
+  display: flex;
+  flex-direction: row;
+  color: #010101;
+}
+.navBarMenu i {
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBarMenu__logo--img {
+  display: flex;
+  width: auto;
   height: 63px;
   padding: 14px 89px 13px 89px;
   justify-content: center;
@@ -57,82 +143,180 @@ td, th {
   flex-shrink: 0;
 }
 
-/*
-
-
-@include footer {
-
-
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  gap: 20px;
+  padding: 30px;
 }
-footer {
-    display: block;
-    gap: 30px;
-    color: map-get($colors, bg-color-white);
-    background: map-get($colors, color-grey);
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    width: 375px;
-    height: 200px;
-    padding: 22px 25px;
-    gap: 16px;
-
-    &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 139px;
-        height: 27px;
-        padding-right: 0px;
-    }
-
-    &__link {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        width: 190px;
-        height: 19px;
-        gap: 7px;
-
-        .proposer-resto,
-        .devenir-partenaire {
-            display: flex;
-            align-items: center;
-
-            color: map-get($colors, bg-color-white);
-
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            gap: 10px;
-        }
-
-        .mention-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            color: map-get($colors, bg-color-white);
-
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-    }
+.hero h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 68px;
+  color: #010101;
+  /* Section Title */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  flex-shrink: 0;
+}
+.hero p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 46px;
+  flex-shrink: 0;
+  color: #353535;
+  text-align: center;
+  /* Paragraph */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.hero .btn-restau {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 218px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  transition: transform 500ms;
+  /* Shadow/Instructions */
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.hero .btn-restau .btn-restau__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 180.495px;
+  height: 24px;
+  color: #f6f6f6;
+  opacity: 1;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: transform 500ms;
+}
+.hero .btn-restau:hover {
+  transform: scale(1.03);
+  opacity: 0.8;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }
 
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 375px;
+  height: 440px;
+  background: white;
+}
+.fonctionnement--h2 {
+  flex-shrink: 0;
+  align-items: center;
+  width: 275px;
+  height: 31px;
+  color: #010101;
+  /* Section Title */
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.fonctionnement .stage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 335px;
+  height: 80px;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+.fonctionnement .stage__badge1 {
+  align-items: center;
+  display: flex;
+  height: 80px;
+}
+.fonctionnement .stage__badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 322px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #f6f6f6;
+  /* Shadow/Instructions */
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement .stage__badge--ellipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+.fonctionnement .stage__badge--ellipse i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  background: #9356dc;
+  color: #f6f6f6;
+}
+.fonctionnement .entitled {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 211px;
+  height: 15px;
+}
+.fonctionnement .entitled p {
+  color: #010101;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.fonctionnement .entitled .fa-solid.fa-store {
+  width: 18px;
+  height: 17px;
+  flex-shrink: 0;
+  color: #9356dc;
+}
 
-  }
-
-
-*/
 .card {
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: flex;
   width: 349px;
   height: 69px;
@@ -212,258 +396,47 @@ footer {
 }
 .card:hover .select {
   width: 70px;
-  /*transform: translatex(0px);*/
+}
+.card .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.card .checkbox__input {
+  display: none;
+}
+.card .checkbox__input:checked + .checkbox__box .fa-solid {
+  box-shadow: 0 0 0 3px hotpink;
+}
+.card .checkbox__input:checked + .checkbox__box .fa-solid::after {
+  position: absolute;
 }
 
 /*** Photo page d'acceuil des restaurants*****/
-a {
-  text-decoration: None;
-  width: 100%;
-  color: #f6f6f6;
-}
-
-* {
-  font-family: Roboto;
-  scroll-behavior: smooth;
-}
-
-h1 {
-  font-family: Shrikhand;
-}
-
-svg {
-  color: #9356dc;
-}
-
-body {
+.cardMenu__badge {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 60px;
-  margin: auto;
-  width: 100%;
-  max-width: 375px;
-  padding: 0px 0px;
-}
-body .navBar {
-  display: flex;
-  width: 375px;
-  height: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: -0.5px;
-  flex-shrink: 0;
-}
-body .navBar .navBar__logo {
-  display: flex;
-  width: 375px;
-  align-items: center;
-}
-body .navBar i {
-  display: none;
-}
-body .navBar .navBar__map {
-  display: flex;
-  width: 375px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 17px;
-  flex-shrink: 0;
-  background: #eaeaea;
-}
-body .navBar .navBar__map i {
-  display: flex;
-  width: 12px;
-  height: 16px;
-  flex-shrink: 0;
-  fill: #353535;
-}
-body .navBar .navBar__map p {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: #353535;
-}
-body main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-body main .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #f6f6f6;
-  gap: 20px;
-  padding: 30px;
-}
-body main .hero h2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 68px;
-  color: #010101;
-  /* Section Title */
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  flex-shrink: 0;
-}
-body main .hero p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 46px;
-  flex-shrink: 0;
-  color: #353535;
-  text-align: center;
-  /* Paragraph */
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-body main .hero .btn-restau {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 218px;
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  transition: transform 500ms;
-  /* Shadow/Instructions */
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-body main .hero .btn-restau .btn-restau__link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 180.495px;
-  height: 24px;
-  color: #f6f6f6;
-  opacity: 1;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  transition: transform 500ms;
-}
-body main .hero .btn-restau:hover {
-  transform: scale(1.03);
-  opacity: 0.8;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
-}
-body main .fonctionnement {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 375px;
-  height: 440px;
-  background: white;
-}
-body main .fonctionnement--h2 {
-  flex-shrink: 0;
-  align-items: center;
-  width: 275px;
-  height: 31px;
-  color: #010101;
-  /* Section Title */
-  margin-bottom: 25px;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-body main .fonctionnement .stage {
-  display: flex;
+  justify-content: flex-end;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  margin-top: 0;
+}
+.cardMenu__badge p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 335px;
-  height: 80px;
+  top: 50px;
+  right: 15px;
+  width: 80px;
+  height: 29px;
   flex-shrink: 0;
-  margin-bottom: 10px;
+  border-radius: 2px;
+  background: #99e2d0;
+  color: #008768;
 }
-body main .fonctionnement .stage__badge1 {
-  align-items: center;
-  display: flex;
-  height: 80px;
-}
-body main .fonctionnement .stage__badge {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 322px;
-  height: 80px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #f6f6f6;
-  /* Shadow/Instructions */
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-}
-body main .fonctionnement .stage__badge--ellipse {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-}
-body main .fonctionnement .stage__badge--ellipse i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  font-size: 15px;
-  font-weight: 600;
-  font-style: normal;
-  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  color: #f6f6f6;
-}
-body main .fonctionnement .entitled {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 211px;
-  height: 15px;
-}
-body main .fonctionnement .entitled p {
-  color: #010101;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-body main .fonctionnement .entitled .fa-solid.fa-store {
-  width: 18px;
-  height: 17px;
-  flex-shrink: 0;
-  color: #9356dc;
-}
-body main .retaurants {
+
+.retaurants {
   display: flex;
   width: 375px;
   height: 1530px;
@@ -473,7 +446,7 @@ body main .retaurants {
   flex-shrink: 0;
   background: #eaeaea;
 }
-body main .retaurants h2 {
+.retaurants h2 {
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -488,17 +461,23 @@ body main .retaurants h2 {
   font-weight: 700;
   line-height: normal;
 }
-body main .retaurants .cardsMenus {
+.retaurants .cardsMenusC .cardMenu__badge,
+.retaurants .cardsMenusD .cardMenu__badge {
+  opacity: 0;
+}
+.retaurants .cardsMenusA,
+.retaurants .cardsMenusB,
+.retaurants .cardsMenusC,
+.retaurants .cardsMenusD {
   height: auto;
   align-self: center;
   border-radius: 15px;
   cursor: pointer;
-  transition: transform 500ms;
 }
-body main .retaurants .cardsMenus:hover {
-  transform: scale(1.03);
-}
-body main .retaurants .cardsMenus .cardMenu {
+.retaurants .cardsMenusA .cardMenu,
+.retaurants .cardsMenusB .cardMenu,
+.retaurants .cardsMenusC .cardMenu,
+.retaurants .cardsMenusD .cardMenu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -510,8 +489,10 @@ body main .retaurants .cardsMenus .cardMenu {
   /* Shadow/Card */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-body main .retaurants .cardsMenus .cardMenu__img-one {
-  background: url(./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+.retaurants .cardsMenusA .cardMenu__img-one,
+.retaurants .cardsMenusB .cardMenu__img-one,
+.retaurants .cardsMenusC .cardMenu__img-one,
+.retaurants .cardsMenusD .cardMenu__img-one {
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
@@ -521,8 +502,10 @@ body main .retaurants .cardsMenus .cardMenu__img-one {
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
 }
-body main .retaurants .cardsMenus .cardMenu__img-two {
-  background: url(./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+.retaurants .cardsMenusA .cardMenu__img-two,
+.retaurants .cardsMenusB .cardMenu__img-two,
+.retaurants .cardsMenusC .cardMenu__img-two,
+.retaurants .cardsMenusD .cardMenu__img-two {
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
@@ -532,8 +515,10 @@ body main .retaurants .cardsMenus .cardMenu__img-two {
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
 }
-body main .retaurants .cardsMenus .cardMenu__img-three {
-  background: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+.retaurants .cardsMenusA .cardMenu__img-three,
+.retaurants .cardsMenusB .cardMenu__img-three,
+.retaurants .cardsMenusC .cardMenu__img-three,
+.retaurants .cardsMenusD .cardMenu__img-three {
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
@@ -543,8 +528,10 @@ body main .retaurants .cardsMenus .cardMenu__img-three {
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
 }
-body main .retaurants .cardsMenus .cardMenu__img-four {
-  background: url(./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+.retaurants .cardsMenusA .cardMenu__img-four,
+.retaurants .cardsMenusB .cardMenu__img-four,
+.retaurants .cardsMenusC .cardMenu__img-four,
+.retaurants .cardsMenusD .cardMenu__img-four {
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
@@ -554,18 +541,27 @@ body main .retaurants .cardsMenus .cardMenu__img-four {
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
 }
-body main .retaurants .cardsMenus .cardMenu__titleHeart {
+.retaurants .cardsMenusA .cardMenu__titleHeart,
+.retaurants .cardsMenusB .cardMenu__titleHeart,
+.retaurants .cardsMenusC .cardMenu__titleHeart,
+.retaurants .cardsMenusD .cardMenu__titleHeart {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0px;
 }
-body main .retaurants .cardsMenus .cardMenu__title {
+.retaurants .cardsMenusA .cardMenu__title,
+.retaurants .cardsMenusB .cardMenu__title,
+.retaurants .cardsMenusC .cardMenu__title,
+.retaurants .cardsMenusD .cardMenu__title {
   display: flex;
   flex-direction: column;
 }
-body main .retaurants .cardsMenus .cardMenu__title h3 {
+.retaurants .cardsMenusA .cardMenu__title h3,
+.retaurants .cardsMenusB .cardMenu__title h3,
+.retaurants .cardsMenusC .cardMenu__title h3,
+.retaurants .cardsMenusD .cardMenu__title h3 {
   width: 267px;
   height: 20px;
   flex-shrink: 0;
@@ -575,7 +571,10 @@ body main .retaurants .cardsMenus .cardMenu__title h3 {
   font-weight: 700;
   line-height: normal;
 }
-body main .retaurants .cardsMenus .cardMenu__title p {
+.retaurants .cardsMenusA .cardMenu__title p,
+.retaurants .cardsMenusB .cardMenu__title p,
+.retaurants .cardsMenusC .cardMenu__title p,
+.retaurants .cardsMenusD .cardMenu__title p {
   width: 247px;
   height: 24px;
   flex-shrink: 0;
@@ -585,37 +584,278 @@ body main .retaurants .cardsMenus .cardMenu__title p {
   font-weight: 300;
   line-height: normal;
 }
-body main .retaurants .cardsMenus .cardMenu__heart {
+.retaurants .cardsMenusA .cardMenu__heart,
+.retaurants .cardsMenusB .cardMenu__heart,
+.retaurants .cardsMenusC .cardMenu__heart,
+.retaurants .cardsMenusD .cardMenu__heart {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   width: 32px;
   height: 40px;
   transition: 1000ms;
-  opacity: 0;
+  /*
+          .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;              
+    font-size: 18px;
+  }
+  .checkbox__input {
+    display: none;
+  }
+  .checkbox__box {
+    width: 32px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .checkbox__input:checked + .checkbox__box .fas{
+    color: transparent;
+    background-image: map-get($colors, color-grad );
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+  }
+  .checkbox__input:checked + .checkbox__box .fas::after{
+    opacity: 1;
+    position: absolute;
+    color: map-get($colors, color-grad );
+    background-image: map-get($colors, color-grad );
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .checkbox__input:checked + .checkbox__box .far::after{
+    opacity: 0;
+    position: absolute;
+    color: map-get($colors, color-black );
+    background-image: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .checkbox__input:checked + .checkbox__box .far{
+    color: b;
+    //background-image: map-get($colors, color-black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+  }
+
+  */
 }
-body main .retaurants .cardsMenus .cardMenu__heart i, body main .retaurants .cardsMenus .cardMenu__heart svg {
+.retaurants .cardsMenusA .cardMenu__heart i,
+.retaurants .cardsMenusB .cardMenu__heart i,
+.retaurants .cardsMenusC .cardMenu__heart i,
+.retaurants .cardsMenusD .cardMenu__heart i {
+  font-size: 1.2em;
+}
+.retaurants .cardsMenusA .cardMenu__heart .far,
+.retaurants .cardsMenusB .cardMenu__heart .far,
+.retaurants .cardsMenusC .cardMenu__heart .far,
+.retaurants .cardsMenusD .cardMenu__heart .far {
+  color: black;
+  position: absolute;
+}
+.retaurants .cardsMenusA .cardMenu__heart .fas,
+.retaurants .cardsMenusB .cardMenu__heart .fas,
+.retaurants .cardsMenusC .cardMenu__heart .fas,
+.retaurants .cardsMenusD .cardMenu__heart .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+.retaurants .cardsMenusA .cardMenu__heart:hover .far,
+.retaurants .cardsMenusB .cardMenu__heart:hover .far,
+.retaurants .cardsMenusC .cardMenu__heart:hover .far,
+.retaurants .cardsMenusD .cardMenu__heart:hover .far {
+  position: absolute;
+  opacity: 0;
+  background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition-duration: 300ms;
+  transform: scale(1.3);
+}
+.retaurants .cardsMenusA .cardMenu__heart:hover .fas,
+.retaurants .cardsMenusB .cardMenu__heart:hover .fas,
+.retaurants .cardsMenusC .cardMenu__heart:hover .fas,
+.retaurants .cardsMenusD .cardMenu__heart:hover .fas {
+  opacity: 1;
+  background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  color: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  transition-duration: 300ms;
+  transform: scale(1.3);
+}
+
+footer {
+  display: block;
+  gap: 30px;
+  color: white;
+  background: #353535;
+}
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 375px;
+  height: 200px;
+  padding: 22px 25px;
+  gap: 16px;
+}
+footer .footer__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 139px;
+  height: 27px;
+  padding-right: 0px;
+}
+footer .footer a {
+  color: white;
+}
+footer .footer__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 190px;
+  height: 19px;
+  gap: 7px;
+}
+footer .footer__link .proposer-resto,
+footer .footer__link .devenir-partenaire {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  gap: 10px;
+}
+footer .footer__link .mention-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  width: 349px;
+  height: 69px;
+  align-items: center;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0px;
+  cursor: pointer;
+}
+.card__platePrice {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  text-transform: none;
+}
+.card__platePrice .plate h3 {
+  height: 21px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card__platePrice .plate p {
+  height: 19px;
+  flex-shrink: 0;
+  align-self: stretch;
+  overflow: hidden;
+  color: #010101;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.card__platePrice .price {
+  display: flex;
+  align-items: flex-end;
+  width: 24px;
+  height: 40px;
+  justify-content: space-between;
+  color: #010101;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card .select {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 0px;
+  height: 69px;
+  color: white;
+  background: #99e2d0;
+  transition: all 400ms;
+  overflow: hidden;
+}
+.card .select i {
+  color: #99e2d0;
   background: white;
-  color: red;
-  font-size: 23px;
+  padding: 2px;
+  border-radius: 50%;
 }
-body main .retaurants .cardsMenus .cardMenu__heart .fa-solid .fa-heart, body main .retaurants .cardsMenus .cardMenu__heart i {
-  width: 32px;
-  height: 31px;
+.card:hover .select {
+  width: 70px;
 }
-body main .retaurants .cardsMenus .cardMenu__heart:hover {
-  opacity: 1;
+.card .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
-body main .retaurants .cardsMenus .cardMenu__badge {
+.card .checkbox__input {
+  display: none;
+}
+.card .checkbox__input:checked + .checkbox__box .fa-solid {
+  box-shadow: 0 0 0 3px hotpink;
+}
+.card .checkbox__input:checked + .checkbox__box .fa-solid::after {
+  position: absolute;
+}
+
+.cardMenu__badge {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
   align-items: center;
   margin-top: 0;
 }
-body main .retaurants .cardsMenus .cardMenu__badge p {
+.cardMenu__badge p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,57 +869,86 @@ body main .retaurants .cardsMenus .cardMenu__badge p {
   background: #99e2d0;
   color: #008768;
 }
-body footer {
-  display: block;
-  gap: 30px;
-  color: white;
-  background: #353535;
-}
-body footer .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 375px;
-  height: 200px;
-  padding: 22px 25px;
-  gap: 16px;
-}
-body footer .footer__logo {
+
+/*** Photo page d'acceuil des restaurants*****/
+.box {
+  position: fixed;
+  inset: 0;
+  background-color: #eaeaea;
+  font-family: Shrikhand;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 139px;
-  height: 27px;
-  padding-right: 0px;
+  min-height: 100vh;
+  animation: flop 1000ms 3s forwards;
+  transform-origin: center;
+  z-index: 1;
+  opacity: 0.9;
 }
-body footer .footer__link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 190px;
-  height: 19px;
-  gap: 7px;
-}
-body footer .footer__link .proposer-resto,
-body footer .footer__link .devenir-partenaire {
+
+.loader {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: #353535;
   display: flex;
   align-items: center;
-  color: white;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  gap: 10px;
+  justify-content: center;
+  border-radius: 25%;
+  z-index: 1;
+  overflow: hidden;
 }
-body footer .footer__link .mention-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: white;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 260%;
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  animation: rotate 4s linear infinite;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  background: #eaeaea;
+  inset: 5px;
+  border-radius: 25%;
+}
+
+.loader span {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  color: #353535;
+  font-family: Shrikhand;
+  font-weight: 600;
+  animation: flip 1000ms 3s forwards;
+  animation-delay: calc(0.2s * var(--i));
+  z-index: 2;
+}
+
+/*debut et fin du loader*/
+@keyframes flop {
+  to {
+    transform: scale(0);
+  }
+}
+/*keyfram pour animation de bordure*/
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*rotation des lettres span*/
+@keyframes flip {
+  0%, 50% {
+    transform: rotateY(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

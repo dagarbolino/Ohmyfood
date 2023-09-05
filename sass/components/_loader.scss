@@ -1,0 +1,92 @@
+.box {
+      position: fixed;
+    inset: 0;
+    background-color :#eaeaea;
+    font-family: Shrikhand;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: flop 1000ms 3s forwards;
+    transform-origin: center;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+  .loader {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background: #353535;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    z-index: 1; 
+    overflow: hidden;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 260%;
+  background: map-get($colors, color-grad );
+  animation: rotate 4s linear infinite;
+  
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  background: #eaeaea;
+  inset: 5px;
+  border-radius: 25%;
+}
+
+
+  .loader span {
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    color: #353535;
+    font-family: Shrikhand;
+    font-weight: 600;
+    //text-transform: uppercase;
+    animation: flip 1000ms 3s forwards;
+    animation-delay: calc(.2s * var(--i)) ;
+    z-index: 2;
+  }
+
+/*debut et fin du loader*/
+  @keyframes flop {
+    to {
+      transform: scale(0);
+    }
+  }
+
+  /*keyfram pour animation de bordure*/
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+/*rotation des lettres span*/
+  @keyframes flip {
+ 0%,50% {
+      transform: rotateY(360deg) ;
+    }
+ }
+
+
+
+   
+   
+
+
+
+
+  

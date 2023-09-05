@@ -1,30 +1,60 @@
-@mixin navBar {
-  display: flex;
-  width: 375px;
-  height: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: -0.5px;
-  flex-shrink: 0;
-
-  .navBar__logo {
-    display: flex;
-    width: 375px;
-    align-items: center;
-  }
-}
+.navBar {
   .navBar__logo--img {
     display: flex;
-    width: 375px;
+    width:auto;
     height: 63px;
     padding: 14px 89px 13px 89px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
   }
+  .navBar__map {
+    display: flex;
+    width: 375px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    flex-shrink: 0;
+    background: map-get($colors, color-bg-grey);
+    i {
+      display: flex;
+      width: 12px;
+      height: 16px;
+      flex-shrink: 0;
+      fill: map-get($colors, color-grey);
+    }
+    p {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: map-get($colors, color-grey);
+    }
+  }
+}
 
-
-
-
-
+.navBarMenu {
+  position: relative;
+  z-index: 1;
+  &__logo  {
+    display: flex;
+    flex-direction: row;
+    color: map-get($colors, color-black);
+  }
+  i {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo--img {
+    display: flex;
+    width:auto;
+    height: 63px;
+    padding: 14px 89px 13px 89px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}

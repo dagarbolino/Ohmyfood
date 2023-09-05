@@ -9,11 +9,14 @@
   overflow: hidden;
   padding: 0px;
   cursor: pointer;
+   
 }
 
 
 
 .card {
+ margin-top: 5px;
+ margin-bottom: 5px;
 @include card-menu;
 
 
@@ -71,6 +74,8 @@
 
     }
   }
+
+
   .select {
     display: flex;
     align-items: center;
@@ -83,22 +88,40 @@
     transition: all 400ms;
     overflow: hidden;
 
+
     i {
       color: map-get($colors, color-tertiaire);
       background: map-get($colors, bg-color-white);
       padding: 2px;
       border-radius: 50%;
     }
-  }
 
+  }
   &:hover {
     .select {
-      width: 70px;
-
-      /*transform: translatex(0px);*/
-      
+      width: 70px;  
     }
   }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;              
+    font-size: 18px;
+  }
+
+  .checkbox__input {
+    display: none;
+  }
+
+  .checkbox__input:checked + .checkbox__box .fa-solid {
+    box-shadow: 0 0 0 3px hotpink;
+  }
+  .checkbox__input:checked + .checkbox__box .fa-solid::after{
+   
+    position: absolute;
+  }
+
 }
 
 

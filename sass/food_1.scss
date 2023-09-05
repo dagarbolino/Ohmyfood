@@ -1,28 +1,21 @@
 @import "./abstracts/variables";
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/placeholders";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
 
-@import "vendors/bootstrap";
-@import "vendors/jquery-ui";
+@import "./base/reset";
 
-@import "base/reset";
+@import "./layout/header";
+@import "./layout/body";
+@import "./layout/navbar";
+@import "./layout/restaurants";
+@import "./layout/footer";
 
-@import "layout/header";
-@import "layout/body";
-@import "layout/navbar";
-@import "layout/sidebar";
-@import "layout/forms";
-@import "layout/footer";
-
-@import "components/buttons";
-@import "components/carousel";
-@import "components/card";
-@import "components/badge";
-@import "components/cover";
-@import "components/icon";
-@import "components/media";
-@import "components/logo";
+@import "./components/buttons";
+@import "./components/loader";
+@import "./components/card";
+@import "./components/badge";
+@import "./components/media";
 
 a {
   text-decoration: None;
@@ -39,12 +32,12 @@ h1 {
 }
 
 body {
-@include body;
 
-  .navBar {
+/*
+  .navBarMenu {
     position: relative;
     z-index: 1;
-    .navBar__logo  {
+    &__logo  {
       display: flex;
       flex-direction: row;
       color: map-get($colors, color-black);
@@ -55,7 +48,7 @@ body {
       align-items: center;
       justify-content: center;
     }
-    .navBar__logo--img {
+    &__logo--img {
       display: flex;
       width:auto;
       height: 63px;
@@ -66,14 +59,7 @@ body {
     }
   }
 
-  main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    width: 375px;
-    height: 1307px;
-    
+*/
     .imgOne {
       position: absolute;
       display: flex;
@@ -82,7 +68,20 @@ body {
       width: 375px;
       height: 275px;
       //background: url(#{$imgOne}); 
-      @include img-bg-cover-center-noRepeat;
+     
+      img {
+        @include img-bg-cover-center-noRepeat;
+
+      }
+  main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 375px;
+    height: 1307px;
+    
+
     }
     
     .container {
@@ -351,6 +350,10 @@ body {
           line-height: normal;
           gap: 10px;
         }
+        a {
+          color: map-get($colors, bg-color-white);
+        }
+
 
         .mention-contact {
           display: flex;

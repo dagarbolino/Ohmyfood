@@ -1,0 +1,95 @@
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 375px;
+  height: 440px;
+  background: map-get($colors, bg-color-white);
+  &--h2 {
+    flex-shrink: 0;
+    align-items: center;
+    width: 275px;
+    height: 31px;
+    color: map-get($colors, color-black);
+    /* Section Title */
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .stage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 335px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    &__badge1 {
+      align-items: center;
+      display: flex;
+      height: 80px;
+    }
+    &__badge {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 322px;
+      height: 80px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      background: map-get($colors, bg-color);
+      /* Shadow/Instructions */
+      @include shadow-badge;
+      &--ellipse {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+      }
+      &--ellipse i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        font-size: 15px;
+        font-weight: 600;
+        font-style: normal;
+        background: map-get($colors, color-primaire);
+        color: map-get($colors, bg-color);
+      }
+    }
+  }
+  .entitled {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 211px;
+    height: 15px;
+    p {
+      color: map-get($colors, color-black);
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .fa-solid.fa-store {
+      width: 18px;
+      height: 17px;
+      flex-shrink: 0;
+      color: map-get($colors, color-primaire);
+    }
+  }
+}
