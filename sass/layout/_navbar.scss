@@ -36,6 +36,8 @@
 
 .navBarMenu {
   position: relative;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   &__logo  {
     display: flex;
@@ -43,10 +45,15 @@
     color: map-get($colors, color-black);
   }
   i {
+    width: 30px;
     height: 63px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
+    &:hover {
+      font-size: 20px;
+    }
   }
   &__logo--img {
     display: flex;

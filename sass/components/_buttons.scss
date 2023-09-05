@@ -9,12 +9,9 @@
   overflow: hidden;
   padding: 0px;
   cursor: pointer;
-   
 }
 
-
-
-.card {
+.cardDetailMenu {
  margin-top: 5px;
  margin-bottom: 5px;
 @include card-menu;

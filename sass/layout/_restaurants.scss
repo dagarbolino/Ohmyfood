@@ -1,5 +1,4 @@
 @import "../components/buttons";
-@import "../components/media";
 @import "../components/badge";
 
 .retaurants {
@@ -52,22 +51,18 @@
       /* Shadow/Card */
       @include shadow-card;
       &__img-one {
-        //background: url(#{$imgOne});
         @include img-bg-cover-center-noRepeat;
         @include size-img-1-2-3-4;
       }
       &__img-two {
-        //background: url(#{$imgTwo});
         @include img-bg-cover-center-noRepeat;
         @include size-img-1-2-3-4;
       }
       &__img-three {
-        //background: url(#{$imgThree});
         @include img-bg-cover-center-noRepeat;
         @include size-img-1-2-3-4;
       }
       &__img-four {
-        //background: url(#{$imgFour});
         @include img-bg-cover-center-noRepeat;
         @include size-img-1-2-3-4;
       }
@@ -192,12 +187,7 @@
         }
         
         */
-
-
-
-
       }
-
     }
   }
 }
