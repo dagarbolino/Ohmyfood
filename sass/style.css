@@ -203,7 +203,8 @@ td, th {
 
 */
 a {
-  text-decoration: None;
+  -webkit-text-decoration: None;
+          text-decoration: None;
   width: 100%;
   color: #f6f6f6;
 }
@@ -253,7 +254,8 @@ main {
 }
 .mainMenu__imgOne img {
   background-repeat: no-repeat;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: center;
   background-size: cover;
 }
@@ -900,7 +902,8 @@ main {
 .retaurants .cardsMenusC .cardMenu__img-one,
 .retaurants .cardsMenusD .cardMenu__img-one {
   background-repeat: no-repeat;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: center;
   background-size: cover;
   width: 340px;
@@ -913,7 +916,8 @@ main {
 .retaurants .cardsMenusC .cardMenu__img-two,
 .retaurants .cardsMenusD .cardMenu__img-two {
   background-repeat: no-repeat;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: center;
   background-size: cover;
   width: 340px;
@@ -926,7 +930,8 @@ main {
 .retaurants .cardsMenusC .cardMenu__img-three,
 .retaurants .cardsMenusD .cardMenu__img-three {
   background-repeat: no-repeat;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: center;
   background-size: cover;
   width: 340px;
@@ -939,7 +944,8 @@ main {
 .retaurants .cardsMenusC .cardMenu__img-four,
 .retaurants .cardsMenusD .cardMenu__img-four {
   background-repeat: no-repeat;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-position: center;
   background-size: cover;
   width: 340px;
@@ -1413,6 +1419,4 @@ footer .footer__link .mention-contact {
   0%, 50% {
     transform: rotateY(360deg);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
