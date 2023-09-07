@@ -1,5 +1,12 @@
 footer {
-    display: block;
+  position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 0px;
+    margin-top: 0px;
     gap: 30px;
     color: map-get($colors, bg-color-white);
     background: map-get($colors, color-grey);

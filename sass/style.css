@@ -129,18 +129,17 @@ td, th {
 }
 .cardDetailMenu:hover .select {
   width: 70px;
+  height: 100%;
 }
-.cardDetailMenu .checkbox {
+.cardDetailMenu .checkBox {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
 }
-.cardDetailMenu .checkbox__input {
-  display: none;
-}
-.cardDetailMenu .checkbox__input:checked + .checkbox__box .fa-solid::after {
-  position: absolute;
+
+input[type=checkbox]:checked {
+  color: red;
 }
 
 /*
@@ -225,6 +224,7 @@ body {
   padding-bottom: 60px;
   margin: auto;
   width: 100%;
+  height: auto;
   max-width: 375px;
   padding: 0px 0px;
 }
@@ -243,9 +243,11 @@ main {
   position: relative;
   align-items: center;
   width: 375px;
-  height: 1307px;
+  height: auto;
+  max-height: 1600px;
 }
 .mainMenu__imgOne {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -260,11 +262,11 @@ main {
   background-size: cover;
 }
 .mainMenu__content {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 375px;
-  height: 1090px;
+  height: 100%;
   background: #f6f6f6;
   top: 215px;
   border-top-left-radius: 40px;
@@ -291,7 +293,7 @@ main {
   align-items: stretch;
   justify-content: space-around;
   width: 375px;
-  height: auto;
+  height: 100%;
   padding: 10px 10px;
 }
 .mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
@@ -318,86 +320,11 @@ main {
   background: #99e2d0;
   margin-bottom: 10px;
 }
-.mainMenu .menu .cardDetailMenu {
-  display: flex;
-  width: 349px;
-  height: 69px;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5px 0;
-  cursor: pointer;
-  border-radius: 15px;
-  background: white;
-  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
-}
-.mainMenu .menu__check {
-  display: flex;
-  width: 50px;
-  height: 69px;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1000ms ease-out;
-}
-.mainMenu .menu__check:active {
-  background: #99e2d0;
-  width: 50px;
-  height: 69px;
-  flex-shrink: 0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  transform: scaleX(2);
-}
-.mainMenu .menu__title {
-  display: flex;
-  flex-direction: column;
-  text-transform: none;
-}
-.mainMenu .menu__title h3 {
-  height: 21px;
-  flex-shrink: 0;
-  align-self: stretch;
-  overflow: hidden;
-  color: #010101;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.mainMenu .menu__title p {
-  height: 19px;
-  flex-shrink: 0;
-  align-self: stretch;
-  overflow: hidden;
-  color: #010101;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-.mainMenu .menu__price {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 24px;
-  height: 40px;
-}
-.mainMenu .menu__price p {
-  color: #353535;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
+
 .mainMenu__btn-commander {
   width: auto;
   height: 50px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -748,18 +675,17 @@ main {
 }
 .cardDetailMenu:hover .select {
   width: 70px;
+  height: 100%;
 }
-.cardDetailMenu .checkbox {
+.cardDetailMenu .checkBox {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
 }
-.cardDetailMenu .checkbox__input {
-  display: none;
-}
-.cardDetailMenu .checkbox__input:checked + .checkbox__box .fa-solid::after {
-  position: absolute;
+
+input[type=checkbox]:checked {
+  color: red;
 }
 
 /*
@@ -1106,7 +1032,14 @@ main {
 }
 
 footer {
-  display: block;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 0px;
+  margin-top: 0px;
   gap: 30px;
   color: white;
   background: #353535;
@@ -1243,18 +1176,17 @@ footer .footer__link .mention-contact {
 }
 .cardDetailMenu:hover .select {
   width: 70px;
+  height: 100%;
 }
-.cardDetailMenu .checkbox {
+.cardDetailMenu .checkBox {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
 }
-.cardDetailMenu .checkbox__input {
-  display: none;
-}
-.cardDetailMenu .checkbox__input:checked + .checkbox__box .fa-solid::after {
-  position: absolute;
+
+input[type=checkbox]:checked {
+  color: red;
 }
 
 /*

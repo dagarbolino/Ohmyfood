@@ -24,7 +24,9 @@ body {
   padding-bottom: 60px;
   margin: auto;
   width: 100%;
+  height: auto;
   max-width: 375px;
+  
   padding: 0px 0px;
 
 }
@@ -45,10 +47,12 @@ main {
   position: relative;
   align-items: center;
   width: 375px;
-  height: 1307px;
+  height: auto;
+  max-height: 1600px;
+  
 
   &__imgOne {
-    //position: absolute;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -61,11 +65,13 @@ main {
   }
 
   &__content {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 375px;
-    height: 1090px;
+    height: 100%;
+
+
     background: map-get($colors, bg-color);
     top: 215px;
     border-top-left-radius: 40px;
@@ -90,13 +96,14 @@ main {
     }
   }
 
+
     .menu {
       display: flex;
       flex-direction: column;
       align-items: stretch;
       justify-content: space-around;
       width: 375px;
-      height: auto;
+      height: 100%;
       padding: 10px 10px;
 
       &__entrees,
@@ -118,6 +125,7 @@ main {
 
         h2 {
           font-weight: 600;
+          
 
         }
 
@@ -129,117 +137,21 @@ main {
         }
       }
 
-      .cardDetailMenu {
-        display: flex;
-        width: 349px;
-        height: 69px;
-        align-items: center;
-        justify-content: space-between;
-        margin: 5px 0;
-        //padding: 0 15px;
-
-        cursor: pointer;
-
-        //overflow: hidden;
-        border-radius: 15px;
-        background: map-get($colors, bg-color-white);
-        box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10);
-
-      }
-
-
-      &__check {
-        display: flex;
-        width: 50px;
-        height: 69px;
-        align-items: center;
-        justify-content: center;
-        transition: transform 1000ms ease-out;
-
-      }
-
-      &__check:active {
-
-        background: map-get($colors, color-tertiaire);
-        width: 50px;
-        height: 69px;
-        flex-shrink: 0;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transform: scaleX(2);
-      }
-
-
-
-
-
-
-      &__title {
-        display: flex;
-        flex-direction: column;
-        text-transform: none;
-
-        h3 {
-          height: 21px;
-          flex-shrink: 0;
-          align-self: stretch;
-          overflow: hidden;
-          color: map-get($colors, color-black);
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-        }
-
-        p {
-          height: 19px;
-          flex-shrink: 0;
-          align-self: stretch;
-          overflow: hidden;
-          color: map-get($colors, color-black);
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-family: Roboto;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-        }
-      }
-
-      &__price {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 24px;
-        height: 40px;
-
-        p {
-          color: map-get($colors, color-grey);
-          text-align: center;
-          font-family: Roboto;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-        }
-      }
-    }
 
 
     
 
+}}
 
 
-  &__btn-commander {
+      .mainMenu__btn-commander{
     width: auto;
     height: 50px;
-
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
 
     button {
@@ -274,7 +186,6 @@ main {
       @include shadow-hover;
     }
   }
-}
 
 
 
