@@ -51,5 +51,18 @@
   border-radius: 15px 15px 0px 0px;
 }
 
+/***Card detail menus ***/
+@mixin card-menu {
+  display: flex;
+  width: 349px;
+  height: 69px;
+  align-items: center;
+  border-radius: 15px;
+  background: map-get($colors, bg-color-white);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0px;
+  cursor: pointer;
+}
 
 

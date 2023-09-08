@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: map-get($colors, color-black);
     &:hover {
       font-size: 20px;
     }

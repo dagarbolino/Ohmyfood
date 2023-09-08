@@ -38,47 +38,4 @@
     line-height: normal;
   }
 
-  .btn-restau {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 218px;
-    height: 50px;
-    border: none;
-    
-    border-radius: 25px;
-    background: map-get($colors, color-grad);
-    transition: transform 500ms;
-
-    /* Shadow/Instructions */
-    @include shadow;
-
-    .btn-restau__link {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 180.495px;
-      height: 24px;
-      
-
-      color: map-get($colors, bg-color);
-      opacity: 1;
-      text-align: center;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      transition: transform 500ms;
-      
-    }
-  }
-  .btn-restau:hover {
-    transform: scale(1.03);
-    opacity: 0.8;
-
-    @include shadow-hover;
-  }
 }
