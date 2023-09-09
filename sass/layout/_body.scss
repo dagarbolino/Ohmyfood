@@ -10,4 +10,12 @@ body {
   
   padding: 0px 0px;
 
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
 }
