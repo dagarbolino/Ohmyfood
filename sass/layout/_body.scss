@@ -1,21 +1,25 @@
+@import "../abstracts/breakpoints";
+
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 60px;
-  margin: auto;
-  width: 100%;
-  height: auto;
-  max-width: 375px;
-  
+  margin: 0;
+  width: 375px;
+  height: 100vh;
+ 
   padding: 0px 0px;
 
-  @include desktop {
+
+  @include sm {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
+    margin: 10px;
+    //width: 650px;
 
+  }
 }
+
+

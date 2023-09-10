@@ -65,10 +65,9 @@
   cursor: pointer;
 }
 
-/** Media query  **/
-@mixin desktop {
-  @media  screnn and(max-width: 1440px) {
-    @content;
-  }
-}
+
+
+
+
+
 
