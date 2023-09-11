@@ -72,3 +72,44 @@ footer {
       }
     }
   }
+
+
+footer {
+  @include xl {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 25px 30px 25px;
+    .footer {
+      width: 665px;
+      display: inline-flex;
+      flex-direction: row-reverse;
+    }
+}
+
+
+.footer__link {
+
+    @include xl {
+      width: 100%;
+      height: auto;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+    }
+    .devenir-partenaire,
+    .proposer-resto {
+      width: auto;
+      display: inline;
+      flex-direction: row;
+    }
+    .mention-contact  {
+      display: flex;
+      flex-direction: column;
+
+
+    }
+}  
+}

@@ -20,6 +20,8 @@
     font-weight: 700;
     line-height: normal;
   }
+
+
   .stage {
     display: flex;
     flex-direction: row;
@@ -30,6 +32,8 @@
     height: 80px;
     flex-shrink: 0;
     margin-bottom: 10px;
+
+
     &__badge1 {
       align-items: center;
       display: flex;
@@ -92,4 +96,35 @@
       color: map-get($colors, color-primaire);
     }
   }
+}
+
+
+.fonctionnement {
+  @include xl {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+  &--h2 {
+    width: auto;
+  }
+}
+
+
+
+.stages {
+  @include xl {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    
+  }
+
+
 }

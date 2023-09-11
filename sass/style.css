@@ -71,15 +71,20 @@ body {
   padding-bottom: 60px;
   margin: 0 auto;
   width: 375px;
-  height: 100vh;
+  height: 100%;
   padding: 0px 0px;
 }
 
-/****  font family   ****/
-/****  for image and photo    ****/
-/****    Shadow    ****/
-/****    Restaurants cards    ****/
-/***Card detail menus ***/
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .navBar .navBar__logo--img {
   display: flex;
   width: auto;
@@ -88,6 +93,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+@media (min-width: 745px) {
+  .navBar .navBar__logo--img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .navBar .navBar__map {
   display: flex;
@@ -112,6 +126,15 @@ body {
   font-weight: 500;
   line-height: normal;
   color: #353535;
+}
+@media (min-width: 745px) {
+  .navBar .navBar__map {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .navBarMenu {
@@ -146,6 +169,16 @@ body {
   flex-shrink: 0;
 }
 
+@media (min-width: 745px) {
+  .navBar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -154,6 +187,15 @@ body {
   background: #f6f6f6;
   gap: 20px;
   padding: 30px;
+}
+@media (min-width: 1440px) {
+  .hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .hero h2 {
   display: flex;
@@ -279,6 +321,29 @@ body {
   height: 17px;
   flex-shrink: 0;
   color: #9356dc;
+}
+
+@media (min-width: 1440px) {
+  .fonctionnement {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.fonctionnement--h2 {
+  width: auto;
+}
+
+@media (min-width: 1440px) {
+  .stages {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 /* main page index*/
@@ -744,6 +809,41 @@ footer .footer__link .mention-contact {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+@media (min-width: 1440px) {
+  footer {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 25px 30px 25px;
+  }
+  footer .footer {
+    width: 665px;
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 1440px) {
+  footer .footer__link {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+}
+footer .footer__link .devenir-partenaire,
+footer .footer__link .proposer-resto {
+  width: auto;
+  display: inline;
+  flex-direction: row;
+}
+footer .footer__link .mention-contact {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Bouton commander pour les pages menus*/
