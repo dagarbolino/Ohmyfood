@@ -100,7 +100,7 @@
 
 
 .fonctionnement {
-  @include lg {
+  @include md {
     display: flex;
     padding: 50px 180px;
     flex-direction: column;

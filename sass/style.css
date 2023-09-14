@@ -337,7 +337,7 @@ body {
   color: #9356dc;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 745px) {
   .fonctionnement {
     display: flex;
     padding: 50px 180px;
@@ -465,7 +465,7 @@ body {
   }
   .mainMenu__content {
     width: 1055px;
-    height: 1221px;
+    height: auto;
     flex-shrink: 0;
     top: 430px;
     align-items: center;
@@ -497,10 +497,9 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .mainMenu .menu__entrees h2, .mainMenu .menu__entrees .line, .mainMenu .menu__plats h2, .mainMenu .menu__plats .line, .mainMenu .menu__desserts h2, .mainMenu .menu__desserts .line {
-    width: 634px;
+  .mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
+    width: 40px;
     display: flex;
-    align-items: flex-start;
   }
 }
 
@@ -847,7 +846,7 @@ footer {
   line-height: normal;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 745px) {
   footer {
     display: flex;
     flex-direction: column;
