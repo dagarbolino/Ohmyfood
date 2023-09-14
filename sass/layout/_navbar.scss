@@ -1,55 +1,66 @@
-
 .navBar {
-  .navBar__logo--img {
+  .navBar__logo {
     display: flex;
-    width:auto;
+    width: auto;
     height: 63px;
     padding: 14px 89px 13px 89px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    & {
-      @include md {
+
+    @include lg {
+      display: flex;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+
+      .navBar__logo {
         width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+        &--img {
+          width: 200px;
+          height: 34.202px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
+}
 
-  .navBar__map {
+.navBar__map {
+  display: flex;
+  width: 375px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  flex-shrink: 0;
+  background: map-get($colors, color-bg-grey);
+  i {
     display: flex;
-    width: 375px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    gap: 17px;
+    width: 12px;
+    height: 16px;
     flex-shrink: 0;
-    background: map-get($colors, color-bg-grey);
-    i {
+    fill: map-get($colors, color-grey);
+  }
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: map-get($colors, color-grey);
+  }
+  & {
+    @include lg {
+      width: 100%;
+      height: 60px;
       display: flex;
-      width: 12px;
-      height: 16px;
-      flex-shrink: 0;
-      fill: map-get($colors, color-grey);
-    }
-    p {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      color: map-get($colors, color-grey);
-    }
-    & {
-      @include md {
-        width: 100%;
-        height: 60px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
+      flex-direction: row;
+      align-items: center;
     }
   }
 }
@@ -59,7 +70,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-  &__logo  {
+  &__logo {
     display: flex;
     flex-direction: row;
     color: map-get($colors, color-black);
@@ -77,21 +88,24 @@
   }
   &__logo--img {
     display: flex;
-    width:auto;
+    width: auto;
     height: 63px;
     padding: 14px 89px 13px 89px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
   }
-}
-.navBar {
-  @include md {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  @include lg {
+    .navBarMenu__logo {
+      display: flex;
+      width: 1440px;
+      height: 96.339px;
+      padding: 30px 621px 32.137px 17px;
+      align-items: flex-end;
+      gap: 572px;
+      flex-shrink: 0;
+    }
   }
 }
 

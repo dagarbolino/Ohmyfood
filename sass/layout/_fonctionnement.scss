@@ -100,31 +100,33 @@
 
 
 .fonctionnement {
-  @include xl {
-    width: auto;
-    height: auto;
+  @include lg {
     display: flex;
+    padding: 50px 180px;
     flex-direction: column;
-   
-    
-  }
-  &--h2 {
+    align-items: flex-start;
+    gap: 25px;
     width: auto;
-  }
-}
-
-
-
-.stages {
-  @include xl {
-    width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    
+    align-self: stretch;
+
+    &--h2 {
+      margin-bottom: 0;
+    }
+
+    .stage {
+      margin-bottom: 0;
+    }
+    .stages {
+      width: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+    }
   }
 
-
 }
+
+
+

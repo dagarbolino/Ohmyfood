@@ -3,7 +3,7 @@
   .cardDetailMenu {
    margin-top: 5px;
    margin-bottom: 5px;
-  @include card-menu;
+   @include card-menu; // voir dans _mixins.scss
   
   
     &__platePrice {

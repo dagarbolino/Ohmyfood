@@ -1,14 +1,3 @@
-/* main page index*/
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-
-}
-
-
 /* main page des menus*/
 .mainMenu {
   display: flex;
@@ -99,5 +88,75 @@ main {
         margin-bottom: 10px;
       }
     }
+  }
+}
+
+.mainMenu {
+  @include lg {
+    width: 1440px;
+    height: 383px;
+    flex-shrink: 0;
+
+    &__imgOne {
+      width: 1440px;
+      height: 956.142px;
+
+      img {
+        width: 1440px;
+        height: 483px;
+        flex-shrink: 0;
+      }
+    }
+
+    &__content {
+      width: 1055px;
+      height: auto;
+      flex-shrink: 0;
+      top: 430px; // A voir pour le responssive
+      align-items: center;
+      h1 {
+        color: var(--Black, #101010);
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+      .menu {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        .cardDetailMenu {
+          display: flex;
+          width: 634px;
+          height: 69px;
+          align-items: center;
+        }
+
+        &__entrees,
+        &__plats,
+        &__desserts {
+          width: 634px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+          .line {
+            width: 40px;
+            display: flex;
+
+          }
+
+
+
+          }
+        }
+      }
+
   }
 }

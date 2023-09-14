@@ -1,115 +1,136 @@
 footer {
   position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 0px;
+  margin-top: 0px;
+  gap: 30px;
+  color: map-get($colors, bg-color-white);
+  background: map-get($colors, color-grey);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: auto;
+  height: 200px;
+  padding: 22px 25px;
+  gap: 16px;
+
+  &__logo--img {
     display: flex;
-    width: 100%;
-    height: auto;
+    justify-content: center;
+    align-items: center;
+
+    width: 139px;
+    height: 27px;
+    padding-right: 0px;
+  }
+
+  a {
+    color: map-get($colors, bg-color-white);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: auto;
+    height: 19px;
+    gap: 7px;
+
+    .proposer-resto,
+    .devenir-partenaire {
+      display: flex;
+      align-items: center;
+
+      color: map-get($colors, bg-color-white);
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      gap: 10px;
+    }
+
+    .mention,
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      color: map-get($colors, bg-color-white);
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+
+footer {
+  @include lg {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-top: 0px;
-    margin-top: 0px;
-    gap: 30px;
-    color: map-get($colors, bg-color-white);
-    background: map-get($colors, color-grey);
+
+    height: 114px;
+    padding: 30px 25px 0 25px;
+    gap: 16px;
+    flex-shrink: 0;
 
     .footer {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row-reverse;
+      align-items: center;
+      height: 100%;
+      width: auto;
 
-      width: 375px;
-      height: 200px;
-      padding: 22px 25px;
-      gap: 16px;
-
-      &__logo {
+      &__logo--img {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        width: 139px;
+        width: 135px;
+        min-width: 135px;
+        //height: auto;
         height: 27px;
         padding-right: 0px;
       }
-        a {
-          color: map-get($colors, bg-color-white);
-        }
 
-      &__link {
+      .footer__link {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+        
+        width: auto;
+        
+      }
 
+      .proposer-resto,
+      .devenir-partenaire {
         width: 190px;
-        height: 19px;
-        gap: 7px;
+        height: 20px;
+      }
 
-        .proposer-resto,
-        .devenir-partenaire {
-          display: flex;
-          align-items: center;
+      .mention,
+      .contact {
+        width: 130px;
+        height: 20px;
+      }
 
-          color: map-get($colors, bg-color-white);
-
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-          gap: 10px;
-        }
-
-        .mention-contact {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-
-          color: map-get($colors, bg-color-white);
-
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: normal;
-        }
+      a {
+        width: auto;
+        
       }
     }
   }
-
-
-footer {
-  @include xl {
-    width: 1440px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 30px 25px 30px 25px;
-    .footer {
-      width: 665px;
-      display: inline-flex;
-      flex-direction: row-reverse;
-    }
-}
-
-
-.footer__link {
-
-    @include xl {
-      width: 100%;
-      height: auto;
-      display: inline-flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 40px;
-    }
-    .devenir-partenaire,
-    .proposer-resto {
-      width: auto;
-      display: inline;
-      flex-direction: row;
-    }
-    .mention-contact  {
-      display: flex;
-      flex-direction: column;
-
-
-    }
-}  
 }
