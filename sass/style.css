@@ -450,14 +450,35 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.mainMenu__content .titleMenu i {
+.mainMenu__content .titleMenu__heart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 32px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.mainMenu__content .titleMenu__heart img {
+  overflow: visible;
+  width: 22px;
+}
+.mainMenu__content .titleMenu__heart .heartBackground {
+  position: absolute;
+  z-index: -1;
+}
+.mainMenu__content .titleMenu__heart .heartMain:hover + .heartBackground {
+  z-index: 1;
+  stroke-width: 20;
+}
+.mainMenu__content .titleMenu__heart .titleMenu i {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
   height: 30px;
 }
-.mainMenu .menu {
+.mainMenu__content .menu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -466,7 +487,7 @@ body {
   height: 100%;
   padding: 10px 10px;
 }
-.mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
+.mainMenu__content .menu__entrees, .mainMenu__content .menu__plats, .mainMenu__content .menu__desserts {
   display: flex;
   width: 275px;
   height: auto;
@@ -481,32 +502,31 @@ body {
   text-transform: uppercase;
   margin-bottom: 25px;
 }
-.mainMenu .menu__entrees h2, .mainMenu .menu__plats h2, .mainMenu .menu__desserts h2 {
+.mainMenu__content .menu__entrees h2, .mainMenu__content .menu__plats h2, .mainMenu__content .menu__desserts h2 {
   font-weight: 600;
 }
-.mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
+.mainMenu__content .menu__entrees .line, .mainMenu__content .menu__plats .line, .mainMenu__content .menu__desserts .line {
   width: 40px;
   height: 3px;
   background: #99e2d0;
   margin-bottom: 10px;
 }
-
 @media (min-width: 1040px) {
-  .mainMenu {
+  .mainMenu .mainMenu {
     width: 100%;
     height: 383px;
     flex-shrink: 0;
   }
-  .mainMenu__imgOne {
+  .mainMenu .mainMenu__imgOne {
     width: 100%;
     height: 956.142px;
   }
-  .mainMenu__imgOne img {
+  .mainMenu .mainMenu__imgOne img {
     width: 100%;
     height: 483px;
     flex-shrink: 0;
   }
-  .mainMenu__content {
+  .mainMenu .mainMenu__content {
     width: 1055px;
     height: auto;
     flex-shrink: 0;
@@ -515,7 +535,7 @@ body {
     margin-left: 50px;
     margin-right: 50px;
   }
-  .mainMenu__content h1 {
+  .mainMenu .mainMenu__content h1 {
     color: var(--Black, #101010);
     font-family: Shrikhand;
     font-size: 28px;
@@ -523,26 +543,26 @@ body {
     font-weight: 400;
     line-height: normal;
   }
-  .mainMenu .menu {
+  .mainMenu .mainMenu .menu {
     width: 100%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
   }
-  .mainMenu .menu .cardDetailMenu {
+  .mainMenu .mainMenu .menu .cardDetailMenu {
     display: flex;
     width: 100%;
     max-width: 634px;
     height: 69px;
     align-items: center;
   }
-  .mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
+  .mainMenu .mainMenu .menu__entrees, .mainMenu .mainMenu .menu__plats, .mainMenu .mainMenu .menu__desserts {
     width: 634px;
     display: flex;
     justify-content: center;
   }
-  .mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
+  .mainMenu .mainMenu .menu__entrees .line, .mainMenu .mainMenu .menu__plats .line, .mainMenu .mainMenu .menu__desserts .line {
     width: 40px;
     display: flex;
   }
@@ -714,7 +734,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 10px;
 }
 .restaurants .cardsMenus .cardMenu__title {
   display: flex;
@@ -746,48 +766,47 @@ body {
   justify-content: flex-end;
   width: 32px;
   height: 40px;
-  transition: 1000ms;
-  /*
-
-          .far {
-            color: black;
-            position: absolute;
-          }
-          .fas {
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 1;
-          }
-          &:hover .far {
-            position: absolute;
-            opacity: 0;
-            background-image: map-get($colors, color-grad);
-            background-clip: text;
-            -webkit-background-clip: text;
-            //transition-duration: 300ms;
-            //transform: scale(1.3);
-          }
-          &:hover .fas,
-          &:active .fas {
-            opacity: 1;
-            background-image: map-get($colors, color-grad);
-            background-clip: text;
-            color: map-get($colors, color-grad);
-            -webkit-background-clip: text;
-            //transition-duration: 300ms;
-            //transform: scale(1.3);
-          }
-
-
-  */
+  position: relative;
+  cursor: pointer;
+}
+.restaurants .cardsMenus .cardMenu__heart img {
+  overflow: visible;
+  width: 22px;
+}
+.restaurants .cardsMenus .cardMenu__heart .heartBackground {
+  position: absolute;
+  z-index: -1;
+}
+.restaurants .cardsMenus .cardMenu__heart .heartMain:hover + .heartBackground {
+  z-index: 1;
+  stroke-width: 20;
 }
 .restaurants .cardsMenus .cardMenu__heart i {
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
-.restaurants .cardsMenus .cardMenu__heart .fas:hover {
+.restaurants .cardsMenus .cardMenu__heart .far {
+  color: black;
+  position: absolute;
+}
+.restaurants .cardsMenus .cardMenu__heart .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+.restaurants .cardsMenus .cardMenu__heart:hover .far {
+  position: absolute;
+  opacity: 0;
   background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
+  -webkit-background-clip: text;
+  transition-duration: 150ms;
+}
+.restaurants .cardsMenus .cardMenu__heart:hover .fas {
+  opacity: 1;
+  background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  color: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
 }
 
@@ -1043,7 +1062,14 @@ footer {
   padding: 0 10px;
   text-transform: none;
 }
+.cardDetailMenu__platePrice .plate {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .cardDetailMenu__platePrice .plate h3 {
+  width: 100%;
   height: 21px;
   flex-shrink: 0;
   align-self: stretch;
@@ -1057,6 +1083,7 @@ footer {
   line-height: normal;
 }
 .cardDetailMenu__platePrice .plate p {
+  width: 100%;
   height: 19px;
   flex-shrink: 0;
   align-self: stretch;
@@ -1071,6 +1098,7 @@ footer {
   line-height: normal;
 }
 .cardDetailMenu__platePrice .price {
+  width: 100%;
   display: flex;
   align-items: flex-end;
   width: 24px;
@@ -1083,6 +1111,8 @@ footer {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transform: none;
+  transition: width 300ms ease-in-out;
 }
 .cardDetailMenu .select {
   display: flex;
@@ -1105,15 +1135,82 @@ footer {
   width: 70px;
   height: 100%;
 }
-.cardDetailMenu .checkBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
 
-input[type=checkbox]:checked {
-  color: red;
+@media (min-width: 1040px) {
+  .cardDetailMenu {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    width: 349px;
+    height: 69px;
+    align-items: center;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 0px;
+    cursor: pointer;
+  }
+  .cardDetailMenu__platePrice {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    text-transform: none;
+  }
+  .cardDetailMenu__platePrice .plate {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .cardDetailMenu__platePrice .plate h3 {
+    width: 100%;
+    height: 21px;
+    flex-shrink: 0;
+    align-self: stretch;
+    overflow: hidden;
+    color: #010101;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .cardDetailMenu__platePrice .plate p {
+    width: 100%;
+    height: 19px;
+    flex-shrink: 0;
+    align-self: stretch;
+    overflow: hidden;
+    color: #010101;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cardDetailMenu__platePrice .price {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    width: 24px;
+    height: 40px;
+    justify-content: space-between;
+    color: #010101;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transform: none;
+    transition: width 300ms ease-in-out;
+  }
 }
 
 /*****  badge nouveau  ********/
