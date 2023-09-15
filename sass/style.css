@@ -211,7 +211,6 @@ body {
     height: 96.339px;
     padding: 30px 621px 32.137px 17px;
     align-items: flex-end;
-    gap: 572px;
     flex-shrink: 0;
   }
 }
@@ -491,16 +490,16 @@ body {
 
 @media (min-width: 1040px) {
   .mainMenu {
-    width: 1440px;
+    width: 100%;
     height: 383px;
     flex-shrink: 0;
   }
   .mainMenu__imgOne {
-    width: 1440px;
+    width: 100%;
     height: 956.142px;
   }
   .mainMenu__imgOne img {
-    width: 1440px;
+    width: 100%;
     height: 483px;
     flex-shrink: 0;
   }
@@ -510,6 +509,8 @@ body {
     flex-shrink: 0;
     top: 430px;
     align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   .mainMenu__content h1 {
     color: var(--Black, #101010);
@@ -528,7 +529,8 @@ body {
   }
   .mainMenu .menu .cardDetailMenu {
     display: flex;
-    width: 634px;
+    width: 100%;
+    max-width: 634px;
     height: 69px;
     align-items: center;
   }

@@ -105,16 +105,17 @@
 
 .mainMenu {
   @include lg {
-    width: 1440px;
+    width: 100%;
     height: 383px;
     flex-shrink: 0;
 
+
     &__imgOne {
-      width: 1440px;
+      width: 100%;
       height: 956.142px;
 
       img {
-        width: 1440px;
+        width: 100%;
         height: 483px;
         flex-shrink: 0;
       }
@@ -126,6 +127,9 @@
       flex-shrink: 0;
       top: 430px; // A voir pour le responssive
       align-items: center;
+      margin-left: 50px;
+      margin-right: 50px;
+      
       h1 {
         color: var(--Black, #101010);
         font-family: Shrikhand;
@@ -141,12 +145,15 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
+        
 
         .cardDetailMenu {
           display: flex;
-          width: 634px;
+          width: 100%;
+          max-width: 634px;
           height: 69px;
           align-items: center;
+          
         }
 
         &__entrees,
