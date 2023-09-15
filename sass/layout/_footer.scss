@@ -76,7 +76,7 @@ footer {
 }
 
 footer {
-  @include md {
+  @include lg {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

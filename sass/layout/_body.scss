@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  @include md {
+  @include lg {
     display: flex;
     flex-direction: column;
     justify-content: center;

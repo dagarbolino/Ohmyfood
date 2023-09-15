@@ -75,7 +75,7 @@ body {
   padding: 0px 0px;
 }
 
-@media (min-width: 745px) {
+@media (min-width: 1040px) {
   body {
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .navBar .navBar__logo {
     display: flex;
     width: 100%;
@@ -122,9 +122,9 @@ body {
   height: 50px;
   justify-content: center;
   align-items: center;
-  gap: 17px;
   flex-shrink: 0;
   background: #eaeaea;
+  /*permet de retirer le border de l'input au click*/
 }
 .navBar__map i {
   display: flex;
@@ -133,14 +133,37 @@ body {
   flex-shrink: 0;
   fill: #353535;
 }
-.navBar__map p {
+.navBar__map .search {
+  display: flex;
+  align-items: center;
+  background: #eaeaea;
+  border: 0px solid white;
+}
+.navBar__map input.search {
+  padding: 0 20px;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
+  line-height: normal;
+}
+.navBar__map input::-moz-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
   line-height: normal;
   color: #353535;
 }
-@media (min-width: 1440px) {
+.navBar__map input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #353535;
+}
+.navBar__map input:focus {
+  outline: none;
+}
+@media (min-width: 1040px) {
   .navBar__map {
     width: 100%;
     height: 60px;
@@ -181,7 +204,7 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .navBarMenu .navBarMenu__logo {
     display: flex;
     width: 1440px;
@@ -202,7 +225,7 @@ body {
   gap: 20px;
   padding: 30px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .hero {
     width: 100%;
     height: auto;
@@ -337,12 +360,11 @@ body {
   color: #9356dc;
 }
 
-@media (min-width: 745px) {
+@media (min-width: 1040px) {
   .fonctionnement {
     display: flex;
     padding: 50px 180px;
     flex-direction: column;
-    align-items: flex-start;
     gap: 25px;
     width: auto;
     height: auto;
@@ -399,20 +421,32 @@ body {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
-.mainMenu__content h1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.mainMenu__content .titleMenu {
+  flex-shrink: 0;
+  margin: 25px 0px 30px 20px;
   width: 341px;
   height: 27px;
-  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mainMenu__content .titleMenu h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   color: #010101;
   font-family: Shrikhand;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 25px 0px 30px 20px;
+}
+.mainMenu__content .titleMenu i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  height: 30px;
 }
 .mainMenu .menu {
   display: flex;
@@ -448,7 +482,7 @@ body {
   margin-bottom: 10px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .mainMenu {
     width: 1440px;
     height: 383px;
@@ -495,7 +529,6 @@ body {
     width: 634px;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
   .mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
     width: 40px;
@@ -534,7 +567,6 @@ body {
 }
 .mainMenu__btn-commander button:hover {
   cursor: pointer;
-  transform: scale(1.15);
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }
@@ -573,7 +605,6 @@ body {
 }
 
 .btn-restau:hover {
-  transform: scale(1.03);
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }
@@ -704,41 +735,53 @@ body {
   width: 32px;
   height: 40px;
   transition: 1000ms;
+  /*
+
+          .far {
+            color: black;
+            position: absolute;
+          }
+          .fas {
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 1;
+          }
+          &:hover .far {
+            position: absolute;
+            opacity: 0;
+            background-image: map-get($colors, color-grad);
+            background-clip: text;
+            -webkit-background-clip: text;
+            //transition-duration: 300ms;
+            //transform: scale(1.3);
+          }
+          &:hover .fas,
+          &:active .fas {
+            opacity: 1;
+            background-image: map-get($colors, color-grad);
+            background-clip: text;
+            color: map-get($colors, color-grad);
+            -webkit-background-clip: text;
+            //transition-duration: 300ms;
+            //transform: scale(1.3);
+          }
+
+
+  */
 }
 .restaurants .cardsMenus .cardMenu__heart i {
   font-size: 1.2em;
 }
-.restaurants .cardsMenus .cardMenu__heart .far {
-  color: black;
-  position: absolute;
-}
-.restaurants .cardsMenus .cardMenu__heart .fas {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-}
-.restaurants .cardsMenus .cardMenu__heart:hover .far {
-  position: absolute;
-  opacity: 0;
-  background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition-duration: 300ms;
-  transform: scale(1.3);
-}
-.restaurants .cardsMenus .cardMenu__heart:hover .fas {
-  opacity: 1;
+.restaurants .cardsMenus .cardMenu__heart .fas:hover {
   background-image: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
   color: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
-  transition-duration: 300ms;
-  transform: scale(1.3);
 }
 
 /*     news frame and cardMenu */
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
   .restaurants {
     width: 100%;
     height: auto;
@@ -846,7 +889,7 @@ footer {
   line-height: normal;
 }
 
-@media (min-width: 745px) {
+@media (min-width: 1040px) {
   footer {
     display: flex;
     flex-direction: column;
@@ -925,7 +968,6 @@ footer {
 }
 .mainMenu__btn-commander button:hover {
   cursor: pointer;
-  transform: scale(1.15);
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }
@@ -964,7 +1006,6 @@ footer {
 }
 
 .btn-restau:hover {
-  transform: scale(1.03);
   opacity: 0.8;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45);
 }

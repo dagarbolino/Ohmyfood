@@ -35,7 +35,7 @@
 
   button:hover {
     cursor: pointer;
-    transform: scale(1.15);
+    //transform: scale(1.15);
     opacity: 0.8;
 
     @include shadow-hover;
@@ -82,7 +82,7 @@
   }
 }
 .btn-restau:hover {
-  transform: scale(1.03);
+  //transform: scale(1.03);
   opacity: 0.8;
 
   @include shadow-hover;

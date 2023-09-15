@@ -37,7 +37,8 @@
   height: 50px;
   justify-content: center;
   align-items: center;
-  gap: 17px;
+  
+  //gap: 5px;
   flex-shrink: 0;
   background: map-get($colors, color-bg-grey);
   i {
@@ -47,13 +48,37 @@
     flex-shrink: 0;
     fill: map-get($colors, color-grey);
   }
-  p {
+
+
+  .search {
+    display: flex;
+    align-items: center;
+    background: map-get($colors, color-bg-grey);
+    border: 0px solid white;
+  }
+  
+  input.search {
+    padding: 0 20px;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  input::placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
     line-height: normal;
     color: map-get($colors, color-grey);
   }
+  
+  /*permet de retirer le border de l'input au click*/
+  input:focus {
+    outline: none;
+  }
+
+
   & {
     @include lg {
       width: 100%;

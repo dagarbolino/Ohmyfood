@@ -33,21 +33,33 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 
-    h1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .titleMenu {
+      flex-shrink: 0
+      margin: 25px 0px 30px 20px;
       width: 341px;
       height: 27px;
-
-      flex-shrink: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .titleMenu h1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       color: map-get($colors, color-black);
       font-family: Shrikhand;
       font-size: 28px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      margin: 25px 0px 30px 20px;
+    }
+
+    .titleMenu i {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: end;
+      height: 30px;
     }
   }
 
@@ -143,7 +155,7 @@
           width: 634px;
           display: flex;
           justify-content: center;
-          align-items: center;
+          
 
 
           .line {
