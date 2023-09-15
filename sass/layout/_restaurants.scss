@@ -109,7 +109,6 @@
         .fas:hover {
           background-image: map-get($colors, color-grad);
           background-clip: text;
-          color: map-get($colors, color-grad);
           -webkit-background-clip: text;
         }
 

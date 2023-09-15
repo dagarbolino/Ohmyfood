@@ -27,6 +27,10 @@
           align-items: center;
         }
       }
+
+      .navBar__map {
+        margin-left: 40px;
+      }
     }
   }
 }
@@ -121,7 +125,10 @@
     flex-shrink: 0;
   }
 
+
   @include lg {
+
+
     .navBarMenu__logo {
       display: flex;
       width: 1440px;
@@ -129,8 +136,10 @@
       padding: 30px 621px 32.137px 17px;
       align-items: flex-end;
       //gap: 572px;
+      
       flex-shrink: 0;
     }
+
   }
 }
 
