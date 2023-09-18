@@ -1,4 +1,5 @@
 /* main page des menus*/
+
 .mainMenu {
   display: flex;
   flex-direction: column;
@@ -27,7 +28,6 @@
     flex-direction: column;
     width: 375px;
     height: 100%;
-
     background: map-get($colors, bg-color);
     top: 215px;
     border-top-left-radius: 40px;
@@ -37,11 +37,9 @@
       flex-shrink: 0;
       margin: 25px 0px 30px 20px;
       width: 341px;
-      height: 27px;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-
     }
     .titleMenu h1 {
       display: flex;
@@ -55,17 +53,16 @@
       line-height: normal;
     }
 
-    
     .titleMenu__heart {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
+      align-items: center;
       width: 32px;
       height: 40px;
       position: relative;
       cursor: pointer;
-      //fill: transparent;
-      
+
       img {
         overflow: visible;
         width: 22px;
@@ -75,83 +72,74 @@
         position: absolute;
         z-index: -1;
       }
-      
+
       .heartMain:hover + .heartBackground {
         z-index: 1;
-        stroke-width: 20; 
+        stroke-width: 20;
       }
 
-
-
-    .titleMenu i {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: end;
-      height: 30px;
-    }
-  }
-
-
-
-  
-  .titleMenu__heartt {
-    position: relative;
-    background-color: white;
-    border-radius: 0 0 1rem 3rem;
-    &::before {
-      @include mixins.heart;
+      .titleMenu i {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+        height: 30px;
+      }
     }
 
-    
-  }
+    .titleMenu__heart {
+      position: relative;
+      color: white;
+      &::before {
+        @include heart;
+    }
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-around;
-    width: 375px;
-    height: 100%;
-    padding: 10px 10px;
-
-    &__entrees,
-    &__plats,
-    &__desserts {
+    .menu {
       display: flex;
-      width: 275px;
-      height: auto;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      color: map-get($colors, color-black);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      text-transform: uppercase;
-      margin-bottom: 25px;
+      align-items: stretch;
+      justify-content: space-around;
+      width: 375px;
+      height: 100%;
+      padding: 10px 10px;
 
-      h2 {
-        font-weight: 600;
-      }
+      &__entrees,
+      &__plats,
+      &__desserts {
+        display: flex;
+        width: 275px;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: map-get($colors, color-black);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 25px;
 
-      .line {
-        width: 40px;
-        height: 3px;
-        background: map-get($colors, color-tertiaire);
-        margin-bottom: 10px;
+        h2 {
+          font-weight: 600;
+        }
+
+        .line {
+          width: 40px;
+          height: 3px;
+          background: map-get($colors, color-tertiaire);
+          margin-bottom: 10px;
+        }
       }
     }
   }
 }
-
+}
 .mainMenu {
   @include lg {
-    width: 100%;
+    width: 1440px;
     height: 383px;
     flex-shrink: 0;
-
 
     &__imgOne {
       width: 100%;
@@ -172,7 +160,7 @@
       align-items: center;
       margin-left: 50px;
       margin-right: 50px;
-      
+
       h1 {
         color: var(--Black, #101010);
         font-family: Shrikhand;
@@ -182,44 +170,34 @@
         line-height: normal;
       }
     }
-      .menu {
+    .menu {
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      .cardDetailMenu {
+        display: flex;
         width: 100%;
-        display: inline-flex;
-        flex-direction: column;
+        max-width: 634px;
+        height: 69px;
         align-items: center;
-        gap: 40px;
-        
-
-        .cardDetailMenu {
-          display: flex;
-          width: 100%;
-          max-width: 634px;
-          height: 69px;
-          align-items: center;
-          
-        }
-
-        &__entrees,
-        &__plats,
-        &__desserts {
-          width: 634px;
-          display: flex;
-          justify-content: center;
-          
-
-
-          .line {
-            width: 40px;
-            display: flex;
-
-          }
-
-
-
-          }
-        }
       }
 
-  }
+      &__entrees,
+      &__plats,
+      &__desserts {
+        width: 634px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
+        .line {
+          width: 40px;
+          display: flex;
+        }
+      }
+    }
+  }
 }

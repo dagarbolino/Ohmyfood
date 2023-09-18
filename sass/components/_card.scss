@@ -1,11 +1,164 @@
+.cardDetailMenu {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: none;
 
-  
-  .cardDetailMenu {
-   margin-top: 5px;
-   margin-bottom: 5px;
-   @include card-menu; // voir dans _mixins.scss
-  
-  
+  @include card-menu; // voir dans _mixins.scss
+
+  &__platePrice {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    text-transform: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    .plate {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-transform: none;
+
+      .h {
+        width: 100%;
+        height: 21px;
+        flex-shrink: 0;
+        justify-content: space-between;
+        align-self: stretch;
+        overflow: hidden;
+        color: map-get($colors, color-black);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: none;
+
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+      }
+      .p {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 19px;
+        flex-shrink: 0;
+        align-self: stretch;
+        overflow: hidden;
+        color: map-get($colors, color-black);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        font-family: Roboto;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+    .price {
+      display: flex;
+      align-items: flex-end;
+      width: 24px;
+      height: 40px;
+      justify-content: space-between;
+
+      color: map-get($colors, color-black);
+      text-align: center;
+      font-family: Roboto;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      transform: none;
+      transition: width 300ms ease-in-out;
+    }
+  }
+
+  .select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    height: 69px;
+    color: map-get($colors, bg-color-white);
+    background: map-get($colors, color-tertiaire);
+
+    transition: all 400ms;
+    overflow: hidden;
+
+
+
+  /*      CHECKBOX         */
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    //padding-left: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: "";
+    width: auto;
+    height: auto;
+    top: -10px;
+    left: -8px;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+    font-style: 16px;
+
+    position: absolute;
+    transition: 0.5s ease;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    //background: black;
+    transition: 0.5s ease;
+    border: 2px solid black;
+    background-color: transparent;
+    background: map-get($colors, color-grad);
+    border-radius: 50%;
+  }
+}
+
+.cardDetailMenu {
+  @include lg {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    @include card-menu; // voir dans _mixins.scss
+
     &__platePrice {
       width: 100%;
       display: flex;
@@ -13,16 +166,16 @@
       justify-content: space-between;
       padding: 0 10px;
       text-transform: none;
-  
+
       .plate {
-        width: 200px;
+        width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-  
+
         h3 {
           width: 100%;
-          
+
           height: 21px;
           flex-shrink: 0;
           align-self: stretch;
@@ -34,8 +187,6 @@
           font-style: normal;
           font-weight: 700;
           line-height: normal;
-          
-          
         }
         p {
           width: 100%;
@@ -51,7 +202,6 @@
           font-style: normal;
           font-weight: 300;
           line-height: normal;
-          
         }
       }
       .price {
@@ -61,7 +211,7 @@
         width: 24px;
         height: 40px;
         justify-content: space-between;
-  
+
         color: map-get($colors, color-black);
         text-align: center;
         font-family: Roboto;
@@ -72,125 +222,7 @@
 
         transform: none;
         transition: width 300ms ease-in-out;
-  
       }
     }
-  
-  
-    .select {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 0px;
-      height: 69px;
-      color: map-get($colors, bg-color-white);
-      background: map-get($colors, color-tertiaire);
-      
-      transition: all 400ms;
-      overflow: hidden;
-      
-  
-      i {
-        color: map-get($colors, color-tertiaire);
-        background: map-get($colors, bg-color-white);
-        padding: 2px;
-        border-radius: 50%;
-      }
-  
-    }
-    &:hover {
-      .select {
-        width: 70px;
-        height: 100%;
-        } 
-    }
-
   }
-
-
-
-
-
-  
-  .cardDetailMenu {
-    @include lg {
-    
-      margin-top: 5px;
-      margin-bottom: 5px;
-      @include card-menu; // voir dans _mixins.scss
-     
-     
-       &__platePrice {
-         width: 100%;
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         padding: 0 10px;
-         text-transform: none;
-     
-         .plate {
-           width: 100%;
-           overflow: hidden;
-           text-overflow: ellipsis;
-           white-space: nowrap;
-     
-           h3 {
-             width: 100%;
-             
-             height: 21px;
-             flex-shrink: 0;
-             align-self: stretch;
-             overflow: hidden;
-             color: map-get($colors, color-black);
-             text-overflow: ellipsis;
-             white-space: nowrap;
-             font-size: 18px;
-             font-style: normal;
-             font-weight: 700;
-             line-height: normal;
-             
-             
-           }
-           p {
-             width: 100%;
-             height: 19px;
-             flex-shrink: 0;
-             align-self: stretch;
-             overflow: hidden;
-             color: map-get($colors, color-black);
-             text-overflow: ellipsis;
-             white-space: nowrap;
-             font-family: Roboto;
-             font-size: 15px;
-             font-style: normal;
-             font-weight: 300;
-             line-height: normal;
-             
-           }
-         }
-         .price {
-           width: 100%;
-           display: flex;
-           align-items: flex-end;
-           width: 24px;
-           height: 40px;
-           justify-content: space-between;
-     
-           color: map-get($colors, color-black);
-           text-align: center;
-           font-family: Roboto;
-           font-size: 15px;
-           font-style: normal;
-           font-weight: 700;
-           line-height: normal;
-   
-           transform: none;
-           transition: width 300ms ease-in-out;
-     
-         }
-       }
-       }
-    }
-
-   
- 
+}

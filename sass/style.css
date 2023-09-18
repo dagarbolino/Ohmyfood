@@ -434,7 +434,6 @@ body {
   flex-shrink: 0;
   margin: 25px 0px 30px 20px;
   width: 341px;
-  height: 27px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -453,7 +452,8 @@ body {
 .mainMenu__content .titleMenu__heart {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 40px;
   position: relative;
@@ -478,7 +478,30 @@ body {
   align-items: end;
   height: 30px;
 }
-.mainMenu__content .menu {
+.mainMenu__content .titleMenu__heart {
+  position: relative;
+  color: white;
+}
+.mainMenu__content .titleMenu__heart::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  content: "";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: aqua;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.mainMenu__content .titleMenu__heart .menu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -487,7 +510,7 @@ body {
   height: 100%;
   padding: 10px 10px;
 }
-.mainMenu__content .menu__entrees, .mainMenu__content .menu__plats, .mainMenu__content .menu__desserts {
+.mainMenu__content .titleMenu__heart .menu__entrees, .mainMenu__content .titleMenu__heart .menu__plats, .mainMenu__content .titleMenu__heart .menu__desserts {
   display: flex;
   width: 275px;
   height: auto;
@@ -502,31 +525,32 @@ body {
   text-transform: uppercase;
   margin-bottom: 25px;
 }
-.mainMenu__content .menu__entrees h2, .mainMenu__content .menu__plats h2, .mainMenu__content .menu__desserts h2 {
+.mainMenu__content .titleMenu__heart .menu__entrees h2, .mainMenu__content .titleMenu__heart .menu__plats h2, .mainMenu__content .titleMenu__heart .menu__desserts h2 {
   font-weight: 600;
 }
-.mainMenu__content .menu__entrees .line, .mainMenu__content .menu__plats .line, .mainMenu__content .menu__desserts .line {
+.mainMenu__content .titleMenu__heart .menu__entrees .line, .mainMenu__content .titleMenu__heart .menu__plats .line, .mainMenu__content .titleMenu__heart .menu__desserts .line {
   width: 40px;
   height: 3px;
   background: #99e2d0;
   margin-bottom: 10px;
 }
+
 @media (min-width: 1040px) {
-  .mainMenu .mainMenu {
-    width: 100%;
+  .mainMenu {
+    width: 1440px;
     height: 383px;
     flex-shrink: 0;
   }
-  .mainMenu .mainMenu__imgOne {
+  .mainMenu__imgOne {
     width: 100%;
     height: 956.142px;
   }
-  .mainMenu .mainMenu__imgOne img {
+  .mainMenu__imgOne img {
     width: 100%;
     height: 483px;
     flex-shrink: 0;
   }
-  .mainMenu .mainMenu__content {
+  .mainMenu__content {
     width: 1055px;
     height: auto;
     flex-shrink: 0;
@@ -535,7 +559,7 @@ body {
     margin-left: 50px;
     margin-right: 50px;
   }
-  .mainMenu .mainMenu__content h1 {
+  .mainMenu__content h1 {
     color: var(--Black, #101010);
     font-family: Shrikhand;
     font-size: 28px;
@@ -543,26 +567,27 @@ body {
     font-weight: 400;
     line-height: normal;
   }
-  .mainMenu .mainMenu .menu {
+  .mainMenu .menu {
     width: 100%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
   }
-  .mainMenu .mainMenu .menu .cardDetailMenu {
+  .mainMenu .menu .cardDetailMenu {
     display: flex;
     width: 100%;
     max-width: 634px;
     height: 69px;
     align-items: center;
   }
-  .mainMenu .mainMenu .menu__entrees, .mainMenu .mainMenu .menu__plats, .mainMenu .mainMenu .menu__desserts {
+  .mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
     width: 634px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
-  .mainMenu .mainMenu .menu__entrees .line, .mainMenu .mainMenu .menu__plats .line, .mainMenu .mainMenu .menu__desserts .line {
+  .mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
     width: 40px;
     display: flex;
   }
@@ -1043,6 +1068,7 @@ footer {
 .cardDetailMenu {
   margin-top: 5px;
   margin-bottom: 5px;
+  text-transform: none;
   display: flex;
   width: 349px;
   height: 69px;
@@ -1053,36 +1079,48 @@ footer {
   overflow: hidden;
   padding: 0px;
   cursor: pointer;
+  /*      CHECKBOX         */
 }
 .cardDetailMenu__platePrice {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
   text-transform: none;
-}
-.cardDetailMenu__platePrice .plate {
-  width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.cardDetailMenu__platePrice .plate h3 {
+.cardDetailMenu__platePrice .plate {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: none;
+}
+.cardDetailMenu__platePrice .plate .h {
   width: 100%;
   height: 21px;
   flex-shrink: 0;
+  justify-content: space-between;
   align-self: stretch;
   overflow: hidden;
   color: #010101;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-transform: none;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin: 0;
 }
-.cardDetailMenu__platePrice .plate p {
+.cardDetailMenu__platePrice .plate .p {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 19px;
   flex-shrink: 0;
@@ -1098,7 +1136,6 @@ footer {
   line-height: normal;
 }
 .cardDetailMenu__platePrice .price {
-  width: 100%;
   display: flex;
   align-items: flex-end;
   width: 24px;
@@ -1116,6 +1153,7 @@ footer {
 }
 .cardDetailMenu .select {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 0px;
@@ -1126,14 +1164,60 @@ footer {
   overflow: hidden;
 }
 .cardDetailMenu .select i {
+  width: 20px;
+  height: 20px;
   color: #99e2d0;
   background: white;
   padding: 2px;
   border-radius: 50%;
+  font-style: 16px;
 }
 .cardDetailMenu:hover .select {
+  display: flex;
   width: 70px;
   height: 100%;
+}
+.cardDetailMenu input[type=checkbox] {
+  display: none;
+}
+.cardDetailMenu input[type=checkbox] + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.cardDetailMenu input[type=checkbox] + label::before {
+  content: "";
+  width: auto;
+  height: auto;
+  top: -10px;
+  left: -8px;
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 3px;
+  display: block;
+  font-style: 16px;
+  position: absolute;
+  transition: 0.5s ease;
+}
+.cardDetailMenu input[type=checkbox]:checked + label::after {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+.cardDetailMenu input[type=checkbox]:checked + label::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.5s ease;
+  border: 2px solid black;
+  background-color: transparent;
+  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+  border-radius: 50%;
 }
 
 @media (min-width: 1040px) {
