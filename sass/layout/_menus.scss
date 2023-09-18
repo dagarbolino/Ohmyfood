@@ -87,6 +87,8 @@
       }
     }
 
+/*
+
     .titleMenu__heart {
       position: relative;
       color: white;
@@ -94,7 +96,9 @@
         @include heart;
     }
 
-    .menu {
+*/
+
+  .menu {
       display: flex;
       flex-direction: column;
       align-items: stretch;
@@ -131,13 +135,17 @@
           margin-bottom: 10px;
         }
       }
-    }
+  }
   }
 }
-}
+
+
+
+/*******   media query          ************/
+
 .mainMenu {
   @include lg {
-    width: 1440px;
+    width: auto;
     height: 383px;
     flex-shrink: 0;
 
@@ -160,6 +168,7 @@
       align-items: center;
       margin-left: 50px;
       margin-right: 50px;
+      
 
       h1 {
         color: var(--Black, #101010);

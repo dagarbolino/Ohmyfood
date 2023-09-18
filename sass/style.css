@@ -3,6 +3,30 @@
 /****    Shadow    ****/
 /****    Restaurants cards    ****/
 /***Card detail menus ***/
+/* 
+
+
+@mixin heart {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  //font-family: "font Amesome 5 free";
+  font-weight: 400;
+  content: "";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: aqua;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+*/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -88,7 +112,7 @@ body {
 
 .navBar .navBar__logo {
   display: flex;
-  width: auto;
+  width: 100%;
   height: 63px;
   padding: 14px 89px 13px 89px;
   justify-content: center;
@@ -429,6 +453,16 @@ body {
   top: 215px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  /*
+
+      .titleMenu__heart {
+        position: relative;
+        color: white;
+        &::before {
+          @include heart;
+      }
+
+  */
 }
 .mainMenu__content .titleMenu {
   flex-shrink: 0;
@@ -478,30 +512,7 @@ body {
   align-items: end;
   height: 30px;
 }
-.mainMenu__content .titleMenu__heart {
-  position: relative;
-  color: white;
-}
-.mainMenu__content .titleMenu__heart::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  content: "";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: aqua;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-.mainMenu__content .titleMenu__heart .menu {
+.mainMenu__content .menu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -510,7 +521,7 @@ body {
   height: 100%;
   padding: 10px 10px;
 }
-.mainMenu__content .titleMenu__heart .menu__entrees, .mainMenu__content .titleMenu__heart .menu__plats, .mainMenu__content .titleMenu__heart .menu__desserts {
+.mainMenu__content .menu__entrees, .mainMenu__content .menu__plats, .mainMenu__content .menu__desserts {
   display: flex;
   width: 275px;
   height: auto;
@@ -525,19 +536,20 @@ body {
   text-transform: uppercase;
   margin-bottom: 25px;
 }
-.mainMenu__content .titleMenu__heart .menu__entrees h2, .mainMenu__content .titleMenu__heart .menu__plats h2, .mainMenu__content .titleMenu__heart .menu__desserts h2 {
+.mainMenu__content .menu__entrees h2, .mainMenu__content .menu__plats h2, .mainMenu__content .menu__desserts h2 {
   font-weight: 600;
 }
-.mainMenu__content .titleMenu__heart .menu__entrees .line, .mainMenu__content .titleMenu__heart .menu__plats .line, .mainMenu__content .titleMenu__heart .menu__desserts .line {
+.mainMenu__content .menu__entrees .line, .mainMenu__content .menu__plats .line, .mainMenu__content .menu__desserts .line {
   width: 40px;
   height: 3px;
   background: #99e2d0;
   margin-bottom: 10px;
 }
 
+/*******   media query          ************/
 @media (min-width: 1040px) {
   .mainMenu {
-    width: 1440px;
+    width: auto;
     height: 383px;
     flex-shrink: 0;
   }
@@ -1079,7 +1091,6 @@ footer {
   overflow: hidden;
   padding: 0px;
   cursor: pointer;
-  /*      CHECKBOX         */
 }
 .cardDetailMenu__platePrice {
   width: 100%;
@@ -1156,38 +1167,29 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 0px;
+  width: 10px;
   height: 69px;
   color: white;
   background: #99e2d0;
   transition: all 400ms;
   overflow: hidden;
+  /*      CHECKBOX         */
 }
-.cardDetailMenu .select i {
-  width: 20px;
-  height: 20px;
-  color: #99e2d0;
-  background: white;
-  padding: 2px;
-  border-radius: 50%;
-  font-style: 16px;
-}
-.cardDetailMenu:hover .select {
-  display: flex;
+.cardDetailMenu .select :hover .select {
   width: 70px;
   height: 100%;
 }
-.cardDetailMenu input[type=checkbox] {
+.cardDetailMenu .select input[type=checkbox] {
   display: none;
 }
-.cardDetailMenu input[type=checkbox] + label {
+.cardDetailMenu .select input[type=checkbox] + label {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
 }
-.cardDetailMenu input[type=checkbox] + label::before {
+.cardDetailMenu .select input[type=checkbox] + label::before {
   content: "";
   width: auto;
   height: auto;
@@ -1201,11 +1203,11 @@ footer {
   position: absolute;
   transition: 0.5s ease;
 }
-.cardDetailMenu input[type=checkbox]:checked + label::after {
+.cardDetailMenu .select input[type=checkbox]:checked + label::after {
   border: 1px solid transparent;
   background-color: transparent;
 }
-.cardDetailMenu input[type=checkbox]:checked + label::before {
+.cardDetailMenu .select input[type=checkbox]:checked + label::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -1249,7 +1251,7 @@ footer {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .cardDetailMenu__platePrice .plate h3 {
+  .cardDetailMenu__platePrice .plate .h {
     width: 100%;
     height: 21px;
     flex-shrink: 0;
@@ -1263,7 +1265,7 @@ footer {
     font-weight: 700;
     line-height: normal;
   }
-  .cardDetailMenu__platePrice .plate p {
+  .cardDetailMenu__platePrice .plate .p {
     width: 100%;
     height: 19px;
     flex-shrink: 0;
