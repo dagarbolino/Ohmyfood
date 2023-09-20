@@ -124,24 +124,24 @@
 }  
 .navBarMenu {
   @include lg {
-    
-      width: 1055px;
+      width: 1024px;
 
       &__logo {
         display: flex;
         width: auto;
         height: 96.339px;
         align-items: center;
-        justify-content: space-between;
+        //justify-content: space-between;
         //gap: 572px;
         flex-shrink: 0;
+        
       }
-      a {
-        width: 20px;
-      }
+
       &__logo--img {
         width: auto;
-        //padding: 30px 621px 32.137px 17px;
+        display: flex;
+        align-items: center;
+        padding: 14px 420px 13px 89px;
 
       }
     }
