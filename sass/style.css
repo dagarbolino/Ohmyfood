@@ -79,6 +79,7 @@ body {
   body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -86,9 +87,13 @@ body {
   }
 }
 
+/****** nav index.html  ********/
+.navBar {
+  width: 100%;
+}
 .navBar .navBar__logo {
   display: flex;
-  width: auto;
+  width: 100%;
   height: 63px;
   padding: 14px 89px 13px 89px;
   justify-content: center;
@@ -98,7 +103,7 @@ body {
 @media (min-width: 1040px) {
   .navBar .navBar__logo {
     display: flex;
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     justify-content: center;
@@ -114,14 +119,11 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .navBar .navBar__logo .navBar__map {
-    margin-left: 40px;
-  }
 }
 
 .navBar__map {
   display: flex;
-  width: 375px;
+  width: auto;
   height: 50px;
   justify-content: center;
   align-items: center;
@@ -137,6 +139,7 @@ body {
   fill: #353535;
 }
 .navBar__map .search {
+  width: 150px;
   display: flex;
   align-items: center;
   background: #eaeaea;
@@ -176,6 +179,7 @@ body {
   }
 }
 
+/********* navBar page menu  *************/
 .navBarMenu {
   position: relative;
   align-items: center;
@@ -207,14 +211,24 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
+
 @media (min-width: 1040px) {
-  .navBarMenu .navBarMenu__logo {
+  .navBarMenu {
+    width: 1055px;
+  }
+  .navBarMenu__logo {
     display: flex;
-    width: 1440px;
+    width: auto;
     height: 96.339px;
-    padding: 30px 621px 32.137px 17px;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
     flex-shrink: 0;
+  }
+  .navBarMenu a {
+    width: 20px;
+  }
+  .navBarMenu__logo--img {
+    width: auto;
   }
 }
 
@@ -507,7 +521,8 @@ body {
 
 @media (min-width: 1040px) {
   .mainMenu {
-    width: 1440px;
+    width: auto;
+    max-width: 1440px;
     height: 383px;
     flex-shrink: 0;
   }

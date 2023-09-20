@@ -1,7 +1,9 @@
+/****** nav index.html  ********/
 .navBar {
+  width: 100%;
   .navBar__logo {
     display: flex;
-    width: auto;
+    width: 100%;
     height: 63px;
     padding: 14px 89px 13px 89px;
     justify-content: center;
@@ -10,7 +12,7 @@
 
     @include lg {
       display: flex;
-      width: 100%;
+      width: auto;
       height: auto;
       display: flex;
       justify-content: center;
@@ -27,21 +29,16 @@
           align-items: center;
         }
       }
-
-      .navBar__map {
-        margin-left: 40px;
-      }
     }
   }
 }
 
 .navBar__map {
   display: flex;
-  width: 375px;
+  width: auto;
   height: 50px;
   justify-content: center;
   align-items: center;
-  
   //gap: 5px;
   flex-shrink: 0;
   background: map-get($colors, color-bg-grey);
@@ -53,14 +50,14 @@
     fill: map-get($colors, color-grey);
   }
 
-
   .search {
+    width: 150px;
     display: flex;
     align-items: center;
     background: map-get($colors, color-bg-grey);
     border: 0px solid white;
   }
-  
+
   input.search {
     padding: 0 20px;
     font-size: 16px;
@@ -68,7 +65,7 @@
     font-weight: 700;
     line-height: normal;
   }
-  
+
   input::placeholder {
     font-size: 16px;
     font-style: normal;
@@ -76,12 +73,11 @@
     line-height: normal;
     color: map-get($colors, color-grey);
   }
-  
+
   /*permet de retirer le border de l'input au click*/
   input:focus {
     outline: none;
   }
-
 
   & {
     @include lg {
@@ -93,6 +89,7 @@
     }
   }
 }
+/********* navBar page menu  *************/
 
 .navBarMenu {
   position: relative;
@@ -124,22 +121,29 @@
     align-items: center;
     flex-shrink: 0;
   }
-
-
+}  
+.navBarMenu {
   @include lg {
+    
+      width: 1055px;
 
+      &__logo {
+        display: flex;
+        width: auto;
+        height: 96.339px;
+        align-items: center;
+        justify-content: space-between;
+        //gap: 572px;
+        flex-shrink: 0;
+      }
+      a {
+        width: 20px;
+      }
+      &__logo--img {
+        width: auto;
+        //padding: 30px 621px 32.137px 17px;
 
-    .navBarMenu__logo {
-      display: flex;
-      width: 1440px;
-      height: 96.339px;
-      padding: 30px 621px 32.137px 17px;
-      align-items: flex-end;
-      //gap: 572px;
-      
-      flex-shrink: 0;
+      }
     }
-
   }
-}
 

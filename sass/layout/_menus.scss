@@ -139,7 +139,8 @@
 
 .mainMenu {
   @include lg {
-    width: 1440px;
+    width: auto;
+    max-width: 1440px;
     height: 383px;
     flex-shrink: 0;
 
