@@ -110,10 +110,7 @@ body {
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     max-width: 1440px;
@@ -279,9 +276,6 @@ body {
   .hero {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 .hero h2 {
@@ -412,7 +406,6 @@ body {
   .fonctionnement {
     display: flex;
     padding: 50px 180px;
-    flex-direction: column;
     gap: 25px;
     width: auto;
     height: auto;
@@ -994,10 +987,8 @@ footer {
 
 @media (min-width: 1024px) {
   footer {
-    display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
     width: 100%;
     height: 114px;
     padding: 30px 25px 0 25px;
@@ -1005,23 +996,18 @@ footer {
     flex-shrink: 0;
   }
   footer .footer {
-    display: flex;
     flex-direction: row-reverse;
     align-items: center;
     height: 100%;
     width: auto;
   }
   footer .footer__logo--img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 135px;
     min-width: 135px;
     height: 27px;
     padding-right: 0px;
   }
   footer .footer .footer__link {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
     width: auto;
@@ -1223,8 +1209,6 @@ footer {
 
 @media (min-width: 1024px) {
   .cardDetailMenu {
-    margin-top: 5px;
-    margin-bottom: 5px;
     display: inherit;
     width: 349px;
     height: 69px;
@@ -1235,66 +1219,6 @@ footer {
     overflow: hidden;
     padding: 0px;
     cursor: pointer;
-  }
-  .cardDetailMenu__platePrice {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    text-transform: none;
-  }
-  .cardDetailMenu__platePrice .plate {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .cardDetailMenu__platePrice .plate .h {
-    width: 100%;
-    height: 21px;
-    flex-shrink: 0;
-    align-self: stretch;
-    overflow: hidden;
-    color: #010101;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .cardDetailMenu__platePrice .plate .p {
-    width: 100%;
-    height: 19px;
-    flex-shrink: 0;
-    align-self: stretch;
-    overflow: hidden;
-    color: #010101;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-family: Roboto;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-  }
-  .cardDetailMenu__platePrice .price {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    width: 24px;
-    height: 40px;
-    justify-content: space-between;
-    color: #010101;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    transform: none;
-    transition: width 300ms ease-in-out;
   }
 }
 
