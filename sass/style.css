@@ -3,6 +3,30 @@
 /****    Shadow    ****/
 /****    Restaurants cards    ****/
 /***Card detail menus ***/
+/* 
+
+
+@mixin heart {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  //font-family: "font Amesome 5 free";
+  font-weight: 400;
+  content: "";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: aqua;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+*/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -1057,7 +1081,7 @@ footer {
   margin-top: 5px;
   margin-bottom: 5px;
   text-transform: none;
-  display: flex;
+  display: inherit;
   width: 349px;
   height: 69px;
   align-items: center;
@@ -1127,7 +1151,7 @@ footer {
 .cardDetailMenu__platePrice {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: inherit;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
@@ -1137,15 +1161,14 @@ footer {
   white-space: nowrap;
 }
 .cardDetailMenu__platePrice .plate {
-  width: 100%;
+  width: 270px;
   height: auto;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   text-transform: none;
 }
-.cardDetailMenu__platePrice .plate h3 {
-  width: 100%;
+.cardDetailMenu__platePrice .plate .h {
   height: 21px;
   flex-shrink: 0;
   justify-content: space-between;
@@ -1161,10 +1184,8 @@ footer {
   line-height: normal;
   margin: 0;
 }
-.cardDetailMenu__platePrice .plate p {
-  display: flex;
+.cardDetailMenu__platePrice .plate .p {
   justify-content: space-between;
-  width: 100%;
   height: 19px;
   flex-shrink: 0;
   align-self: stretch;
@@ -1223,7 +1244,7 @@ footer {
   .cardDetailMenu {
     margin-top: 5px;
     margin-bottom: 5px;
-    display: flex;
+    display: inherit;
     width: 349px;
     height: 69px;
     align-items: center;

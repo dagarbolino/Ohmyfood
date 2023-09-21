@@ -53,7 +53,7 @@
 
 /***Card detail menus ***/
 @mixin card-menu {
-  display: flex;
+  display: inherit;
   width: 349px;
   height: 69px;
   align-items: center;
