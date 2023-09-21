@@ -3,30 +3,6 @@
 /****    Shadow    ****/
 /****    Restaurants cards    ****/
 /***Card detail menus ***/
-/* 
-
-
-@mixin heart {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  //font-family: "font Amesome 5 free";
-  font-weight: 400;
-  content: "";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: aqua;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-*/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -99,10 +75,11 @@ body {
   padding: 0px 0px;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -110,6 +87,10 @@ body {
   }
 }
 
+/****** nav index.html  ********/
+.navBar {
+  width: 100%;
+}
 .navBar .navBar__logo {
   display: flex;
   width: 100%;
@@ -119,18 +100,18 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-@media (min-width: 1040px) {
-  .navBar .navBar__logo {
-    display: flex;
-    width: 100%;
+@media (min-width: 1024px) {
+  .navBar {
+    width: 1415px;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
-  .navBar .navBar__logo .navBar__logo {
+  .navBar .navBar__logo {
     width: 100%;
   }
-  .navBar .navBar__logo .navBar__logo--img {
+  .navBar .navBar__logo--img {
     width: 200px;
     height: 34.202px;
     display: flex;
@@ -138,14 +119,11 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .navBar .navBar__logo .navBar__map {
-    margin-left: 40px;
-  }
 }
 
 .navBar__map {
   display: flex;
-  width: 375px;
+  width: auto;
   height: 50px;
   justify-content: center;
   align-items: center;
@@ -161,6 +139,7 @@ body {
   fill: #353535;
 }
 .navBar__map .search {
+  width: 150px;
   display: flex;
   align-items: center;
   background: #eaeaea;
@@ -190,7 +169,7 @@ body {
 .navBar__map input:focus {
   outline: none;
 }
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .navBar__map {
     width: 100%;
     height: 60px;
@@ -200,6 +179,7 @@ body {
   }
 }
 
+/********* navBar page menu  *************/
 .navBarMenu {
   position: relative;
   align-items: center;
@@ -231,14 +211,23 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-@media (min-width: 1040px) {
-  .navBarMenu .navBarMenu__logo {
+
+@media (min-width: 1024px) {
+  .navBarMenu {
+    width: 1024px;
+  }
+  .navBarMenu__logo {
     display: flex;
-    width: 1440px;
+    width: auto;
     height: 96.339px;
-    padding: 30px 621px 32.137px 17px;
-    align-items: flex-end;
+    align-items: center;
     flex-shrink: 0;
+  }
+  .navBarMenu__logo--img {
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 14px 420px 13px 89px;
   }
 }
 
@@ -251,7 +240,7 @@ body {
   gap: 20px;
   padding: 30px;
 }
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .hero {
     width: 100%;
     height: auto;
@@ -386,7 +375,7 @@ body {
   color: #9356dc;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .fonctionnement {
     display: flex;
     padding: 50px 180px;
@@ -453,16 +442,6 @@ body {
   top: 215px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  /*
-
-      .titleMenu__heart {
-        position: relative;
-        color: white;
-        &::before {
-          @include heart;
-      }
-
-  */
 }
 .mainMenu__content .titleMenu {
   flex-shrink: 0;
@@ -472,7 +451,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-.mainMenu__content .titleMenu h1 {
+.mainMenu__content .titleMenu .titleMenu h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -483,7 +462,7 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.mainMenu__content .titleMenu__heart {
+.mainMenu__content .titleMenu .titleMenu__heart {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -493,26 +472,19 @@ body {
   position: relative;
   cursor: pointer;
 }
-.mainMenu__content .titleMenu__heart img {
+.mainMenu__content .titleMenu .titleMenu__heart img {
   overflow: visible;
   width: 22px;
 }
-.mainMenu__content .titleMenu__heart .heartBackground {
+.mainMenu__content .titleMenu .titleMenu__heart .heartBackground {
   position: absolute;
   z-index: -1;
 }
-.mainMenu__content .titleMenu__heart .heartMain:hover + .heartBackground {
+.mainMenu__content .titleMenu .titleMenu__heart .heartMain:hover + .heartBackground {
   z-index: 1;
   stroke-width: 20;
 }
-.mainMenu__content .titleMenu__heart .titleMenu i {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: end;
-  height: 30px;
-}
-.mainMenu__content .menu {
+.mainMenu .menu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -521,7 +493,7 @@ body {
   height: 100%;
   padding: 10px 10px;
 }
-.mainMenu__content .menu__entrees, .mainMenu__content .menu__plats, .mainMenu__content .menu__desserts {
+.mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
   display: flex;
   width: 275px;
   height: auto;
@@ -536,20 +508,20 @@ body {
   text-transform: uppercase;
   margin-bottom: 25px;
 }
-.mainMenu__content .menu__entrees h2, .mainMenu__content .menu__plats h2, .mainMenu__content .menu__desserts h2 {
+.mainMenu .menu__entrees h2, .mainMenu .menu__plats h2, .mainMenu .menu__desserts h2 {
   font-weight: 600;
 }
-.mainMenu__content .menu__entrees .line, .mainMenu__content .menu__plats .line, .mainMenu__content .menu__desserts .line {
+.mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
   width: 40px;
   height: 3px;
   background: #99e2d0;
   margin-bottom: 10px;
 }
 
-/*******   media query          ************/
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .mainMenu {
     width: auto;
+    max-width: 1415px;
     height: 383px;
     flex-shrink: 0;
   }
@@ -805,6 +777,7 @@ body {
   height: 40px;
   position: relative;
   cursor: pointer;
+  /****  heart for i, in cardMenu__heart : fas and far *******/
 }
 .restaurants .cardsMenus .cardMenu__heart img {
   overflow: visible;
@@ -848,7 +821,7 @@ body {
 }
 
 /*     news frame and cardMenu */
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .restaurants {
     width: 100%;
     height: auto;
@@ -922,7 +895,9 @@ footer {
   height: 27px;
   padding-right: 0px;
 }
-.footer a {
+.footer .footer__a {
+  display: flex;
+  flex-direction: column;
   color: white;
 }
 .footer__link {
@@ -956,12 +931,13 @@ footer {
   line-height: normal;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    width: 100%;
     height: 114px;
     padding: 30px 25px 0 25px;
     gap: 16px;
@@ -1091,6 +1067,62 @@ footer {
   overflow: hidden;
   padding: 0px;
   cursor: pointer;
+  /*      CHECKBOX         */
+  /*
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    //padding-left: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: "";
+    width: auto;
+    height: auto;
+    top: -10px;
+    left: -8px;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+    font-style: 16px;
+
+    position: absolute;
+    transition: 0.5s ease;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    //background: black;
+    transition: 0.5s ease;
+    border: 2px solid black;
+    background-color: transparent;
+    background: map-get($colors, color-grad);
+    border-radius: 50%;
+  }
+  */
 }
 .cardDetailMenu__platePrice {
   width: 100%;
@@ -1112,7 +1144,7 @@ footer {
   white-space: nowrap;
   text-transform: none;
 }
-.cardDetailMenu__platePrice .plate .h {
+.cardDetailMenu__platePrice .plate h3 {
   width: 100%;
   height: 21px;
   flex-shrink: 0;
@@ -1129,7 +1161,7 @@ footer {
   line-height: normal;
   margin: 0;
 }
-.cardDetailMenu__platePrice .plate .p {
+.cardDetailMenu__platePrice .plate p {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -1167,62 +1199,27 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 10px;
+  width: 0px;
   height: 69px;
   color: white;
   background: #99e2d0;
   transition: all 400ms;
   overflow: hidden;
-  /*      CHECKBOX         */
 }
-.cardDetailMenu .select :hover .select {
+.cardDetailMenu .select i {
+  width: 20px;
+  height: 20px;
+  color: #99e2d0;
+  border-radius: 50%;
+  background: white;
+  font-size: 20px;
+}
+.cardDetailMenu:hover .select {
   width: 70px;
   height: 100%;
 }
-.cardDetailMenu .select input[type=checkbox] {
-  display: none;
-}
-.cardDetailMenu .select input[type=checkbox] + label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-}
-.cardDetailMenu .select input[type=checkbox] + label::before {
-  content: "";
-  width: auto;
-  height: auto;
-  top: -10px;
-  left: -8px;
-  border: 1px solid transparent;
-  padding: 10px;
-  border-radius: 3px;
-  display: block;
-  font-style: 16px;
-  position: absolute;
-  transition: 0.5s ease;
-}
-.cardDetailMenu .select input[type=checkbox]:checked + label::after {
-  border: 1px solid transparent;
-  background-color: transparent;
-}
-.cardDetailMenu .select input[type=checkbox]:checked + label::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  transition: 0.5s ease;
-  border: 2px solid black;
-  background-color: transparent;
-  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  border-radius: 50%;
-}
 
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .cardDetailMenu {
     margin-top: 5px;
     margin-bottom: 5px;

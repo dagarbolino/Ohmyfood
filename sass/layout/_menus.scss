@@ -40,112 +40,97 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-    }
-    .titleMenu h1 {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      color: map-get($colors, color-black);
-      font-family: Shrikhand;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    .titleMenu__heart {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 32px;
-      height: 40px;
-      position: relative;
-      cursor: pointer;
-
-      img {
-        overflow: visible;
-        width: 22px;
-      }
-
-      .heartBackground {
-        position: absolute;
-        z-index: -1;
-      }
-
-      .heartMain:hover + .heartBackground {
-        z-index: 1;
-        stroke-width: 20;
-      }
-
-      .titleMenu i {
+      .titleMenu h1 {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: end;
-        height: 30px;
+        color: map-get($colors, color-black);
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
-    }
 
-/*
-
-    .titleMenu__heart {
-      position: relative;
-      color: white;
-      &::before {
-        @include heart;
-    }
-
-*/
-
-  .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: space-around;
-      width: 375px;
-      height: 100%;
-      padding: 10px 10px;
-
-      &__entrees,
-      &__plats,
-      &__desserts {
+      .titleMenu__heart {
         display: flex;
-        width: 275px;
-        height: auto;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        color: map-get($colors, color-black);
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        text-transform: uppercase;
-        margin-bottom: 25px;
+        align-items: center;
+        width: 32px;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
 
-        h2 {
-          font-weight: 600;
+        img {
+          overflow: visible;
+          width: 22px;
         }
 
-        .line {
-          width: 40px;
-          height: 3px;
-          background: map-get($colors, color-tertiaire);
-          margin-bottom: 10px;
+        .heartBackground {
+          position: absolute;
+          z-index: -1;
+        }
+
+        .heartMain:hover + .heartBackground {
+          z-index: 1;
+          stroke-width: 20;
         }
       }
+    }
   }
+
+
+
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 375px;
+    height: 100%;
+    padding: 10px 10px;
+
+    &__entrees,
+    &__plats,
+    &__desserts {
+      display: flex;
+      width: 275px;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: map-get($colors, color-black);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+
+      h2 {
+        font-weight: 600;
+      }
+
+      .line {
+        width: 40px;
+        height: 3px;
+        background: map-get($colors, color-tertiaire);
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
 
 
-/*******   media query          ************/
+
 
 .mainMenu {
   @include lg {
     width: auto;
+    max-width: 1415px;
     height: 383px;
     flex-shrink: 0;
 
@@ -168,7 +153,6 @@
       align-items: center;
       margin-left: 50px;
       margin-right: 50px;
-      
 
       h1 {
         color: var(--Black, #101010);

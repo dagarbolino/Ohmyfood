@@ -32,7 +32,9 @@ footer {
     padding-right: 0px;
   }
 
-  a {
+  .footer__a {
+    display: flex;
+    flex-direction: column;
     color: map-get($colors, bg-color-white);
   }
 
@@ -81,7 +83,7 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-
+    width: 100%;
     height: 114px;
     padding: 30px 25px 0 25px;
     gap: 16px;
