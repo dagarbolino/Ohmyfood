@@ -81,6 +81,7 @@
       transition: width 300ms ease-in-out;
     }
   }
+  
 
   .select {
     display: flex;
@@ -94,17 +95,28 @@
 
     transition: all 400ms;
     overflow: hidden;
+
+    i {
+      width: 20px;
+      height: 20px;
+      color: map-get($colors, color-tertiaire);
+      border-radius: 50%;
+      background: white;
+      font-size: 20px;
+    }
   }
 
   &:hover {
     .select {
       width: 70px;
       height: 100%;
+      
     }
   }
 
   /*      CHECKBOX         */
-
+  /*
+  
   input[type="checkbox"] {
     display: none;
   }
@@ -157,6 +169,8 @@
     background: map-get($colors, color-grad);
     border-radius: 50%;
   }
+  */
+
 }
 
 .cardDetailMenu {
@@ -179,7 +193,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
 
-        h3 {
+        .h {
           width: 100%;
 
           height: 21px;
@@ -194,7 +208,7 @@
           font-weight: 700;
           line-height: normal;
         }
-        p {
+        .p {
           width: 100%;
           height: 19px;
           flex-shrink: 0;
