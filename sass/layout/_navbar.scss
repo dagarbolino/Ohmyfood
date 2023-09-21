@@ -13,9 +13,7 @@
   @include lg {
     width: 1415px;
     height: auto;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
 
     .navBar__logo {
       width: 100%;
@@ -99,7 +97,6 @@
 
   &__logo {
     display: flex;
-    flex-direction: row;
     color: map-get($colors, color-black);
   }
 
@@ -131,7 +128,6 @@
     width: 1024px;
 
     &__logo {
-      display: flex;
       width: auto;
       height: 96.339px;
       align-items: center;
@@ -140,8 +136,6 @@
 
     &__logo--img {
       width: auto;
-      display: flex;
-      align-items: center;
       padding: 14px 420px 13px 89px;
     }
   }

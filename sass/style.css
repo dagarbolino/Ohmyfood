@@ -134,9 +134,7 @@ body {
   .navBar {
     width: 1415px;
     height: auto;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
   }
   .navBar .navBar__logo {
     width: 100%;
@@ -219,7 +217,6 @@ body {
 }
 .navBarMenu__logo {
   display: flex;
-  flex-direction: row;
   color: #010101;
 }
 .navBarMenu i {
@@ -248,7 +245,6 @@ body {
     width: 1024px;
   }
   .navBarMenu__logo {
-    display: flex;
     width: auto;
     height: 96.339px;
     align-items: center;
@@ -256,8 +252,6 @@ body {
   }
   .navBarMenu__logo--img {
     width: auto;
-    display: flex;
-    align-items: center;
     padding: 14px 420px 13px 89px;
   }
 }
@@ -590,17 +584,9 @@ body {
     margin-right: 50px;
   }
   .mainMenu__content h1 {
-    color: var(--Black, #101010);
-    font-family: Shrikhand;
     font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
   }
   .mainMenu__content .titleMenu__heart {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 32px;
     height: 40px;
     margin: 10px;
@@ -610,7 +596,6 @@ body {
   .mainMenu .menu {
     width: 100%;
     display: inline-flex;
-    flex-direction: column;
     align-items: center;
     gap: 40px;
   }
@@ -623,13 +608,6 @@ body {
   }
   .mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
     width: 634px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .mainMenu .menu__entrees .line, .mainMenu .menu__plats .line, .mainMenu .menu__desserts .line {
-    width: 40px;
-    display: flex;
   }
 }
 
@@ -879,9 +857,7 @@ body {
   .restaurants {
     width: 100%;
     height: auto;
-    display: flex;
     padding: 0px 180px;
-    flex-direction: column;
     align-items: flex-start;
     gap: 28px;
     align-self: stretch;
