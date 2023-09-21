@@ -71,13 +71,14 @@
 
         input[type="checkbox"] + label {
           position: relative;
-          //padding-left: 35px;
           display: inline-block;
           font-size: 23px;
         }
 
         input[type="checkbox"] + label:before {
-          content: url(/assets/images/logo/logos/logo-border.svg);          top: -11px;
+          content: url(/assets/images/logo/logos/logo-border.svg);
+          
+          top: -11px;
           left: -8px;
           border: 1px solid transparent;
           padding: 10px;
