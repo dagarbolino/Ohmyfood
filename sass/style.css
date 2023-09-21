@@ -777,6 +777,7 @@ body {
   height: 40px;
   position: relative;
   cursor: pointer;
+  /****  heart for i, in cardMenu__heart : fas and far *******/
 }
 .restaurants .cardsMenus .cardMenu__heart img {
   overflow: visible;
