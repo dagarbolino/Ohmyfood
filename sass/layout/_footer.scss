@@ -16,7 +16,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   width: auto;
   height: 200px;
   padding: 22px 25px;
@@ -26,7 +25,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 139px;
     height: 27px;
     padding-right: 0px;
@@ -42,7 +40,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     width: auto;
     height: 19px;
     gap: 7px;
@@ -51,9 +48,7 @@ footer {
     .devenir-partenaire {
       display: flex;
       align-items: center;
-
       color: map-get($colors, bg-color-white);
-
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -66,9 +61,7 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 10px;
-
       color: map-get($colors, bg-color-white);
-
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -100,10 +93,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-
         width: 135px;
         min-width: 135px;
-        //height: auto;
         height: 27px;
         padding-right: 0px;
       }
@@ -112,9 +103,7 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        
         width: auto;
-        
       }
 
       .proposer-resto,
@@ -131,7 +120,6 @@ footer {
 
       a {
         width: auto;
-        
       }
     }
   }

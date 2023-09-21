@@ -1,5 +1,4 @@
 @import "abstracts/variables";
-@import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/breakpoints";
 
@@ -14,9 +13,6 @@
 @import "layout/restaurants";
 @import "layout/footer";
 
-
 @import "components/buttons";
 @import "components/card";
 @import "components/badge";
-@import "components/loader";
-

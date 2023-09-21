@@ -32,16 +32,16 @@
   }
 }
 
-
+/***** page index nav form recherche ville******/
 .navBar__map {
   display: flex;
   width: auto;
   height: 50px;
   justify-content: center;
   align-items: center;
-  //gap: 5px;
   flex-shrink: 0;
   background: map-get($colors, color-bg-grey);
+
   i {
     display: flex;
     width: 12px;
@@ -89,18 +89,20 @@
     }
   }
 }
-/********* navBar page menu  *************/
 
+/********* navBar page menu  *************/
 .navBarMenu {
   position: relative;
   align-items: center;
   justify-content: center;
   z-index: 1;
+
   &__logo {
     display: flex;
     flex-direction: row;
     color: map-get($colors, color-black);
   }
+
   i {
     width: 30px;
     height: 63px;
@@ -112,6 +114,7 @@
       font-size: 20px;
     }
   }
+
   &__logo--img {
     display: flex;
     width: auto;
@@ -122,6 +125,7 @@
     flex-shrink: 0;
   }
 }
+
 .navBarMenu {
   @include lg {
     width: 1024px;
@@ -131,8 +135,6 @@
       width: auto;
       height: 96.339px;
       align-items: center;
-      //justify-content: space-between;
-      //gap: 572px;
       flex-shrink: 0;
     }
 

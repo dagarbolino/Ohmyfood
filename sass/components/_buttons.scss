@@ -12,10 +12,7 @@
     height: 50px;
     flex-shrink: 0;
     border-radius: 25px;
-    background: var(
-      --button-gradient,
-      linear-gradient(175deg, #9356dc 0%, #ff79da 100%)
-    );
+    background: var(--button-gradient, linear-gradient(175deg, #9356dc 0%, #ff79da 100%));
     border: none;
 
     /* Shadow/Button */
@@ -35,13 +32,11 @@
 
   button:hover {
     cursor: pointer;
-    //transform: scale(1.15);
     opacity: 0.8;
 
     @include shadow-hover;
   }
 }
-
 
 /*Bouton page index : explorer nos restaurants */
 .btn-restau {
@@ -53,7 +48,6 @@
   width: 218px;
   height: 50px;
   border: none;
-  
   border-radius: 25px;
   background: map-get($colors, color-grad);
   transition: transform 500ms;
@@ -68,7 +62,6 @@
     flex-shrink: 0;
     width: 180.495px;
     height: 24px;
-    
 
     color: map-get($colors, bg-color);
     opacity: 1;
@@ -78,11 +71,9 @@
     font-weight: 500;
     line-height: normal;
     transition: transform 500ms;
-    
   }
 }
 .btn-restau:hover {
-  //transform: scale(1.03);
   opacity: 0.8;
 
   @include shadow-hover;

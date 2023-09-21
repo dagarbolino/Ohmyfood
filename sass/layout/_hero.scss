@@ -1,3 +1,4 @@
+/****page index******/
 .hero {
   display: flex;
   flex-direction: column;
@@ -6,9 +7,6 @@
   background: map-get($colors, bg-color);
   gap: 20px;
   padding: 30px;
-
-
-
 
   & {
     @include lg {
@@ -20,10 +18,6 @@
     }
   }
 
-
-
-
-
   h2 {
     display: flex;
     flex-direction: column;
@@ -31,7 +25,6 @@
     text-align: center;
     height: 68px;
     color: map-get($colors, color-black);
-    /* Section Title */
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -48,15 +41,9 @@
     flex-shrink: 0;
     color: map-get($colors, color-grey);
     text-align: center;
-    /* Paragraph */
     font-size: 18px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
   }
-  
-
 }
-
-
-

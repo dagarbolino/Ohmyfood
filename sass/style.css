@@ -3,37 +3,40 @@
 /****    Shadow    ****/
 /****    Restaurants cards    ****/
 /***Card detail menus ***/
-/* 
-
-
-@mixin heart {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  //font-family: "font Amesome 5 free";
-  font-weight: 400;
-  content: "";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: aqua;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-*/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -42,7 +45,9 @@ ul {
   list-style: none;
 }
 
-button, input, select {
+button,
+input,
+select {
   margin: 0;
 }
 
@@ -50,11 +55,14 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%;
 }
@@ -68,7 +76,8 @@ table {
   border-spacing: 0;
 }
 
-td, th {
+td,
+th {
   padding: 0;
 }
 
@@ -145,6 +154,7 @@ body {
   }
 }
 
+/***** page index nav form recherche ville******/
 .navBar__map {
   display: flex;
   width: auto;
@@ -255,6 +265,7 @@ body {
   }
 }
 
+/****page index******/
 .hero {
   display: flex;
   flex-direction: column;
@@ -280,7 +291,6 @@ body {
   text-align: center;
   height: 68px;
   color: #010101;
-  /* Section Title */
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -296,13 +306,13 @@ body {
   flex-shrink: 0;
   color: #353535;
   text-align: center;
-  /* Paragraph */
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
 }
 
+/**** page index*******/
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -319,7 +329,6 @@ body {
   width: 275px;
   height: 31px;
   color: #010101;
-  /* Section Title */
   margin-bottom: 25px;
   font-size: 24px;
   font-style: normal;
@@ -495,7 +504,7 @@ body {
   height: 40px;
   position: relative;
   cursor: pointer;
-  /*      CHECKBOX         */
+  /****checkbox*****/
 }
 .mainMenu__content .titleMenu .titleMenu__heart input[type=checkbox] {
   display: none;
@@ -746,7 +755,6 @@ body {
   height: 68px;
   flex-shrink: 0;
   color: #010101;
-  /* Section Title */
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -831,7 +839,6 @@ body {
   height: 40px;
   position: relative;
   cursor: pointer;
-  /****  heart for i, in cardMenu__heart : fas and far *******/
 }
 .restaurants .cardsMenus .cardMenu__heart img {
   overflow: visible;
@@ -874,7 +881,7 @@ body {
   -webkit-background-clip: text;
 }
 
-/*     news frame and cardMenu */
+/******responsive******/
 @media (min-width: 1024px) {
   .restaurants {
     width: 100%;
@@ -1121,62 +1128,6 @@ footer {
   overflow: hidden;
   padding: 0px;
   cursor: pointer;
-  /*      CHECKBOX         */
-  /*
-
-  input[type="checkbox"] {
-    display: none;
-  }
-
-  input[type="checkbox"] + label {
-    position: relative;
-
-    //padding-left: 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-
-  input[type="checkbox"] + label::before {
-    content: "";
-    width: auto;
-    height: auto;
-    top: -10px;
-    left: -8px;
-    border: 1px solid transparent;
-    padding: 10px;
-    border-radius: 3px;
-    display: block;
-    font-style: 16px;
-
-    position: absolute;
-    transition: 0.5s ease;
-  }
-
-  input[type="checkbox"]:checked + label::after {
-    border: 1px solid transparent;
-    background-color: transparent;
-  }
-
-  input[type="checkbox"]:checked + label::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    font-size: 18px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-    //background: black;
-    transition: 0.5s ease;
-    border: 2px solid black;
-    background-color: transparent;
-    background: map-get($colors, color-grad);
-    border-radius: 50%;
-  }
-  */
 }
 .cardDetailMenu__platePrice {
   width: 100%;
@@ -1368,86 +1319,4 @@ footer {
   border-radius: 2px;
   background: #99e2d0;
   color: #008768;
-}
-
-.box {
-  position: fixed;
-  inset: 0;
-  background-color: #eaeaea;
-  font-family: Shrikhand;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  animation: flop 1000ms 3s forwards;
-  transform-origin: center;
-  z-index: 1;
-  opacity: 0.9;
-}
-
-/*loader*/
-.loader {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  background: #353535;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.loader::before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 260%;
-  background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
-  animation: rotate 4s linear infinite;
-}
-
-.loader::after {
-  content: "";
-  position: absolute;
-  background: #eaeaea;
-  inset: 5px;
-  border-radius: 25%;
-}
-
-/*animation pour les lettres de homyfood*/
-.loader span {
-  position: relative;
-  display: inline-block;
-  font-size: 60px;
-  color: #353535;
-  font-family: Shrikhand;
-  font-weight: 600;
-  animation: flip 1000ms 3s forwards;
-  animation-delay: calc(0.2s * var(--i));
-  z-index: 2;
-}
-
-/*debut et fin du loader*/
-@keyframes flop {
-  to {
-    transform: scale(0);
-  }
-}
-/*keyfram pour animation de bordure*/
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/*animation rotation des lettres span*/
-@keyframes flip {
-  0%, 50% {
-    transform: rotateY(360deg);
-  }
 }/*# sourceMappingURL=style.css.map */

@@ -3,43 +3,35 @@ $brekpoints: (
   "sm": 500px,
   "md": 745px,
   "lg": 1024px,
-  "xl": 1440px,
-); 
+  "xl": 1440px
+);
 
 @mixin xs {
   @media (min-width: map-get($brekpoints, "xs")) {
     @content;
-  } 
+  }
 }
-
 
 @mixin sm {
   @media (min-width: map-get($brekpoints, "sm")) {
     @content;
-  } 
+  }
 }
-
 
 @mixin md {
   @media (min-width: map-get($brekpoints, "md")) {
     @content;
-  } 
+  }
 }
-
 
 @mixin lg {
   @media (min-width: map-get($brekpoints, "lg")) {
     @content;
-  } 
+  }
 }
-
 
 @mixin xl {
   @media (min-width: map-get($brekpoints, "xl")) {
     @content;
-  } 
+  }
 }
-
-
-
-

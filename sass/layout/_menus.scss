@@ -1,5 +1,4 @@
 /* main page des menus*/
-
 .mainMenu {
   display: flex;
   flex-direction: column;
@@ -40,7 +39,8 @@
       height: 27px;
       display: flex;
       flex-direction: row;
-      justify-content:space-evenly;
+      justify-content: space-evenly;
+
       .titleMenu h1 {
         display: flex;
         flex-direction: row;
@@ -57,13 +57,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        //align-items: center;
         width: 32px;
         height: 40px;
         position: relative;
         cursor: pointer;
 
-        /*      CHECKBOX         */
+        /****checkbox*****/
 
         input[type="checkbox"] {
           display: none;
@@ -77,7 +76,6 @@
 
         input[type="checkbox"] + label:before {
           content: url(/assets/images/logo/logos/logo-border.svg);
-          
           top: -11px;
           left: -8px;
           border: 1px solid transparent;
@@ -95,7 +93,6 @@
 
         input[type="checkbox"]:checked + label:after {
           content: url(/assets/images/logo/logos/logo-heart.svg);
-          
           font-size: 24px;
           position: absolute;
           top: -1px;
@@ -168,7 +165,7 @@
       width: 1055px;
       height: auto;
       flex-shrink: 0;
-      top: 430px; // A voir pour le responssive
+      top: 430px;
       align-items: center;
       margin-left: 50px;
       margin-right: 50px;
@@ -186,14 +183,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        //align-items: center;
         width: 32px;
         height: 40px;
         margin: 10px;
         position: relative;
         cursor: pointer;
       }
-
     }
     .menu {
       width: 100%;

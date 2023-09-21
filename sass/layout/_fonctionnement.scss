@@ -1,3 +1,4 @@
+/**** page index*******/
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -13,14 +14,12 @@
     width: 275px;
     height: 31px;
     color: map-get($colors, color-black);
-    /* Section Title */
     margin-bottom: 25px;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
-
 
   .stage {
     display: flex;
@@ -32,7 +31,6 @@
     height: 80px;
     flex-shrink: 0;
     margin-bottom: 10px;
-
 
     &__badge1 {
       align-items: center;
@@ -59,7 +57,7 @@
         width: 24px;
         height: 24px;
       }
-      &--ellipse i{
+      &--ellipse i {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -98,13 +96,11 @@
   }
 }
 
-
 .fonctionnement {
   @include lg {
     display: flex;
     padding: 50px 180px;
     flex-direction: column;
-    //align-items: flex-start;
     gap: 25px;
     width: auto;
     height: auto;
@@ -132,8 +128,4 @@
       flex-wrap: wrap;
     }
   }
-
 }
-
-
-
