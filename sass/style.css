@@ -489,7 +489,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 32px;
-  height: 40px;
+  height: 30px;
   margin-top: 10px;
   position: relative;
   cursor: pointer;
@@ -504,7 +504,7 @@ body {
   font-size: 23px;
 }
 .mainMenu__content .titleMenu .titleMenu__heart input[type=checkbox] + label:before {
-  content: url(/assets/images/logo/logos/logo-border.svg);
+  content: url("/assets/images/logo/logos/logo-border.svg");
   top: -11px;
   left: -8px;
   border: 1px solid transparent;
@@ -519,7 +519,7 @@ body {
   background-color: transparent;
 }
 .mainMenu__content .titleMenu .titleMenu__heart input[type=checkbox]:checked + label:after {
-  content: url(/assets/images/logo/logos/logo-heart.svg);
+  content: url("/assets/images/logo/logos/logo-heart.svg");
   font-size: 24px;
   position: absolute;
   top: -1px;
