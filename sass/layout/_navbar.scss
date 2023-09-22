@@ -98,6 +98,7 @@
   &__logo {
     display: flex;
     color: map-get($colors, color-black);
+    width: 345px;
   }
 
   i {

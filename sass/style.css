@@ -218,6 +218,7 @@ body {
 .navBarMenu__logo {
   display: flex;
   color: #010101;
+  width: 345px;
 }
 .navBarMenu i {
   width: 30px;
