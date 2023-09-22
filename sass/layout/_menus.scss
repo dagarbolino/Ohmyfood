@@ -41,7 +41,7 @@
       flex-direction: row;
       justify-content: space-evenly;
 
-      .titleMenu h1 {
+      h1 {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -59,6 +59,7 @@
         justify-content: space-between;
         width: 32px;
         height: 40px;
+        margin-top: 10px;
         position: relative;
         cursor: pointer;
 
@@ -84,11 +85,13 @@
           display: block;
           position: absolute;
           transition: 1.5s ease;
+          
         }
 
         input[type="checkbox"]:checked + label:before {
           border: 1px solid transparent;
           background-color: transparent;
+          
         }
 
         input[type="checkbox"]:checked + label:after {
@@ -98,6 +101,7 @@
           top: -1px;
           left: 3px;
           transition: 1.5s ease;
+          cursor: pointer;
         }
       }
     }
@@ -200,6 +204,7 @@
       &__plats,
       &__desserts {
         width: 634px;
+
       }
     }
   }
