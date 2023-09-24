@@ -251,6 +251,9 @@ body {
     align-items: center;
     flex-shrink: 0;
   }
+  .navBarMenu i {
+    width: 10px;
+  }
   .navBarMenu__logo--img {
     width: auto;
     padding: 14px 420px 13px 89px;
