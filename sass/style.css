@@ -243,20 +243,21 @@ body {
 
 @media (min-width: 1024px) {
   .navBarMenu {
-    width: 100%;
+    width: auto;
+    max-width: 1415px;
   }
   .navBarMenu__logo {
-    width: auto;
+    width: 100%;
     height: 96.339px;
     align-items: center;
     flex-shrink: 0;
   }
   .navBarMenu i {
-    width: 10px;
+    width: 100%;
   }
   .navBarMenu__logo--img {
-    width: auto;
-    padding: 14px 420px 13px 89px;
+    width: 100%;
+    padding: 14px 420px 13px 389px;
   }
 }
 
