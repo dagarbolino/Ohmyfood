@@ -243,7 +243,7 @@ body {
 
 @media (min-width: 1024px) {
   .navBarMenu {
-    width: 1024px;
+    width: 100%;
   }
   .navBarMenu__logo {
     width: auto;
@@ -261,6 +261,10 @@ body {
 }
 
 /****page index******/
+main {
+  width: 100%;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -428,6 +432,12 @@ body {
     justify-content: space-evenly;
     gap: 25px;
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1160px) {
+  .fonctionnement .stages {
+    flex-wrap: nowrap;
   }
 }
 
@@ -948,7 +958,7 @@ footer {
     justify-content: flex-end;
     width: 100%;
     height: 114px;
-    padding: 30px 25px 0 25px;
+    padding: 30px 30px 0 25px;
     gap: 16px;
     flex-shrink: 0;
   }
