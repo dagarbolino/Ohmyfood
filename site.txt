@@ -1,5 +1,5 @@
 repo github:
 https://github.com/dagarbolino/Ohmyfood.git
 
-site web:
+site web sur git pages:
 https://dagarbolino.github.io/Ohmyfood/

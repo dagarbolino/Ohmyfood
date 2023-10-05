@@ -129,7 +129,7 @@
   }
 }
 .fonctionnement {
-  @include lgg {
+  @include lg {
     .stages {
       flex-wrap: nowrap;
     }

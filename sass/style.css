@@ -436,7 +436,7 @@ main {
   }
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1024px) {
   .fonctionnement .stages {
     flex-wrap: nowrap;
   }
