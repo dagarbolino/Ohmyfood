@@ -108,7 +108,7 @@ body {
   padding: 0px 0px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 745px) {
   body {
     align-items: center;
     width: 100%;
@@ -130,7 +130,7 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 745px) {
   .navBar {
     width: 100%;
     height: auto;
@@ -405,6 +405,26 @@ main {
   color: #9356dc;
 }
 
+@media (min-width: 745px) {
+  .fonctionnement {
+    width: 100%;
+  }
+}
+.fonctionnement--h2 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 31px;
+  color: #010101;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 @media (min-width: 1024px) {
   .fonctionnement {
     display: flex;
@@ -416,8 +436,6 @@ main {
   }
   .fonctionnement--h2 {
     margin-bottom: 0;
-    display: flex;
-    width: 100%;
     height: auto;
     align-items: flex-start;
     justify-content: flex-start;
@@ -433,12 +451,6 @@ main {
     justify-content: space-evenly;
     gap: 25px;
     flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 1024px) {
-  .fonctionnement .stages {
-    flex-wrap: nowrap;
   }
 }
 
@@ -566,7 +578,7 @@ main {
   margin-bottom: 10px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 745px) {
   .mainMenu {
     width: auto;
     max-width: 1415px;
@@ -574,16 +586,16 @@ main {
     flex-shrink: 0;
   }
   .mainMenu__imgOne {
-    width: 100%;
+    width: auto;
     height: 956.142px;
   }
   .mainMenu__imgOne img {
-    width: 100%;
+    width: auto;
     height: 483px;
     flex-shrink: 0;
   }
   .mainMenu__content {
-    width: 1055px;
+    width: auto;
     height: auto;
     flex-shrink: 0;
     top: 430px;
@@ -616,6 +628,24 @@ main {
   }
   .mainMenu .menu__entrees, .mainMenu .menu__plats, .mainMenu .menu__desserts {
     width: 634px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainMenu__imgOne {
+    width: 100%;
+  }
+  .mainMenu__imgOne img {
+    width: 100%;
+  }
+  .mainMenu__content {
+    width: 1055px;
+    height: auto;
+    flex-shrink: 0;
+    top: 430px;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
@@ -846,6 +876,38 @@ main {
 }
 
 /******responsive******/
+@media (min-width: 745px) {
+  .restaurants {
+    width: auto;
+    height: 100%;
+    padding-bottom: 40px;
+  }
+  .restaurants .frame1,
+  .restaurants .frame2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+  .restaurants h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 68px;
+    flex-shrink: 0;
+    color: #010101;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
 @media (min-width: 1024px) {
   .restaurants {
     width: 100%;
@@ -865,11 +927,11 @@ main {
     gap: 100px;
     align-self: stretch;
   }
+  .restaurants h2 {
+    justify-content: flex-start;
+  }
   .restaurants .frame2 {
     margin-bottom: 30px;
-  }
-  .restaurants .frame2 .cardMenu__badge {
-    opacity: 0;
   }
   .restaurants .cardsMenus {
     width: 100%;
@@ -954,13 +1016,13 @@ footer {
   line-height: normal;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 745px) {
   footer {
+    position: relative;
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
     height: 114px;
-    padding: 30px 30px 0 25px;
     gap: 16px;
     flex-shrink: 0;
   }
@@ -969,17 +1031,52 @@ footer {
     align-items: center;
     height: 100%;
     width: auto;
+    gap: 0;
   }
   footer .footer__logo--img {
-    width: 135px;
-    min-width: 135px;
+    width: 110px;
+    min-width: 110px;
     height: 27px;
     padding-right: 0px;
+    gap: 0;
   }
   footer .footer .footer__link {
     flex-direction: row;
     align-items: flex-start;
     width: auto;
+    gap: 5px;
+  }
+  footer .footer .proposer-resto,
+  footer .footer .devenir-partenaire {
+    width: 170px;
+    height: 20px;
+    font-size: 15px;
+    gap: 3px;
+  }
+  footer .footer .mention,
+  footer .footer .contact {
+    width: 110px;
+    height: 20px;
+    font-size: 15px;
+    gap: 0;
+  }
+  footer .footer a {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    justify-content: flex-end;
+    padding: 30px 30px 0 25px;
+  }
+  footer .footer {
+    width: auto;
+  }
+  footer .footer__logo--img {
+    width: 135px;
+    min-width: 135px;
+    padding-right: 0px;
   }
   footer .footer .proposer-resto,
   footer .footer .devenir-partenaire {
@@ -990,9 +1087,6 @@ footer {
   footer .footer .contact {
     width: 130px;
     height: 20px;
-  }
-  footer .footer a {
-    width: auto;
   }
 }
 
