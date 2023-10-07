@@ -4,6 +4,7 @@
 /****    Shadow    ****/
 /****    Restaurants cards    ****/
 /***Card detail menus ***/
+/*** Heart check ***/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -530,7 +531,6 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 25px;
-    flex-wrap: wrap;
   }
 }
 
