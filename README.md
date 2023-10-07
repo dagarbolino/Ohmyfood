@@ -13,4 +13,4 @@ Ohmyfood est une entreprise de commande de repas en ligne. Notre concept permet 
 
  Nous nous positionnons sur un marché de niche, avec les restaurants luxueux des villes
  dans lesquelles nous sommes établis. Nous souhaitons être identifiés comme une
- entreprise proposant des services haut de gamme
+ entreprise proposant des services haut de gamme.
