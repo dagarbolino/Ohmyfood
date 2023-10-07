@@ -36,7 +36,7 @@
 .loader::after {
   content: "";
   position: absolute;
-  background: map-get($colors, color-grey);
+  background: map-get($colors, color-bg-grey);
   inset: 5px;
   border-radius: 25%;
 }
@@ -46,10 +46,9 @@
   font-size: 60px;
   color: map-get($colors, color-grey);
   font-family: Shrikhand;
-  //text-transform: uppercase;
   font-weight: 600;
   animation: flip 1000ms 3s forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation-delay: calc(.2s * var(--i));
   z-index: 2;
 }
 /* début et fin du loader*/
