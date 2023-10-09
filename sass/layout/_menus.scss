@@ -63,7 +63,7 @@
         cursor: pointer;
 
         /****checkbox*****/
-        @include heart-wrapper; // voir mixins heart check 
+        @include heart-wrapper; // voir mixins heart check
       }
     }
   }
@@ -76,6 +76,8 @@
     width: 375px;
     height: 100%;
     padding: 10px 10px;
+
+    @include fade_in;
 
     &__entrees,
     &__plats,
