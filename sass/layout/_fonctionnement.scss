@@ -99,6 +99,7 @@
 .fonctionnement {
   @include md {
     width: 100%;
+    gap: 10px;
   }
   &--h2 {
     flex-shrink: 0;
@@ -114,6 +115,7 @@
     font-weight: 700;
     line-height: normal;
   }
+
 }
 
 .fonctionnement {
@@ -141,7 +143,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      gap: 25px;
+      gap: 10px;
     }
   }
 }
