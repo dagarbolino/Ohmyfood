@@ -112,7 +112,8 @@
 
 .mainMenu {
   @include md {
-    width: auto;
+    
+    width: 100%;
     max-width: 1415px;
     height: 383px;
     flex-shrink: 0;

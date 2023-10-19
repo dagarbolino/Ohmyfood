@@ -40,7 +40,13 @@
   inset: 5px;
   border-radius: 25%;
 }
-.loader span {
+
+/* début et fin du loader*/
+@keyframes flop {
+  to {
+    transform: scale(0);
+  }
+}.loader span {
   position: relative;
   display: inline-block;
   font-size: 60px;
@@ -50,12 +56,6 @@
   animation: flip 1000ms 3s forwards;
   animation-delay: calc(.2s * var(--i));
   z-index: 2;
-}
-/* début et fin du loader*/
-@keyframes flop {
-  to {
-    transform: scale(0);
-  }
 }
 
 /* keyfram pour animation de bordure*/
@@ -67,6 +67,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+
 
 /* rotation des lettres span*/
 @keyframes flip {
