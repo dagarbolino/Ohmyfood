@@ -53,8 +53,6 @@
   color: map-get($colors, color-grey);
   font-family: Shrikhand;
   font-weight: 600;
-  animation: flip 1000ms 3s forwards;
-  animation-delay: calc(.2s * var(--i));
   z-index: 2;
 }
 
@@ -65,20 +63,5 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-
-
-
-
-
-
-
-/* rotation des lettres span*/
-@keyframes flip {
-  0%,
-  50% {
-    transform: rotateY("360deg");
   }
 }
